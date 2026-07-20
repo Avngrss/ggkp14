@@ -1,0 +1,123 @@
+:root {
+  /* Brand colors */
+  --color-primary: #0D7377;
+  --color-primary-light: #14919B;
+  --color-primary-dark: #0A5C5F;
+  --color-secondary: #1B6B93;
+  --color-secondary-light: #2E86AB;
+  --color-accent: #32E0C4;
+  --color-accent-soft: #E8FBF8;
+  --color-accent-green: #2ECC71;
+
+  /* Neutrals */
+  --color-text: #1A2332;
+  --color-text-secondary: #6B7A90;
+  --color-text-muted: #9AA5B4;
+  --color-text-inverse: #FFFFFF;
+  --color-bg: #FFFFFF;
+  --color-bg-subtle: #F5F7FA;
+  --color-bg-muted: #EEF1F5;
+  --color-surface: #FFFFFF;
+  --color-border: #D1D9E6;
+  --color-border-light: #E8ECF1;
+
+  /* Semantic */
+  --color-success: #2ECC71;
+  --color-warning: #F39C12;
+  --color-error: #E74C3C;
+  --color-info: #3498DB;
+  --color-focus: #0D7377;
+
+  /* Header / Footer */
+  --color-topbar-bg: #0A5C5F;
+  --color-topbar-text: #FFFFFF;
+  --color-footer-bg: #1A2332;
+  --color-footer-text: #C8D0DA;
+
+  /* Typography */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-heading: var(--font-family-base);
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.75rem;
+  --text-4xl: 2.25rem;
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.6;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Spacing */
+  --space-unit: 4px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-max-wide: 1320px;
+  --container-padding: 24px;
+  --container-padding-mobile: 16px;
+  --sidebar-width: 320px;
+  --header-height: 82px;
+  --header-height-mobile: 60px;
+  --topbar-height: 36px;
+  --header-logo-width: 300px;
+  --header-actions-width: 220px;
+  --header-cta-width: 164px;
+  --nav-link-padding-x: 10px;
+  --color-header-bg: #FFFFFF;
+  --color-header-border: #E2E8F0;
+  --color-nav-hover-bg: #E8FBF8;
+  --color-nav-active-border: #0D7377;
+  --hero-overlay: rgba(255, 255, 255, 0.88);
+  --grid-gap: 24px;
+  --grid-gap-mobile: 16px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(26, 35, 50, 0.06);
+  --shadow-md: 0 4px 16px rgba(26, 35, 50, 0.09);
+  --shadow-lg: 0 8px 32px rgba(26, 35, 50, 0.11);
+  --shadow-header: 0 2px 8px rgba(26, 35, 50, 0.06);
+  --shadow-card: 0 2px 12px rgba(13, 115, 119, 0.08);
+  --shadow-xl: 0 16px 48px rgba(26, 35, 50, 0.16);
+  --shadow-focus: 0 0 0 3px rgba(13, 115, 119, 0.3);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+
+  /* Breakpoints (for reference in media queries) */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1200px;
+  --bp-2xl: 1440px;
+
+  /* Z-index */
+  --z-topbar: 100;
+  --z-header: 200;
+  --z-drawer: 300;
+  --z-overlay: 250;
+}

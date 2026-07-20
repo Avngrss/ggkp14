@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="news-bg" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8FBF8"/>
+      <stop offset="1" stop-color="#C5E8EA"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#news-bg)"/>
+  <rect x="250" y="118" width="140" height="100" rx="12" fill="#0D7377" opacity="0.12"/>
+  <circle cx="290" cy="152" r="18" fill="#0D7377" opacity="0.22"/>
+  <path d="M278 176l18-16 14 12 22-20 30 28v28H250v-32z" fill="#1B6B93" opacity="0.18"/>
+  <path d="M250 286h140" stroke="#0D7377" stroke-width="3" stroke-linecap="round" opacity="0.15"/>
+</svg>
