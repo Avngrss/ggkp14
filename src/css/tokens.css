@@ -1,12 +1,12 @@
 :root {
-  /* Brand colors */
-  --color-primary: #0D7377;
-  --color-primary-light: #14919B;
-  --color-primary-dark: #0A5C5F;
-  --color-secondary: #1B6B93;
-  --color-secondary-light: #2E86AB;
-  --color-accent: #32E0C4;
-  --color-accent-soft: #E8FBF8;
+  /* Brand colors — medical blue */
+  --color-primary: #1A6EA8;
+  --color-primary-light: #2380BF;
+  --color-primary-dark: #145A8A;
+  --color-secondary: #2E6DA4;
+  --color-secondary-light: #3D84BC;
+  --color-accent: #4DA3D9;
+  --color-accent-soft: #E8F4FC;
   --color-accent-green: #2ECC71;
 
   /* Neutrals */
@@ -26,10 +26,10 @@
   --color-warning: #F39C12;
   --color-error: #E74C3C;
   --color-info: #3498DB;
-  --color-focus: #0D7377;
+  --color-focus: #1A6EA8;
 
   /* Header / Footer */
-  --color-topbar-bg: #0A5C5F;
+  --color-topbar-bg: #145A8A;
   --color-topbar-text: #FFFFFF;
   --color-footer-bg: #1A2332;
   --color-footer-text: #C8D0DA;
@@ -65,6 +65,9 @@
   --space-10: 40px;
   --space-12: 48px;
   --space-16: 64px;
+  --section-padding: var(--space-12);
+  --section-padding-compact: var(--space-10);
+  --section-padding-mobile: var(--space-8);
 
   /* Layout */
   --container-max: 1200px;
@@ -81,8 +84,8 @@
   --nav-link-padding-x: 10px;
   --color-header-bg: #FFFFFF;
   --color-header-border: #E2E8F0;
-  --color-nav-hover-bg: #E8FBF8;
-  --color-nav-active-border: #0D7377;
+  --color-nav-hover-bg: #E8F4FC;
+  --color-nav-active-border: #1A6EA8;
   --hero-overlay: rgba(255, 255, 255, 0.88);
   --grid-gap: 24px;
   --grid-gap-mobile: 16px;
@@ -99,9 +102,9 @@
   --shadow-md: 0 4px 16px rgba(26, 35, 50, 0.09);
   --shadow-lg: 0 8px 32px rgba(26, 35, 50, 0.11);
   --shadow-header: 0 2px 8px rgba(26, 35, 50, 0.06);
-  --shadow-card: 0 2px 12px rgba(13, 115, 119, 0.08);
+  --shadow-card: 0 2px 12px rgba(26, 110, 168, 0.08);
   --shadow-xl: 0 16px 48px rgba(26, 35, 50, 0.16);
-  --shadow-focus: 0 0 0 3px rgba(13, 115, 119, 0.3);
+  --shadow-focus: 0 0 0 3px rgba(26, 110, 168, 0.35);
 
   /* Transitions */
   --transition-fast: 150ms ease;

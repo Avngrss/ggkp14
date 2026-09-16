@@ -119,6 +119,31 @@
     });
   }
 
+  function initTableScroll() {
+    const wrappers = document.querySelectorAll("[data-table-scroll]");
+    if (!wrappers.length) return;
+
+    const update = (wrapper) => {
+      const section = wrapper.closest(".table-section");
+      const hint = section?.querySelector("[data-table-scroll-hint]");
+      const needsScroll = wrapper.scrollWidth > wrapper.clientWidth + 1;
+
+      wrapper.toggleAttribute("data-scrollable", needsScroll);
+      if (hint) {
+        hint.hidden = !needsScroll;
+      }
+    };
+
+    wrappers.forEach((wrapper) => {
+      update(wrapper);
+      window.addEventListener(
+        "resize",
+        () => update(wrapper),
+        { passive: true },
+      );
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     if (typeof window.initMenu === "function") window.initMenu();
     if (typeof window.initAccessibility === "function")
@@ -126,5 +151,6 @@
     initStickyHeader();
     initHeaderSearch();
     initSearchForm();
+    initTableScroll();
   });
 })();

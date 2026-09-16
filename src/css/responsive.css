@@ -6,7 +6,11 @@
   }
 
   .section {
-    padding-block: var(--space-10);
+    padding-block: var(--section-padding-mobile);
+  }
+
+  .section--compact {
+    padding-block: var(--space-6);
   }
 
   h1 {
@@ -128,9 +132,7 @@
 }
 
 @media (min-width: 1440px) {
-  .container,
-  .topbar__inner,
-  .site-header__inner {
+  .container {
     max-width: var(--container-max-wide);
   }
 }
@@ -140,6 +142,21 @@ html,
 body {
   overflow-x: clip;
   max-width: 100%;
+}
+
+/* Adaptive search — icon submit instead of accent text button */
+@media (max-width: 1439px) {
+  .search-form__submit-text {
+    display: none;
+  }
+
+  .search-form__submit-icon {
+    display: inline-flex;
+  }
+
+  .header-search-panel__form {
+    max-width: none;
+  }
 }
 
 /* Touch targets on mobile/tablet */

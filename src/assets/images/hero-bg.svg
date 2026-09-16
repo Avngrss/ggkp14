@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice">
   <defs>
     <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0A5C5F"/>
-      <stop offset="40%" stop-color="#0D7377"/>
-      <stop offset="70%" stop-color="#1B6B93"/>
-      <stop offset="100%" stop-color="#2E86AB"/>
+      <stop offset="0%" stop-color="#145A8A"/>
+      <stop offset="40%" stop-color="#1A6EA8"/>
+      <stop offset="70%" stop-color="#2E6DA4"/>
+      <stop offset="100%" stop-color="#3D84BC"/>
     </linearGradient>
     <linearGradient id="heroOverlay" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.92"/>
@@ -12,12 +12,12 @@
       <stop offset="100%" stop-color="#eef1f5" stop-opacity="0.95"/>
     </linearGradient>
     <radialGradient id="glow1" cx="80%" cy="20%" r="50%">
-      <stop offset="0%" stop-color="#32E0C4" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#32E0C4" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#4DA3D9" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#4DA3D9" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glow2" cx="10%" cy="80%" r="40%">
-      <stop offset="0%" stop-color="#14919B" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#14919B" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#2380BF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#2380BF" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <rect width="1440" height="600" fill="url(#heroGrad)"/>

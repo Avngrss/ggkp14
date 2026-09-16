@@ -1,0 +1,665 @@
+﻿<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Урицкая АОП — ГУЗ «Гомельская городская клиническая поликлиника №14»"
+    />
+    <title>
+      Урицкая АОП — ГУЗ «Гомельская городская клиническая поликлиника №14»
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/internal-pages.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Перейти к содержимому</a>
+
+    <!-- 1. Topbar -->
+    <div class="topbar" role="region" aria-label="Служебная панель">
+      <div class="container topbar__inner">
+        <nav class="topbar__nav" aria-label="Служебная навигация">
+          <a href="/o-nas/rezhim-raboty/" class="topbar__link">Режим работы</a>
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="/contacts/goryachaya-liniya/" class="topbar__link"
+            >Горячая линия</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="departments-index.html" class="topbar__link is-active"
+            >Структурные подразделения</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="/o-nas/territorialnye-uchastki/" class="topbar__link"
+            >Территориальные участки</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="/o-nas/vakansii/" class="topbar__link">Вакансии</a>
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="/contacts/" class="topbar__link">Контакты</a>
+        </nav>
+        <div class="topbar__actions">
+          <nav class="lang-switcher" aria-label="Выбор языка">
+            <a
+              href="#"
+              class="lang-switcher__link is-active"
+              hreflang="ru"
+              lang="ru"
+              aria-current="true"
+              >RU</a
+            >
+            <a href="#" class="lang-switcher__link" hreflang="be" lang="be"
+              >BY</a
+            >
+            <a href="#" class="lang-switcher__link" hreflang="en" lang="en"
+              >EN</a
+            >
+          </nav>
+          <a href="mailto:ggkp14@ggkp14.by" class="topbar__email">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <path d="M22 6l-10 7L2 6" />
+            </svg>
+            ggkp14@ggkp14.by
+          </a>
+          <button
+            type="button"
+            class="topbar__a11y"
+            data-a11y-toggle
+            aria-pressed="false"
+          >
+            Версия для слабовидящих
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Header -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="index.html" class="site-header__logo">
+          <span class="site-header__logo-icon" aria-hidden="true">14</span>
+          <span class="site-header__logo-text">
+            <span class="site-header__logo-title"
+              >ГУЗ «Гомельская городская клиническая поликлиника №14»</span
+            >
+            <span class="site-header__logo-subtitle"
+              >г. Гомель, ул. Косарева, 11</span
+            >
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Главное меню">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html" class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="table-page.html" class="main-nav__link">Прямые линии</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="/platnye-uslugi-2/" class="main-nav__link"
+                >Платные услуги</a
+              >
+            </li>
+            <li class="main-nav__item main-nav__item--dropdown">
+              <a
+                href="/informaciya/"
+                class="main-nav__link main-nav__link--dropdown"
+              >
+                Информация
+                <svg
+                  class="main-nav__chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </a>
+              <ul class="main-nav__dropdown">
+                <li>
+                  <a href="/informaciya/" class="main-nav__dropdown-link"
+                    >Общая информация</a
+                  >
+                </li>
+                <li>
+                  <a href="/o-nas/" class="main-nav__dropdown-link">О нас</a>
+                </li>
+                <li>
+                  <a
+                    href="/o-nas/administraciya/"
+                    class="main-nav__dropdown-link"
+                    >Администрация</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/o-nas/rezhim-raboty/"
+                    class="main-nav__dropdown-link"
+                    >Режим работы</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="main-nav__item main-nav__item--dropdown">
+              <a
+                href="contacts.html"
+                class="main-nav__link main-nav__link--dropdown"
+              >
+                Контакты
+                <svg
+                  class="main-nav__chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </a>
+              <ul class="main-nav__dropdown">
+                <li>
+                  <a href="contacts.html" class="main-nav__dropdown-link"
+                    >Контактная информация</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/contacts/goryachaya-liniya/"
+                    class="main-nav__dropdown-link"
+                    >Горячая линия</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/contacts/elektronnye-obrashheniya/"
+                    class="main-nav__dropdown-link"
+                    >Электронные обращения</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/adresa-elektronnoj-pochty/"
+                    class="main-nav__dropdown-link"
+                    >Адреса e-mail</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="main-nav__item">
+              <a href="/abiturient-2023/" class="main-nav__link"
+                >Абитуриент 2026</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <div class="header-search">
+            <button
+              type="button"
+              id="header-search-toggle"
+              class="header-search__toggle"
+              aria-label="Открыть поиск по сайту"
+              aria-expanded="false"
+              aria-controls="header-search-panel"
+            >
+              <svg class="header-search__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+          </div>
+          <a href="content-page.html" class="btn btn--primary site-header__cta"
+            >Запись к врачу</a
+          >
+          <button
+            type="button"
+            id="menu-toggle"
+            class="menu-toggle"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+          >
+            <svg
+              class="menu-toggle__icon menu-toggle__open"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+            <svg
+              class="menu-toggle__icon menu-toggle__close"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="header-search-panel"
+        class="header-search-panel"
+        hidden
+        aria-hidden="true"
+      >
+        <!-- WordPress: replace with get_search_form() -->
+        <div class="container header-search-panel__inner">
+          <form
+            class="search-form header-search-panel__form"
+            role="search"
+            action="#"
+          >
+            <label for="header-search-input" class="header-search-panel__label"
+              >Поиск по сайту</label
+            >
+            <div class="header-search-panel__fields search-form__fields">
+              <input
+                type="search"
+                id="header-search-input"
+                class="form-input search-form__input"
+                placeholder="Введите запрос"
+                autocomplete="off"
+              />
+              <button
+                type="submit"
+                class="btn btn--primary search-form__btn search-form__submit-text"
+              >
+                Найти
+              </button>
+              <button
+                type="submit"
+                class="search-form__submit-icon"
+                aria-label="Выполнить поиск"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile drawer -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer__overlay" aria-hidden="true"></div>
+      <div
+        class="mobile-drawer__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Мобильное меню"
+      >
+        <button
+          type="button"
+          id="menu-close"
+          class="mobile-drawer__close"
+          aria-label="Закрыть меню"
+        >
+          ×
+        </button>
+        <nav class="mobile-drawer__nav" aria-label="Мобильная навигация">
+          <a href="index.html" class="mobile-drawer__link">Главная</a>
+          <a href="table-page.html" class="mobile-drawer__link">Прямые линии</a>
+          <a href="/platnye-uslugi-2/" class="mobile-drawer__link"
+            >Платные услуги</a
+          >
+          <span class="mobile-drawer__group-label">Информация</span>
+          <a
+            href="/informaciya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Общая информация</a
+          >
+          <a href="/o-nas/" class="mobile-drawer__link mobile-drawer__link--sub"
+            >О нас</a
+          >
+          <a
+            href="/o-nas/administraciya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Администрация</a
+          >
+          <span class="mobile-drawer__group-label">Контакты</span>
+          <a
+            href="contacts.html"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Контактная информация</a
+          >
+          <a
+            href="/contacts/goryachaya-liniya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Горячая линия</a
+          >
+          <a
+            href="/contacts/elektronnye-obrashheniya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Электронные обращения</a
+          >
+          <a href="/abiturient-2023/" class="mobile-drawer__link"
+            >Абитуриент 2026</a
+          >
+          <span class="mobile-drawer__group-label">Служебное</span>
+          <a
+            href="departments-index.html"
+            class="mobile-drawer__link mobile-drawer__link--sub is-active"
+            >Структурные подразделения</a
+          >
+          <a
+            href="/o-nas/rezhim-raboty/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Режим работы</a
+          >
+          <a
+            href="/o-nas/vakansii/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Вакансии</a
+          >
+          <a
+            href="mailto:ggkp14@ggkp14.by"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >ggkp14@ggkp14.by</a
+          >
+          <button
+            type="button"
+            class="mobile-drawer__link mobile-drawer__link--sub mobile-drawer__a11y"
+            data-a11y-toggle
+            aria-pressed="false"
+          >
+            Версия для слабовидящих
+          </button>
+        </nav>
+        <nav
+          class="lang-switcher lang-switcher--drawer"
+          aria-label="Выбор языка"
+        >
+          <a
+            href="#"
+            class="lang-switcher__link is-active"
+            hreflang="ru"
+            lang="ru"
+            aria-current="true"
+            >RU</a
+          >
+          <a href="#" class="lang-switcher__link" hreflang="be" lang="be"
+            >BY</a
+          >
+          <a href="#" class="lang-switcher__link" hreflang="en" lang="en"
+            >EN</a
+          >
+        </nav>
+        <a href="content-page.html" class="btn btn--primary mobile-drawer__cta"
+          >Запись к врачу</a
+        >
+        <form class="search-form mobile-drawer__search" role="search" action="#">
+          <label for="mobile-search-input" class="visually-hidden"
+            >Поиск по сайту</label
+          >
+          <div class="search-form__fields">
+            <input
+              type="search"
+              id="mobile-search-input"
+              class="form-input search-form__input"
+              placeholder="Введите запрос"
+            />
+            <button
+              type="submit"
+              class="btn btn--primary search-form__btn search-form__submit-text"
+            >
+              Найти
+            </button>
+            <button
+              type="submit"
+              class="search-form__submit-icon"
+              aria-label="Выполнить поиск"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <main id="main">
+      <div class="internal-page">
+        <div class="container internal-page__container">
+          <nav class="breadcrumb" aria-label="Хлебные крошки">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item">
+                <a href="index.html">Главная</a>
+                <span class="breadcrumb__sep" aria-hidden="true">&#187;</span>
+              </li>
+              <li class="breadcrumb__item">
+                <a href="/o-nas/">О нас</a>
+                <span class="breadcrumb__sep" aria-hidden="true">&#187;</span>
+              </li>
+              <li class="breadcrumb__item">
+                <a href="departments-index.html">Структурные подразделения</a>
+                <span class="breadcrumb__sep" aria-hidden="true">&#187;</span>
+              </li>
+              <li class="breadcrumb__item" aria-current="page">
+                <span>Урицкая АОП</span>
+              </li>
+            </ol>
+          </nav>
+
+          <p class="department-detail__back">
+            <a href="departments-index.html" class="department-detail__back-link"
+              >Все структурные подразделения</a
+            >
+          </p>
+
+          <header class="page-header">
+            <h1 class="page-header__title">Урицкая АОП</h1>
+          </header>
+
+          <article
+            class="department-detail prose"
+            data-dept-path="/o-nas/strukturnye-podrazdeleniya/urickaya-aop/"
+          >
+            <p class="department-detail__lead">
+              Урицкая амбулатория общей практики является структурным
+              подразделением государственного учреждения здравоохранения
+              «Гомельская городская клиническая поликлиника №&nbsp;14». В состав
+              Урицкой АОП входит Старобелицкий ФАП, Залипский ФАП.
+            </p>
+
+            <section
+              class="department-detail__contacts"
+              aria-labelledby="dept-contacts-title"
+            >
+              <h2 id="dept-contacts-title" class="department-detail__section-title">
+                Контактная информация и режим работы
+              </h2>
+              <p>
+                <strong>Режим работы:</strong> с 8:00 до 20:00<br />
+                суббота — с 8:00 до 14:00<br />
+                воскресенье – выходной
+              </p>
+              <p>
+                <strong>Адрес:</strong>
+                <address class="department-detail__address">
+                  аг. Урицкое, улица Коммунистическая 4
+                </address>
+              </p>
+              <ul class="department-detail__phone-list">
+                <li>
+                  <strong>Регистратура:</strong>
+                  <a href="tel:+375232931360">+375&nbsp;(232)&nbsp;93-13-60</a>
+                </li>
+                <li>
+                  <strong>Заведующая Урицкой АОП:</strong>
+                  <a href="tel:+375232931289">+375&nbsp;(232)&nbsp;93-12-89</a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="department-detail__section" aria-labelledby="dept-staff-title">
+              <h2 id="dept-staff-title" class="department-detail__section-title">
+                Штат амбулатории
+              </h2>
+              <ul>
+                <li>3 врача общей практики</li>
+                <li>2 зубных фельдшера</li>
+                <li>5 медсестры общей практики</li>
+                <li>медсестра процедурного кабинета</li>
+                <li>медсестра физиотерапевтического кабинета</li>
+                <li>акушерка</li>
+                <li>4 санитарки</li>
+                <li>водитель медицинского транспорта</li>
+              </ul>
+            </section>
+
+            <section class="department-detail__section" aria-labelledby="dept-additional-title">
+              <h2 id="dept-additional-title" class="department-detail__section-title">
+                Дополнительные услуги
+              </h2>
+              <ul>
+                <li>каждую пятницу прием гинеколога</li>
+                <li>
+                  раз в месяц приезжают на осмотр населения узкие специалисты:
+                  офтальмолог, невролог, хирург
+                </li>
+                <li>
+                  в случае необходимости забор анализов и осмотр врачей
+                  осуществляется на дому
+                </li>
+              </ul>
+            </section>
+
+            <section class="department-detail__section" aria-labelledby="dept-fap-title">
+              <h2 id="dept-fap-title" class="department-detail__section-title">
+                Фельдшерско-акушерские пункты
+              </h2>
+              <p>
+                В зоне обслуживания Урицкой АОП находятся два
+                фельдшерско-акушерских пункта, где ведется прием врача:
+              </p>
+              <ul>
+                <li>Залипский ФАП</li>
+                <li>Старобелицкий ФАП</li>
+              </ul>
+            </section>
+
+            <section class="department-detail__section" aria-labelledby="dept-cabinets-title">
+              <h2 id="dept-cabinets-title" class="department-detail__section-title">
+                Кабинеты амбулатории
+              </h2>
+              <ul>
+                <li>регистратура</li>
+                <li>кабинеты врача общей практики</li>
+                <li>кабинет зубного фельдшера</li>
+                <li>смотровой кабинет</li>
+                <li>процедурный кабинет</li>
+                <li>физиотерапевтический кабинет</li>
+                <li>лаборатория</li>
+                <li>кабинет функциональной диагностики</li>
+                <li>кабинет здорового ребенка</li>
+                <li>прививочный кабинет</li>
+                <li>кабинет дневного пребывания пациентов</li>
+              </ul>
+            </section>
+
+            <section class="department-detail__section" aria-labelledby="dept-schools-title">
+              <h2 id="dept-schools-title" class="department-detail__section-title">
+                Школы здоровья
+              </h2>
+              <ul>
+                <li>«Я выбираю здоровье» (вторник, пятница 15:00-16:00)</li>
+                <li>«Здоровая улыбка» (среда, пятница 13:00-14:30)</li>
+              </ul>
+            </section>
+
+            <section class="department-detail__section" aria-labelledby="dept-zones-title">
+              <h2 id="dept-zones-title" class="department-detail__section-title">
+                Зоны обслуживания
+              </h2>
+              <ul>
+                <li>Алексеевка</li>
+                <li>Барок</li>
+                <li>Галеевка</li>
+                <li>Залипье</li>
+                <li>Красный маяк</li>
+                <li>Старая Белица</li>
+              </ul>
+            </section>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <!-- 10. Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div>
+            <h3 class="site-footer__title">ГУЗ «ГГКП №14»</h3>
+            <p>г. Гомель, ул. Косарева, 11<br />246012</p>
+            <p><a href="tel:+375232329065">+375 (232) 32-90-65</a></p>
+            <p><a href="mailto:ggkp14@ggkp14.by">ggkp14@ggkp14.by</a></p>
+          </div>
+          <div>
+            <h3 class="site-footer__title">Навигация</h3>
+            <ul class="site-footer__list">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="/o-nas/">О нас</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+              <li><a href="/platnye-uslugi-2/">Платные услуги</a></li>
+              <li><a href="/category/novosti/">Новости</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="site-footer__title">Пациентам</h3>
+            <ul class="site-footer__list">
+              <li><a href="content-page.html">Запись к врачу</a></li>
+              <li>
+                <a href="/contacts/elektronnye-obrashheniya/"
+                  >Электронные обращения</a
+                >
+              </li>
+              <li><a href="/o-nas/rezhim-raboty/">Режим работы</a></li>
+              <li><a href="/o-nas/vakansii/">Вакансии</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p>© ГУЗ «Гомельская городская клиническая поликлиника № 14»</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/accessibility.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

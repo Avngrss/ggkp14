@@ -6,11 +6,11 @@
 }
 
 .section {
-  padding-block: var(--space-12);
+  padding-block: var(--section-padding);
 }
 
 .section--compact {
-  padding-block: var(--space-8);
+  padding-block: var(--section-padding-compact);
 }
 
 .section--subtle {

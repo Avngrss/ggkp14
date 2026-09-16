@@ -2,22 +2,663 @@
 
 ## Как открыть демо
 
+### Рекомендуемый способ (локальный сервер)
+
+1. Дважды щёлкните **`preview-local.cmd`** в корне проекта
+2. Откроется навигатор: http://localhost:8765/pages/preview.html
+3. Выберите нужный шаблон
+4. Остановка сервера: **`Ctrl+C`** в окне терминала
+
+Подробности: **`docs/27-local-static-preview.md`**
+
+### Альтернатива (без сервера)
+
 1. Откройте проводник Windows
-2. Перейдите в папку проекта: `c:\Users\Avngr\Desktop\ggkp14\src\pages\`
-3. Дважды щёлкните по файлу **`index.html`**
-4. Страница откроется в вашем браузере по умолчанию
+2. Перейдите в `c:\Users\Avngr\Desktop\ggkp14\src\pages\`
+3. Дважды щёлкните **`index.html`**
 
-**Альтернативный способ:** перетащите файл `index.html` в окно браузера (Chrome, Edge, Firefox).
+> При открытии файла напрямую (`file://`) стили обычно загружаются, но локальный сервер надёжнее для проверки путей и ссылок между страницами.
 
-**Путь к файлу:**
+**Внутренние страницы:**
 
-```
-c:\Users\Avngr\Desktop\ggkp14\src\pages\index.html
-```
-
-> Если стили не загрузились — убедитесь, что вы открываете именно `index.html` из папки `src/pages/`, а не копию файла в другом месте.
+- Stage 5A: `src/pages/content-page.html`
+- Stage 5B: `src/pages/contacts.html`
+- Stage 5C: `src/pages/table-page.html`
+- Stage 5E: `src/pages/departments-index.html`
+- Stage 5F: `src/pages/department.html`
+- Stage 5F.1: `src/pages/department-aop.html`
+- Stage 5G: `src/pages/news-archive.html`
+- Stage 5H: `src/pages/news-single.html`
+- Stage 5H.1: `src/pages/news-single-video.html`, `src/pages/news-single-no-media.html`
+- Stage 5I: `src/pages/search-results.html`
 
 ---
+
+## Stage 5I — search results template
+
+После обновления Stage 5I проверьте:
+
+### Заголовок и запрос
+
+1. Откройте `search-results.html`
+2. Один H1: «Результаты поиска для: «диспансеризация»»
+3. Поддерживающий текст «Найдено: 3» — только если подтверждено источником
+4. Длинный запрос переносится, без обрезки и без hero-блока
+
+### Список результатов
+
+1. Три реальных результата с live-URL источника (страница, новость, главная)
+2. Без выдуманных excerpt, дат и изображений для этого запроса
+3. Тип контента: «Страница» / «Новость» — только где улучшает ясность
+4. Без «Подробнее», если источник не показывает read-more для этих результатов
+5. Текстовый компактный список, без пустых image-wrapper
+
+### Пагинация и no-results
+
+1. Пагинация не отображается — у запроса «диспансеризация» 3 результата без пагинации на источнике
+2. No-results паттерн документирован в `docs/35-stage-5i`, на видимой странице не показан
+
+### Поиск в шапке
+
+1. Desktop search panel открывается
+2. Mobile drawer search доступен
+3. Поле использует `name="s"` (WordPress-ready)
+4. Форма не выполняет client-side search — только визуальный прототип
+
+### Мобильная вёрстка
+
+1. H1 и quoted query переносятся на 360px
+2. Карточки результатов читаемы
+3. Нет горизонтального overflow страницы
+
+### Regressions
+
+- Homepage, news archive, news single variants без изменений
+- Contacts, table, departments index без CSS leak
+- JavaScript файлы без search-логики
+
+Скриншоты: `docs/audit/stage-5i/`
+
+Подробности: `docs/35-stage-5i-search-results-implementation.md`
+
+---
+
+## Stage 5H.1 — news media variants validation
+
+Сравните три контентных варианта одного шаблона новости:
+
+### `news-single.html` (featured image + text)
+
+1. Featured image slot присутствует
+2. Текстовое тело с `.prose`
+
+### `news-single-video.html` (встроенное видео)
+
+1. Нет featured image — видео внутри `the_content()`
+2. Два слота WordPress video block (16:9), без autoplay и без custom JS
+3. Карточка №2 в архиве ведёт локально
+
+### `news-single-no-media.html` (без featured image)
+
+1. Нет пустого media wrapper — заголовок переходит сразу в текст
+2. Только текст и метаданные
+3. Карточка «Профилактика ВИЧ-инфекции» в архиве ведёт локально
+
+### Regressions
+
+- `news-single.html` базовый вариант без изменений layout
+- Archive grid, pagination, остальные 7 карточек — live URLs
+- Homepage, contacts, table, departments без CSS leak
+
+Скриншоты: `docs/audit/stage-5h1/`
+
+Подробности: `docs/34-stage-5h1-news-media-variants-validation.md`
+
+---
+
+## Stage 5H — news single template
+
+После обновления Stage 5H проверьте:
+
+### Страница новости
+
+1. Откройте `news-single.html`
+2. H1 «Игра детей с огнём: дюжина пожаров в Гомельской области» — один на странице
+3. Breadcrumb: «Главная » Новости » [заголовок]»
+4. Метаданные: дата `10.09.2026`, категория «Новости»
+5. Featured image slot с локальным placeholder, без hotlink
+6. Вступительный абзац из источника; основной текст — демонстрационная копия с пометкой
+7. Ссылка «Все новости» ведёт на `news-archive.html`
+
+### Типографика и навигация
+
+1. `.prose` для тела статьи — читаемая ширина, H2, списки, blockquote
+2. Заголовки и длинные URL переносятся на mobile
+3. Новый article-specific JavaScript не добавлен
+
+### Связь с архивом
+
+1. В `news-archive.html` только первая карточка ведёт на `news-single.html`
+2. Остальные 9 карточек по-прежнему ссылаются на live `ggkp14.by`
+
+### Regressions
+
+- Homepage news без изменений
+- Archive layout и pagination без изменений
+- Contacts map, table, departments без single-news CSS leak
+
+Скриншоты: `docs/audit/stage-5h/`
+
+Подробности: `docs/33-stage-5h-news-single-implementation.md`
+
+---
+
+## Stage 5G — news archive template
+
+После обновления Stage 5G проверьте:
+
+### Содержимое архива
+
+1. Откройте `news-archive.html`
+2. **10** карточек новостей — как на первой странице источника
+3. H1 «Рубрика: Новости»; breadcrumb «Главная » Новости»
+4. Даты, категории и заголовки совпадают с https://ggkp14.by/category/novosti/
+5. Excerpt только там, где он есть на источнике (2 карточки без excerpt)
+6. Ссылки «Подробнее» ведут на live `ggkp14.by`
+
+### Изображения и плотность
+
+1. Локальный placeholder `news-thumb-placeholder.svg` — без hotlink
+2. Соотношение media 16:10, `object-fit: cover`
+3. Карточки компактные, без фиксированной высоты
+4. Сетка 2 колонки desktop / 1 колонка mobile
+
+### Пагинация
+
+1. `<nav aria-label="Навигация по страницам новостей">`
+2. Текущая страница `1` с `aria-current="page"`
+3. Ссылки 2, …, 21, «Следующая» (demo `#`)
+4. Пагинация переносится на mobile
+
+### Regressions
+
+- Homepage news section без изменений
+- Contacts map, table columns, departments index (18 cards) без изменений
+- Department pages без archive CSS leak
+
+Скриншоты: `docs/audit/stage-5g/`
+
+Подробности: `docs/32-stage-5g-news-archive-implementation.md`
+
+---
+
+## Stage 5F.1 — compare department content variants
+
+Сравните два контентных варианта одного шаблона:
+
+### `department.html` (женская консультация)
+
+1. Контактная панель: один телефон записи + онлайн-запись
+2. Секции: структура, оборудование, расходные материалы, услуги
+3. Нет адреса подразделения
+
+### `department-aop.html` (Урицкая АОП)
+
+1. Контактная панель: адрес, два телефона (регистратура и заведующая), режим работы
+2. Секции: штат (роли), дополнительные услуги, ФАП, кабинеты, школы здоровья, зоны обслуживания
+3. Нет онлайн-записи (нет на источнике)
+
+### Общее для обоих
+
+1. Одинаковый shell, breadcrumb, back link, `.department-detail` CSS
+2. Один H1, return link на `departments-index.html`
+3. На индексе локально: «Женская консультация» → `department.html`, «Урицкая АОП» → `department-aop.html`
+
+Подробности: `docs/31-stage-5f1-department-variant-validation.md`
+
+---
+
+## Stage 5F — department detail template
+
+После обновления Stage 5F проверьте:
+
+### Открытие и содержимое
+
+1. Откройте `department.html` (или «Женская консультация» с индекса подразделений)
+2. Breadcrumb: «Главная » О нас » Структурные подразделения » Женская консультация»
+3. Один **H1** «Женская консультация»
+4. Ссылка «Все структурные подразделения» ведёт на `departments-index.html`
+5. Текст, телефон, часы, структура, оборудование и услуги совпадают с https://ggkp14.by/o-nas/strukturnye-podrazdeleniya/zhenskaya-konsultaciya/
+
+### Контакты и запись
+
+1. Телефон записи: `+375 (232) 31-09-37` — кликабельный `tel:` link
+2. Ссылка «онлайн-записи» ведёт на tutmed.by (как на content-page)
+3. Время приёма отображено полностью (пн–пт 08:00–14:00 и 14:00–20:00; сб 08:00–14:00)
+4. Нет выдуманного адреса или карты
+
+### Индекс подразделений
+
+1. На `departments-index.html` карточка «Женская консультация» ведёт на `department.html`
+2. Остальные 17 карточек по-прежнему ведут на live `ggkp14.by`
+3. Все 18 подразделений на месте
+
+### Responsive и accessibility
+
+1. Breadcrumb и H1 переносятся на 390 / 360
+2. Списки структуры и оборудования читаемы на mobile
+3. Sticky header и search panel работают
+4. Нет horizontal overflow страницы
+
+### Regressions
+
+- `index.html` 1440 / 390 — без изменений
+- `content-page.html` 1440 — prose без department-detail стилей
+- `contacts.html` 1440 — карта и группы телефонов без изменений
+- `table-page.html` 1440 / 390 — колонки и scroll wrapper без изменений
+- `departments-index.html` 390 — сетка без изменений
+
+Скриншоты: `docs/audit/stage-5f/`
+
+Подробности: `docs/30-stage-5f-department-detail-implementation.md`
+
+---
+
+## Stage 5E — departments index template
+
+После обновления Stage 5E проверьте:
+
+### Открытие и содержимое
+
+1. Откройте `departments-index.html` (или «Структурные подразделения» в topbar / drawer)
+2. На странице **18** карточек-ссылок — столько же, сколько на https://ggkp14.by/o-nas/strukturnye-podrazdeleniya/
+3. Названия подразделений совпадают с источником (например: «Женская консультация», «Урицкая АОП», «Ново-Мильчанский ФАП»)
+4. Порядок карточек совпадает с источником
+5. Ссылки ведут на реальные URL `ggkp14.by` (страницы подразделений на live-сайте)
+
+### Breadcrumb и заголовок
+
+1. «Главная » О нас » Структурные подразделения»
+2. Один **H1** «Структурные подразделения»
+3. Breadcrumb переносится на узких экранах
+
+### Сетка и плотность карточек
+
+1. Desktop (1440 / 1280): 4 колонки, ровные ряды
+2. Tablet (1024): 3 колонки; (768): 2 колонки
+3. Mobile (390 / 360): 1 колонка, карточки на всю ширину
+4. Карточки компактные (имя + иконка), без пустых image-placeholder
+5. Длинные названия не обрезаются (`Отделения медицинской реабилитации`, «Клинико-диагностическая лаборатория»)
+
+### Hover, focus и интерактивность
+
+1. Hover: рамка и цвет названия меняются
+2. `:focus-visible` — видимый outline при Tab
+3. Вся карточка кликабельна; нет вложенных ссылок
+4. Sticky header при прокрутке
+5. Поиск в header открывается и закрывается
+
+### Regressions
+
+- `index.html` 1440 — секция «Структурные подразделения» на главной **без изменений**
+- `index.html` 390 — homepage department cards без изменений
+- `content-page.html` 1440 — prose без dept-index стилей
+- `contacts.html` 1440 — карта ~46%, subpages под grid
+- `table-page.html` 1440 / 390 — колонки, даты, scroll wrapper без изменений
+
+Скриншоты: `docs/audit/stage-5e/`
+
+Подробности: `docs/29-stage-5e-departments-index-implementation.md`
+
+---
+
+## Stage 5D — table alignment and contacts map fix
+
+После обновления Stage 5D проверьте:
+
+### Table page — columns, dates, times
+
+1. Откройте `table-page.html` at 1440px
+2. Колонки **Дата**, **Номер телефона**, **Время** — значения в одну строку, без разрыва после каждой цифры
+3. **Ф.И.О.** и **Должность** — переносятся естественно
+4. Заголовки колонок выровнены с телом таблицы
+5. `rowspan` (Галушкина, 09.09 / 23.09) отображается корректно
+
+### Table page — mobile scroll
+
+1. At **390px** / **360px** — страница **без** horizontal overflow
+2. Таблица прокручивается внутри `.table-scroll`
+3. Подсказка «Прокрутите таблицу вправо…» видна при overflow
+
+### Contacts — map composition
+
+1. At **1440px** — карта ~46% ширины, заметно крупнее прежних 400px
+2. Iframe заполняет `.contacts-map__embed` (aspect-ratio 4:3)
+3. «Дополнительные разделы контактов» — **под** двумя колонками, на всю ширину
+4. Нет большой пустой области справа от subpages
+5. Адрес над картой сохранён; iframe `title` на месте
+
+### Contacts — mobile stacking
+
+1. At **768px** / **390px** — одна колонка, карта на полную ширину
+2. Нет horizontal overflow
+
+### Regressions
+
+- `index.html` 1440 — без изменений
+- `content-page.html` 1440 — prose без table/contact стилей
+
+Скриншоты: `docs/audit/stage-5d/`
+
+Подробности: `docs/28-stage-5d-table-contacts-visual-fixes.md`
+
+---
+
+## Stage 5C — table page template
+
+После обновления Stage 5C проверьте:
+
+### Открытие
+
+1. Откройте `src/pages/table-page.html` (или «Прямые линии» в header)
+2. `internal-pages.css` подключён; `homepage.css` **не** подключён
+
+### Breadcrumb и заголовок
+
+1. «Главная » О нас » График прямых телефонных линий»
+2. Один **H1** «График прямых телефонных линий»
+3. Три секции H2 с реальными графиками (ГГКП №14, центральная ГКП, главное управление)
+
+### Table headings и captions
+
+1. Заголовки колонок в `<thead>` с `<th scope="col">`
+2. У каждой таблицы есть visually-hidden `<caption>`
+3. Данные совпадают с https://ggkp14.by/o-nas/grafik-pryamyh-telefonnyh-linij/
+
+### Telephone links
+
+1. Номера в колонке «Номер телефона» — кликабельные `tel:` links
+2. Видимый текст сохраняет формат source
+
+### Desktop (1440 / 1280)
+
+1. Таблицы читаемы на полную ширину контента
+2. Заголовок строки выделен (accent-soft фон, primary border)
+3. **Нет** horizontal overflow всей страницы
+4. Sticky header при прокрутке
+
+### Mobile horizontal scrolling (390 / 360)
+
+1. **Страница** не имеет horizontal overflow (`scrollWidth` ≤ `clientWidth`)
+2. **Таблица** прокручивается внутри `.table-scroll` wrapper
+3. Подсказка «Прокрутите таблицу вправо…» видна только когда таблица шире wrapper
+4. Wrapper focusable (`Tab` → focus ring)
+5. Нет card-layout вместо таблицы; колонки не скрыты
+
+### Header / drawer / search
+
+1. «Прямые линии» active в nav
+2. Search panel, burger drawer, lang switcher работают
+
+### Homepage regression
+
+`index.html` at 1440 — hero, news, services без изменений
+
+### Content-page regression
+
+`content-page.html` at 1440 — prose layout без table-стилей
+
+### Contacts regression
+
+`contacts.html` at 1440 и 390 — phone groups, map, layout без изменений
+
+### GitHub Pages preview path
+
+`/pages/table-page.html`
+
+### Скриншоты
+
+См. `docs/audit/stage-5c/`
+
+Подробности: `docs/26-stage-5c-table-page-implementation.md`
+
+---
+
+## Stage 5B — contacts page template
+
+После обновления Stage 5B проверьте:
+
+### Открытие
+
+1. Откройте `src/pages/contacts.html` (или перейдите по «Контакты» в header / footer)
+2. Убедитесь, что стили загрузились (`internal-pages.css` подключён, **не** `homepage.css`)
+
+### Breadcrumb
+
+1. «Главная » Контакты» — ссылка на `index.html`
+2. Текущая страница без ссылки, `aria-current="page"`
+3. На **390px** / **360px** — перенос без horizontal overflow
+
+### Internal page header
+
+1. Один **H1** «Контакты»
+2. Компактный заголовок — **не** hero landing block
+3. Длинный заголовок не обрезается
+
+### Contact data accuracy
+
+Сверьте с https://ggkp14.by/contacts/ :
+
+1. «Горячая» линия: +375 (232) 33-26-51 (10:00–18:00)
+2. Приёмная: +375 (232) 32-90-65
+3. Регистратура: 32-91-36 (8:00–20:00), 29-58-62, 31-56-25
+4. Мобильный: +375 (44) 541-74-37 (A1)
+5. Женская консультация: +375 (44) 766-55-47 (A1), 31-09-37 (8:00–20:00)
+6. Адрес: г. Гомель, ул. Косарева, 11; 246012
+
+### Telephone links
+
+1. Каждый номер в основном блоке — кликабельный `tel:` link
+2. Видимый текст совпадает с отформатированным номером
+3. Примечания о режиме работы — обычный текст, не ссылка
+
+### Email links
+
+1. На **основной** странице контактов email-блока **нет** (как на source)
+2. Email только в approved shell: topbar и footer (`mailto:ggkp14@ggkp14.by`)
+3. Ссылка «Адреса электронной почты» ведёт на будущую WP-страницу
+
+### Address
+
+1. Полное название учреждения в блоке «Адрес»
+2. Адрес copyable как текст (`<address>`)
+3. Дублируется над картой
+
+### Working hours
+
+1. Часы указаны **только** как примечания к телефонам (не отдельный блок)
+2. Нет дублирования часов из footer или homepage
+
+### Contact grouping
+
+1. Группы телефонов с понятными H3-заголовками
+2. Блок «Дополнительные разделы контактов» — ссылки на subpages
+3. Карта справа на desktop, под контентом на tablet/mobile
+4. Нет contact form, fake staff cards, excessive card grid
+
+### Mobile stacking
+
+1. **768px** / **390px** / **360px** — одна колонка
+2. Телефоны и email-подобные ссылки переносятся без overflow
+3. Карта не выходит за край viewport
+4. Нет internal scrolling panels
+
+### Header / drawer / search
+
+1. Sticky header при прокрутке
+2. Search icon → панель поиска (Escape закрывает)
+3. Burger → mobile drawer
+4. Lang switcher RU/BY/EN на месте
+5. Пункт «Контакты» активен в nav
+
+### Homepage regression
+
+Откройте `index.html` и убедитесь:
+
+1. Hero и секции **не изменились**
+2. Header/search/drawer работают как раньше
+3. Нет нового overflow
+
+### Content-page regression
+
+Откройте `content-page.html` и убедитесь:
+
+1. Breadcrumb и prose layout **не изменились**
+2. Contact-стили не применяются к generic template
+3. Нет horizontal overflow на 390px
+
+### GitHub Pages preview path
+
+После деплоя: `/pages/contacts.html` (workflow копирует `src/` в `dist/` без изменений)
+
+### Скриншоты
+
+См. `docs/audit/stage-5b/`
+
+Подробности: `docs/25-stage-5b-contacts-implementation.md`
+
+---
+
+## Stage 5A — content page template
+
+После обновления Stage 5A проверьте:
+
+### Открытие
+
+1. Откройте `src/pages/content-page.html` (или перейдите с главной по ссылке «Запись к врачу» в footer)
+2. Убедитесь, что стили загрузились (`internal-pages.css` подключён)
+
+### Breadcrumb
+
+1. «Главная » Запись к врачу» — ссылка на `index.html`
+2. Текущая страница без ссылки, `aria-current="page"`
+3. На **390px** / **360px** — перенос без horizontal overflow
+
+### Internal page header
+
+1. Один **H1** «Запись к врачу»
+2. Компактный заголовок — **не** hero landing block
+3. Длинный заголовок не обрезается
+
+### Prose content
+
+1. Читаемая ширина текста (не на всю ширину viewport)
+2. Списки, ссылки, `tel:`, `mailto:` работают визуально
+3. Блок-notice внизу («обратитесь в регистратуру»)
+4. Нет homepage-секций (hero, news, departments)
+
+### Header / drawer / search
+
+1. Sticky header при прокрутке
+2. Search icon → панель поиска (Escape закрывает)
+3. Burger → mobile drawer
+4. Lang switcher RU/BY/EN на месте
+
+### Homepage regression
+
+Откройте `index.html` и убедитесь:
+
+1. Hero и секции **не изменились**
+2. Header/search/drawer работают как раньше
+3. Нет нового overflow
+
+### Скриншоты
+
+См. `docs/audit/stage-5a/`
+
+Подробности: `docs/24-stage-5a-content-page-implementation.md`
+
+---
+
+## Stage 3I — designer feedback fixes
+
+После обновления Stage 3I проверьте:
+
+### Header full width
+
+1. На **1440px** и **1280px** фон topbar и main header тянется **на всю ширину окна**
+2. Sticky header после прокрутки — тень/граница на full width, контент внутри выровнен по container
+3. Панель поиска под header — full width, без обрезки по краям
+4. Нет horizontal overflow
+
+### Hero
+
+1. **Одна** primary кнопка «Запись к врачу» в блоке actions (не дубль под «Время работы»)
+2. Info cards: только «Горячая линия» и «Время работы»
+3. Hero компактнее — меньше лишних отступов, H1 не обрезан
+
+### Primary color
+
+1. Основной цвет — **медицинский синий** (`#1A6EA8`), не teal-green
+2. Topbar, кнопки, focus ring, nav active — согласованы с новой палитрой
+
+### Section paddings
+
+1. Крупные секции (news, services, departments, resources) — одинаковый вертикальный ритм
+2. Compact секции — меньший, но тоже единый padding
+3. Mobile/tablet — предсказуемое уменьшение отступов
+
+### Language switcher
+
+1. Desktop (1440+): **RU / BY / EN** в topbar справа
+2. Mobile drawer: тот же switcher
+3. Активный RU с `aria-current="true"`, ссылки с `hreflang`
+
+### Adaptive search
+
+1. Ниже 1440px: в форме поиска **иконка лупы**, не accent-кнопка «Найти»
+2. Icon button с `aria-label="Выполнить поиск"`, neutral styling
+3. В header search panel **нет** дублирующего CTA «Запись к врачу» под полем
+4. Desktop 1440+: может оставаться текст «Найти»
+
+### Accessibility basics
+
+1. Skip link «Перейти к содержимому» → `#main`
+2. `<html lang="ru">`, один `<h1>`
+3. Search/menu toggles: `aria-expanded`, `aria-controls`
+4. Escape закрывает search и drawer
+5. Видимый `:focus-visible` на интерактивных элементах
+
+### Тест ширин
+
+| Ширина | Что проверить |
+|--------|----------------|
+| **1440** | Full-width header, desktop nav, lang switcher, blue primary |
+| **1280** | Full-width header, burger, icon search |
+| **1024** | Tablet landscape, paddings |
+| **768** | Hero stack, drawer, section rhythm |
+| **390** | Mobile search icon, no overflow |
+| **360** | Narrow mobile, compact blocks |
+
+### Sticky header
+
+- Прокрутите вниз — header sticky, `.is-scrolled` shadow full width
+- Контент не прыгает
+
+### Скриншоты аудита
+
+См. `docs/audit/`:
+
+- `demo-stage3i-header-1440.png`
+- `demo-stage3i-hero-1440.png`
+- `demo-stage3i-news-services-1440.png`
+- `demo-stage3i-desktop-1280.png`
+- `demo-stage3i-tablet-768.png`
+- `demo-stage3i-mobile-390.png`
+- `demo-stage3i-mobile-search-open.png`
+- `demo-stage3i-sticky-scrolled.png`
+
+Подробности: `docs/20-stage-3i-designer-feedback-fixes.md`
 
 ---
 
