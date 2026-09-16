@@ -105,6 +105,16 @@
 
     forms.forEach((form) => {
       form.addEventListener("submit", (e) => {
+        const action = (form.getAttribute("action") || "#").trim();
+        const isLocalDemoAction =
+          action &&
+          action !== "#" &&
+          !/^https?:\/\//i.test(action);
+
+        if (isLocalDemoAction) {
+          return;
+        }
+
         e.preventDefault();
         const input = form.querySelector(".search-form__input");
         const query = input?.value.trim();

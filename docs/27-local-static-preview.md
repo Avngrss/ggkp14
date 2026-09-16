@@ -129,6 +129,16 @@ Workflow `.github/workflows/pages.yml`:
 
 ---
 
+## Ссылки между статическими страницами
+
+Шаблоны в `src/pages/` используют **относительные sibling-ссылки** (`contacts.html`, `table-page.html`, …), а не WordPress-пути от корня домена (`/contacts/`, `/o-nas/...`).
+
+На GitHub Pages корневая главная (`dist/index.html`) получает префикс `pages/` при сборке workflow — переключать пути вручную перед push не нужно.
+
+Будущая WordPress-конверсия восстановит permalink-маршруты в `href`; исходные пути сохранены в `data-source-path`, `data-dept-path`, `data-article-path`.
+
+---
+
 ## Что не нужно делать
 
 - не переписывать пути в HTML вручную перед локальной проверкой;

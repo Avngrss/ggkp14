@@ -32,6 +32,9 @@ jobs:
           cp -r src/* dist/
           cp src/pages/index.html dist/index.html
           sed -i 's|\.\./css/|./css/|g; s|\.\./js/|./js/|g; s|\.\./assets/|./assets/|g' dist/index.html
+          for page in content-page.html contacts.html table-page.html departments-index.html department.html department-aop.html news-archive.html news-single.html news-single-video.html news-single-no-media.html search-results.html; do
+            sed -i "s|href=\"$page\"|href=\"pages/$page\"|g; s|action=\"$page\"|action=\"pages/$page\"|g" dist/index.html
+          done
           rm -f dist/pages/preview.html
           touch dist/.nojekyll
 
