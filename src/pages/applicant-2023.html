@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ИНФОРМАЦИЯ ДЛЯ АБИТУРИЕНТОВ — ГУЗ «Гомельская городская клиническая поликлиника №14»"
+    />
+    <title>
+      ИНФОРМАЦИЯ ДЛЯ АБИТУРИЕНТОВ — ГУЗ «Гомельская городская клиническая поликлиника №14»
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/internal-pages.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Перейти к содержимому</a>
+
+    <!-- 1. Topbar -->
+    <div class="topbar" role="region" aria-label="Служебная панель">
+      <div class="container topbar__inner">
+        <nav class="topbar__nav" aria-label="Служебная навигация">
+          <a href="https://ggkp14.by/o-nas/rezhim-raboty/" class="topbar__link">Режим работы</a>
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="https://ggkp14.by/contacts/goryachaya-liniya/" class="topbar__link"
+            >Горячая линия</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="departments-index.html" data-source-path="/o-nas/strukturnye-podrazdeleniya/" class="topbar__link"
+            >Структурные подразделения</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="https://ggkp14.by/o-nas/territorialnye-uchastki/" class="topbar__link"
+            >Территориальные участки</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="https://ggkp14.by/o-nas/vakansii/" class="topbar__link">Вакансии</a>
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="contacts.html" data-source-path="/contacts/" class="topbar__link">Контакты</a>
+        </nav>
+        <div class="topbar__actions">
+          <nav class="lang-switcher" aria-label="Выбор языка">
+            <a
+              href="#"
+              class="lang-switcher__link is-active"
+              hreflang="ru"
+              lang="ru"
+              aria-current="true"
+              >RU</a
+            >
+            <a href="#" class="lang-switcher__link" hreflang="be" lang="be"
+              >BY</a
+            >
+            <a href="#" class="lang-switcher__link" hreflang="en" lang="en"
+              >EN</a
+            >
+          </nav>
+          <a href="mailto:ggkp14@ggkp14.by" class="topbar__email">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <path d="M22 6l-10 7L2 6" />
+            </svg>
+            ggkp14@ggkp14.by
+          </a>
+          <button
+            type="button"
+            class="topbar__a11y"
+            data-a11y-toggle
+            aria-pressed="false"
+          >
+            Версия для слабовидящих
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Header -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="index.html" class="site-header__logo">
+          <span class="site-header__logo-icon" aria-hidden="true">14</span>
+          <span class="site-header__logo-text">
+            <span class="site-header__logo-title"
+              >ГУЗ «Гомельская городская клиническая поликлиника №14»</span
+            >
+            <span class="site-header__logo-subtitle"
+              >г. Гомель, ул. Косарева, 11</span
+            >
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Главное меню">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html" class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a
+                href="table-page.html" data-source-path="/o-nas/grafik-pryamyh-telefonnyh-linij/"
+                class="main-nav__link"
+                >Прямые линии</a
+              >
+            </li>
+            <li class="main-nav__item">
+              <a href="paid-services.html" data-source-path="/platnye-uslugi-2/" class="main-nav__link"
+                >Платные услуги</a
+              >
+            </li>
+            <li class="main-nav__item main-nav__item--dropdown">
+              <a
+                href="information.html" data-source-path="/informaciya/"
+                class="main-nav__link main-nav__link--dropdown"
+              >
+                Информация
+                <svg
+                  class="main-nav__chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </a>
+              <ul class="main-nav__dropdown">
+                <li>
+                  <a href="information.html" data-source-path="/informaciya/" class="main-nav__dropdown-link"
+                    >Общая информация</a
+                  >
+                </li>
+                <li>
+                  <a href="about.html" data-source-path="/o-nas/" class="main-nav__dropdown-link">О нас</a>
+                </li>
+                <li>
+                  <a
+                    href="https://ggkp14.by/o-nas/administraciya/"
+                    class="main-nav__dropdown-link"
+                    >Администрация</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://ggkp14.by/o-nas/rezhim-raboty/"
+                    class="main-nav__dropdown-link"
+                    >Режим работы</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="main-nav__item main-nav__item--dropdown">
+              <a
+                href="contacts.html" data-source-path="/contacts/"
+                class="main-nav__link main-nav__link--dropdown"
+              >
+                Контакты
+                <svg
+                  class="main-nav__chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </a>
+              <ul class="main-nav__dropdown">
+                <li>
+                  <a href="contacts.html" data-source-path="/contacts/" class="main-nav__dropdown-link"
+                    >Контактная информация</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://ggkp14.by/contacts/goryachaya-liniya/"
+                    class="main-nav__dropdown-link"
+                    >Горячая линия</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://ggkp14.by/contacts/elektronnye-obrashheniya/"
+                    class="main-nav__dropdown-link"
+                    >Электронные обращения</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://ggkp14.by/adresa-elektronnoj-pochty/"
+                    class="main-nav__dropdown-link"
+                    >Адреса e-mail</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="main-nav__item">
+              <a href="applicant-2023.html" data-source-path="/abiturient-2023/" class="main-nav__link is-active" aria-current="page"
+                >Абитуриент 2026</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <div class="header-search">
+            <button
+              type="button"
+              id="header-search-toggle"
+              class="header-search__toggle"
+              aria-label="Открыть поиск по сайту"
+              aria-expanded="false"
+              aria-controls="header-search-panel"
+            >
+              <svg class="header-search__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+          </div>
+          <a href="content-page.html" class="btn btn--primary site-header__cta"
+            >Запись к врачу</a
+          >
+          <button
+            type="button"
+            id="menu-toggle"
+            class="menu-toggle"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+          >
+            <svg
+              class="menu-toggle__icon menu-toggle__open"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+            <svg
+              class="menu-toggle__icon menu-toggle__close"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="header-search-panel"
+        class="header-search-panel"
+        hidden
+        aria-hidden="true"
+      >
+        <!-- WordPress: replace with get_search_form() -->
+        <div class="container header-search-panel__inner">
+          <form
+            class="search-form header-search-panel__form"
+            role="search"
+            action="search-results.html"
+          >
+            <label for="header-search-input" class="header-search-panel__label"
+              >Поиск по сайту</label
+            >
+            <div class="header-search-panel__fields search-form__fields">
+              <input
+                type="search"
+                id="header-search-input"
+                name="s"
+                class="form-input search-form__input"
+                placeholder="Введите запрос"
+                autocomplete="off"
+              />
+              <button
+                type="submit"
+                class="btn btn--primary search-form__btn search-form__submit-text"
+              >
+                Найти
+              </button>
+              <button
+                type="submit"
+                class="search-form__submit-icon"
+                aria-label="Выполнить поиск"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile drawer -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer__overlay" aria-hidden="true"></div>
+      <div
+        class="mobile-drawer__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Мобильное меню"
+      >
+        <button
+          type="button"
+          id="menu-close"
+          class="mobile-drawer__close"
+          aria-label="Закрыть меню"
+        >
+          ×
+        </button>
+        <nav class="mobile-drawer__nav" aria-label="Мобильная навигация">
+          <a href="index.html" class="mobile-drawer__link">Главная</a>
+          <a
+            href="table-page.html" data-source-path="/o-nas/grafik-pryamyh-telefonnyh-linij/"
+            class="mobile-drawer__link"
+            >Прямые линии</a
+          >
+          <a href="paid-services.html" data-source-path="/platnye-uslugi-2/" class="mobile-drawer__link"
+            >Платные услуги</a
+          >
+          <span class="mobile-drawer__group-label">Информация</span>
+          <a
+            href="information.html" data-source-path="/informaciya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Общая информация</a
+          >
+          <a href="about.html" data-source-path="/o-nas/" class="mobile-drawer__link mobile-drawer__link--sub"
+            >О нас</a
+          >
+          <a
+            href="https://ggkp14.by/o-nas/administraciya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Администрация</a
+          >
+          <span class="mobile-drawer__group-label">Контакты</span>
+          <a
+            href="contacts.html" data-source-path="/contacts/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Контактная информация</a
+          >
+          <a
+            href="https://ggkp14.by/contacts/goryachaya-liniya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Горячая линия</a
+          >
+          <a
+            href="https://ggkp14.by/contacts/elektronnye-obrashheniya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Электронные обращения</a
+          >
+          <a href="applicant-2023.html" data-source-path="/abiturient-2023/" class="mobile-drawer__link is-active" aria-current="page"
+            >Абитуриент 2026</a
+          >
+          <span class="mobile-drawer__group-label">Служебное</span>
+          <a
+            href="https://ggkp14.by/o-nas/rezhim-raboty/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Режим работы</a
+          >
+          <a
+            href="https://ggkp14.by/o-nas/vakansii/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Вакансии</a
+          >
+          <a
+            href="mailto:ggkp14@ggkp14.by"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >ggkp14@ggkp14.by</a
+          >
+          <button
+            type="button"
+            class="mobile-drawer__link mobile-drawer__link--sub mobile-drawer__a11y"
+            data-a11y-toggle
+            aria-pressed="false"
+          >
+            Версия для слабовидящих
+          </button>
+        </nav>
+        <nav
+          class="lang-switcher lang-switcher--drawer"
+          aria-label="Выбор языка"
+        >
+          <a
+            href="#"
+            class="lang-switcher__link is-active"
+            hreflang="ru"
+            lang="ru"
+            aria-current="true"
+            >RU</a
+          >
+          <a href="#" class="lang-switcher__link" hreflang="be" lang="be"
+            >BY</a
+          >
+          <a href="#" class="lang-switcher__link" hreflang="en" lang="en"
+            >EN</a
+          >
+        </nav>
+        <a href="content-page.html" class="btn btn--primary mobile-drawer__cta"
+          >Запись к врачу</a
+        >
+        <form class="search-form mobile-drawer__search" role="search" action="search-results.html">
+          <label for="mobile-search-input" class="visually-hidden"
+            >Поиск по сайту</label
+          >
+          <div class="search-form__fields">
+            <input
+              type="search"
+              id="mobile-search-input"
+              name="s"
+              class="form-input search-form__input"
+              placeholder="Введите запрос"
+            />
+            <button
+              type="submit"
+              class="btn btn--primary search-form__btn search-form__submit-text"
+            >
+              Найти
+            </button>
+            <button
+              type="submit"
+              class="search-form__submit-icon"
+              aria-label="Выполнить поиск"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <main id="main">
+      <div class="internal-page">
+        <div class="container internal-page__container">
+          <nav class="breadcrumb" aria-label="Хлебные крошки">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item">
+                <a href="index.html">Главная</a>
+                <span class="breadcrumb__sep" aria-hidden="true">&#187;</span>
+              </li>
+              <li class="breadcrumb__item" aria-current="page">
+                <span>ИНФОРМАЦИЯ ДЛЯ АБИТУРИЕНТОВ</span>
+              </li>
+            </ol>
+          </nav>
+
+          <header class="page-header">
+            <h1 id="page-title" class="page-header__title">ИНФОРМАЦИЯ ДЛЯ АБИТУРИЕНТОВ</h1>
+          </header>
+
+          <article class="prose">
+            <p>ПРИГЛАШАЕМ ВСЕХ ЖЕЛАЮЩИХ, выпускников и их родителей еженедельно по средам (по предварительной записи по телефону 29-31-20) посетить государственное учреждение здравоохранение «Гомельская городская клиническая поликлиника №14» для знакомства с особенностями работы медицинского персонала.</p>
+            <p>В целях проведения профориентационной работы среди выпускников школ для поступления в медицинские учреждения образования, а также помощи в выборе дальнейшей профессии размещаем ССЫЛКИ НА ОФИЦИАЛЬНЫЕ САЙТЫ, СОДЕРЖАЩИЕ ИНФОРМАЦИЮ ПО ПРОФОРИЕНТАЦИИ УЧРЕЖДЕНИЙ ОБРАЗОВАНИЯ:</p>
+            <ul>
+              <li>
+                <a href="https://ggmc.by/" target="_blank" rel="noopener noreferrer">Гомельский государственный медицинский колледж</a>
+              </li>
+              <li>
+                <a href="https://uommk.by/" target="_blank" rel="noopener noreferrer">Мозырский государственный медицинский колледж</a>
+              </li>
+              <li>
+                <a href="https://gsmu.by/" target="_blank" rel="noopener noreferrer">Гомельский государственный медицинский университет</a>
+              </li>
+            </ul>
+            <h2>Информация о заключении договоров на целевую подготовку специалистов с высшим медицинским образованием в 2026 году</h2>
+            <p>В 2026 году в Гомельской области будет реализовываться кампания по выдачи целевых договоров абитуриентам поступающим в медицинские университеты на условиях целевой подготовки, в соответствии с Положением о целевой подготовке специалистов, рабочих, служащих, утвержденным постановлением Совета Министров Республики Беларусь от 31 августа 2022 г. № 572 (в редакции постановления Совета Министров Республики Беларусь от 16.03.2026 года № 123). Срок заключения целевых договоров в ВУЗы определен Постановлением Министерства здравоохранения Республики Беларусь (далее – Минздрав) от 21 февраля 2023 г. № 35 «О вопросах целевой подготовки специалистов с высшим медицинским, фармацевтическим образованием» (в редакции постановления Минздрава 15.04.2026 № 15).</p>
+            <p>– с 15 мая 2026 года до срока окончания подачи документов проведения вступительного испытания и зачисления абитуриентов для получения высшего образования на условиях целевой подготовки. Срок приема документов в медицинские университеты на условиях целевой подготовки с 27 июня по 2 июля 2026 года . Сроки зачисления на условиях целевой подготовки – по 12 июля 2026 года.</p>
+            <p>Договоры на целевую подготовку будут заключаться исключительно в лице заказчика кадров Министра здравоохранения Республики Беларусь (далее – Минздрав).</p>
+            <p>Целевые договоры в медицинские университеты будут выдаваться абитуриентам, у которых по профильным предметам (соответствуют профильным образовательным стандартам и требованиям единых профильных экзаменов) по итогам окончания школы (лицея, гимназии) успеваемость не ниже 7 (семи) баллов.</p>
+            <p>С целью сохранения временных ресурсов абитуриентов, проживающих в регионах, в текущем году в Гомельской области будет организовано заключение целевых договоров в лице Минздрава: — Гомельским государственным медицинским университетом по адресу: улица Ланге, 5, кабинет 206, т.р. 8 232 34 05 60 (ответственный секретарь Тимошенко Наталья Павловна), режим работы понедельник — пятница с 8.30 до 17.00, обед 13.00 до 13.30, выходной суббота, воскресенье; — ГУЗО по адресу: переулок Спартака 2а, кабинет 406, т.р. 8 232 50 32 66, 8 232 50 32 62, режим работы: понедельник – пятница с 8.30 до 17.30, обед 13.00-14.00, выходной суббота, воскресенье.</p>
+            <p>В период работы приемной комиссии по целевому конкурсу во всех медицинских университетах будут присутствовать представители ГУЗО, что позволит проводить профориентационную работу соответствующих административных территорий и обеспечит выполнение контрольных цифр приема. Срок обязательной работы после окончания обучения для выпускников, получивших образование на условиях целевой подготовки: — высшее медицинское образование первой ступени – не менее 5 (пяти) лет. Первое место работы молодого специалиста определяет заказчик кадров (Минздрав) с учетом потребности организаций здравоохранения регионов в медицинских специалистах на дату распределения (в год окончания).</p>
+            <p>Выпускники направляются на работу в соответствии с п. 2.1 заключенного договора о целевой подготовке — в одно из учреждений здравоохранения Республики Беларусь.</p>
+            <p>Для заключения договора на целевую подготовку при личном обращении абитуриент должен иметь при себе документ, удостоверяющий личность гражданина РБ и его копию.</p>
+            <p>В случае если абитуриент является несовершеннолетним, присутствие одного из родителей или его законного представителя с документом, удостоверяющим личность гражданина РБ и копией, является обязательным условием.</p>
+            <p>* Документом удостоверяющим личность является паспорт, идентификационная карты гражданина Республики Беларусь, или вид на жительство в Республике Беларусь, или биометрический вид на жительство в Республике Беларусь иностранного гражданина, или биометрический вид на жительство в Республике Беларусь лица без гражданства (при наличии), в том числе биометрический паспорт гражданина Республики Беларусь. При заключении целевого договора присутствует родитель или законный представитель абитуриента, который будет подавать вместе с абитуриентом документы в приемную комиссию университета.</p>
+            <h2>Информация о заключении договоров на целевую подготовку специалистов со средним специальным медицинским образованием в 2026 году</h2>
+            <p>В 2026 году в Гомельской области будет организовано заключение договоров о целевой подготовке для поступления в УО «Гомельский государственный медицинский колледж», УО «Мозырский государственный медицинский колледж».</p>
+            <p>Кампания по заключению целевых договоров будет организована в соответствии с нормативными документами:</p>
+            <p>— Положением о целевой подготовке специалистов, рабочих, служащих, утвержденным постановлением Совета Министров Республики Беларусь от 31 августа 2022 г. № 572 (далее – Положение о целевой подготовке) (в редакции постановления СМ РБ 16.03.2026 № 123);</p>
+            <p>— постановление Министерства здравоохранения Республики Беларусь (далее – МЗ РБ) от 21.02.2023 № 35 «О вопросах целевой подготовки специалистов с высшим медицинским. фармацевтическим образованием» (далее – постановление МЗ РБ № 35) (в редакции постановления МЗ РБ от 15.04.2026 № 31).</p>
+            <p>Согласно вышеназванным документам, заказчиками кадров в целевых договорах для поступления в медицинские колледжи будут выступать учреждения (организации) здравоохранения Гомельской области.</p>
+            <p>Срок заключения целевых договоров определен с 1 июня 2026 года по крайний день приема документов в медицинские колледжи на условиях целевой подготовки — по 03.08.2026 (9 классов) и 11.08.2026 (11 классов), соответственно.</p>
+            <p>Приемные комиссии ГГМК и МГМК будут принимать документы для поступления по целевым договорам в периоды:</p>
+            <p>абитуриентов после 9 классов общее базовое образование c 18 июля по 3 августа</p>
+            <p>абитуриентов после 11 классов общее среднее образование c 18 июля по 11 августа</p>
+            <p>Для заключения целевого договора абитуриент должен обратиться в отдел кадров любого учреждения здравоохранения Гомельской области (на выбор гражданина). Организация здравоохранения, при имеющейся потребности в кадрах, заключает целевой договор в лице руководителя этой организации. При заключении целевого договора с конкретным учреждением выпускник будет распределен в учреждение, с которым заключен целевой договор. Срок обязательной работы после окончания колледжа на условиях целевой подготовки не менее 3 (трех) лет .</p>
+            <p>При заключении целевого договора стороны вправе определить срок обязательной отработки (при согласии сторон) до 5 лет.</p>
+            <p>При заключении договора на целевую подготовку абитуриент должен иметь при себе паспорт* гражданина РБ и копию. В случае если абитуриент является несовершеннолетним, присутствие одного из родителей или его официального представителя с паспортом, является обязательным условием. Документом, удостоверяющим личность является паспорт, идентификационная карты гражданина Республики Беларусь, или вид на жительство в Республике Беларусь, или биометрический вид на жительство в Республике Беларусь иностранного гражданина, или биометрический вид на жительство в Республике Беларусь лица без гражданства (при наличии), в том числе биометрический паспорт гражданина Республики Беларусь.</p>
+            <p>В 2026 году в медицинские колледжи будет осуществляться набор после 9 и 11 классов, в том числе по целевым договорам. Целевые договоры будут выдаваться абитуриентам которые на дату трудоустройства по полученной квалификации достигнут совершеннолетия (18 лет), т.е. родившиеся не позднее 01.08.2011 года.</p>
+            <p>Координацию по заключению целевых договоров осуществляет отдел кадров главного управления по здравоохранению Гомельского облисполкома (г. Гомель, переулок Спартака 2а, 4 этаж, каб. 406, режим работы с 8.30 до 17.30, обед 13.00-14.00 (т.р. 50 32 66, 50 32 62).</p>
+            <p>По вопросам заключения целевых договоров с государственным учреждением здравоохранения «Гомельская городская клиническая поликлиника №14» обращаться по адресу : г.Гомель, ул. Косарева, 11, 4 этаж, каб. 403, с 8.00 до 16.30, перерыв 13.00-13.20 (тел. 29-31-20). Выходной суббота, воскресенье.</p>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <!-- 10. Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div>
+            <h3 class="site-footer__title">ГУЗ «ГГКП №14»</h3>
+            <p>г. Гомель, ул. Косарева, 11<br />246012</p>
+            <p><a href="tel:+375232329065">+375 (232) 32-90-65</a></p>
+            <p><a href="mailto:ggkp14@ggkp14.by">ggkp14@ggkp14.by</a></p>
+          </div>
+          <div>
+            <h3 class="site-footer__title">Навигация</h3>
+            <ul class="site-footer__list">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="about.html" data-source-path="/o-nas/">О нас</a></li>
+              <li><a href="contacts.html" data-source-path="/contacts/">Контакты</a></li>
+              <li><a href="paid-services.html" data-source-path="/platnye-uslugi-2/">Платные услуги</a></li>
+              <li><a href="news-archive.html" data-source-path="/category/novosti/">Новости</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="site-footer__title">Пациентам</h3>
+            <ul class="site-footer__list">
+              <li><a href="content-page.html">Запись к врачу</a></li>
+              <li>
+                <a href="https://ggkp14.by/contacts/elektronnye-obrashheniya/"
+                  >Электронные обращения</a
+                >
+              </li>
+              <li><a href="https://ggkp14.by/o-nas/rezhim-raboty/">Режим работы</a></li>
+              <li><a href="https://ggkp14.by/o-nas/vakansii/">Вакансии</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p>© ГУЗ «Гомельская городская клиническая поликлиника № 14»</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/accessibility.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

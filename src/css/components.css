@@ -296,6 +296,11 @@
   background-color: transparent;
 }
 
+.main-nav__dropdown-link.is-active {
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
+}
+
 .main-nav__chevron {
   flex-shrink: 0;
   opacity: 0.6;
@@ -326,8 +331,20 @@
   pointer-events: none;
   transition:
     opacity var(--transition-fast),
-    visibility var(--transition-fast);
+    visibility 0s linear var(--transition-fast);
   z-index: 50;
+}
+
+/* The panel is offset by 4px. This strip stays hittable after the trigger
+   loses hover, so the pointer can cross that offset without the menu closing. */
+.main-nav__dropdown::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 4px;
+  pointer-events: auto;
 }
 
 .main-nav__item--dropdown:hover .main-nav__dropdown,
@@ -335,6 +352,9 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  transition:
+    opacity var(--transition-fast),
+    visibility 0s linear 0s;
 }
 
 .main-nav__dropdown-link {
@@ -629,6 +649,11 @@
 .mobile-drawer__link:hover {
   background-color: var(--color-accent-soft);
   color: var(--color-primary);
+}
+
+.mobile-drawer__link.is-active {
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
 }
 
 .mobile-drawer__group-label {

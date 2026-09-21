@@ -226,9 +226,108 @@
   height: 1.125rem;
   flex-shrink: 0;
   background-color: var(--color-primary);
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z'/%3E%3Cpath d='M14 2v6h6M16 13H8M16 17H8M10 9H8'/%3E%3C/svg%3E");
+  mask-image: url("../assets/icons/icon-document.svg");
   mask-size: contain;
   mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+/* Compact important-information rows. Icons are decorative masks. */
+.info-facts {
+  list-style: none;
+  margin: var(--space-6) 0;
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.info-line {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-3);
+  min-width: 0;
+}
+
+.info-facts > .info-line,
+.info-line:last-child {
+  margin-bottom: 0;
+}
+
+.info-line__icon {
+  flex: 0 0 1.125rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 0.2em;
+  color: var(--color-primary);
+  background-color: currentColor;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.info-line__icon--phone {
+  mask-image: url("../assets/icons/icon-phone.svg");
+}
+
+.info-line__icon--pin {
+  mask-image: url("../assets/icons/icon-pin.svg");
+}
+
+.info-line__icon--clock {
+  mask-image: url("../assets/icons/icon-clock.svg");
+}
+
+.info-line__icon--notice {
+  mask-image: url("../assets/icons/icon-notice.svg");
+}
+
+.info-line__text {
+  min-width: 0;
+  flex: 1;
+}
+
+.info-line a[href^="tel:"] {
+  white-space: nowrap;
+}
+
+.info-line__label {
+  font-weight: var(--font-semibold);
+}
+
+.info-facts .info-line__label {
+  display: block;
+  margin-bottom: 0.125rem;
+}
+
+.prose-notice--cue {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.department-detail__phone-list .info-line {
+  margin-bottom: var(--space-2);
+}
+
+.prose .info-facts,
+.prose .department-detail__phone-list {
+  margin-bottom: 0;
+  padding-left: var(--space-5);
+  list-style: none;
+}
+
+.prose .department-detail__phone-list {
+  padding-left: 0;
+}
+
+.prose .info-facts {
+  margin: var(--space-6) 0;
+  padding: var(--space-4) var(--space-5);
 }
 
 .prose-subheading-accent {

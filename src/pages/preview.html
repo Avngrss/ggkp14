@@ -73,10 +73,29 @@
         border-radius: 8px;
       }
 
-      .page-card h2 {
+      .group {
+        margin: 0 0 0.5rem;
+      }
+
+      .group-title {
+        margin: 1.5rem 0 0.75rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      .group:first-of-type .group-title {
+        margin-top: 0;
+      }
+
+      .page-card h3 {
         margin: 0 0 0.25rem;
         font-size: 1.0625rem;
         font-weight: 600;
+      }
+
+      .page-card--dev {
+        border-style: dashed;
       }
 
       .page-card .filename {
@@ -128,120 +147,162 @@
         </p>
       </div>
 
-      <ul>
-        <li class="page-card">
-          <h2>Главная страница</h2>
-          <p class="filename">index.html</p>
-          <p class="desc">
-            Одобренная главная страница с hero, новостями, услугами и
-            подразделениями.
-          </p>
-          <a href="index.html">Открыть страницу</a>
-        </li>
+      <section class="group">
+        <h2 class="group-title">Основные страницы и служебные</h2>
+        <ul>
+          <li class="page-card">
+            <h3>Главная страница</h3>
+            <p class="filename">index.html</p>
+            <p class="desc">
+              Рабочая главная страница с hero, новостями, услугами и
+              подразделениями.
+            </p>
+            <a href="index.html">Открыть страницу</a>
+          </li>
+          <li class="page-card">
+            <h3>Универсальная контентная страница</h3>
+            <p class="filename">content-page.html</p>
+            <p class="desc">
+              Демонстрация внутреннего шаблона: «Запись к врачу».
+            </p>
+            <a href="content-page.html">Открыть страницу</a>
+          </li>
+          <li class="page-card">
+            <h3>Контакты</h3>
+            <p class="filename">contacts.html</p>
+            <p class="desc">
+              Телефоны, адрес, ссылки на подразделы и карта.
+            </p>
+            <a href="contacts.html">Открыть страницу</a>
+          </li>
+          <li class="page-card">
+            <h3>Страница с таблицами</h3>
+            <p class="filename">table-page.html</p>
+            <p class="desc">
+              Табличный шаблон на примере графика прямых телефонных линий.
+            </p>
+            <a href="table-page.html">Открыть страницу</a>
+          </li>
+          <li class="page-card">
+            <h3>Результаты поиска</h3>
+            <p class="filename">search-results.html</p>
+            <p class="desc">
+              Статический пример страницы результатов поиска.
+            </p>
+            <a href="search-results.html">Открыть страницу</a>
+          </li>
+          <li class="page-card page-card--dev">
+            <h3>Навигатор превью</h3>
+            <p class="filename">preview.html</p>
+            <p class="desc">
+              Только для локальной разработки. Не публикуется на сайте.
+            </p>
+            <a href="preview.html">Открыть страницу</a>
+          </li>
+        </ul>
+      </section>
 
-        <li class="page-card">
-          <h2>Универсальная контентная страница</h2>
-          <p class="filename">content-page.html</p>
-          <p class="desc">
-            Внутренний шаблон с breadcrumb, H1 и prose-контентом (пример:
-            «Запись к врачу»).
-          </p>
-          <a href="content-page.html">Открыть страницу</a>
-        </li>
+      <section class="group">
+        <h2 class="group-title">Разделы главного меню</h2>
+        <ul>
+          <li class="page-card">
+            <h3>Платные услуги</h3>
+            <p class="filename">paid-services.html</p>
+            <p class="desc">
+              Условие оплаты через E-POS и ссылки на прейскуранты.
+            </p>
+            <a href="paid-services.html">Открыть страницу</a>
+          </li>
+          <li class="page-card">
+            <h3>Информация</h3>
+            <p class="filename">information.html</p>
+            <p class="desc">Раздел со списком информационных материалов.</p>
+            <a href="information.html">Открыть страницу</a>
+          </li>
+          <li class="page-card">
+            <h3>О нас</h3>
+            <p class="filename">about.html</p>
+            <p class="desc">Раздел со ссылками на материалы о поликлинике.</p>
+            <a href="about.html">Открыть страницу</a>
+          </li>
+          <li class="page-card">
+            <h3>Абитуриент 2026</h3>
+            <p class="filename">applicant-2023.html</p>
+            <p class="desc">Информация для абитуриентов.</p>
+            <a href="applicant-2023.html">Открыть страницу</a>
+          </li>
+        </ul>
+      </section>
 
-        <li class="page-card">
-          <h2>Контакты</h2>
-          <p class="filename">contacts.html</p>
-          <p class="desc">
-            Страница контактов с телефонами, адресом, ссылками на подразделы
-            и картой.
-          </p>
-          <a href="contacts.html">Открыть страницу</a>
-        </li>
+      <section class="group">
+        <h2 class="group-title">Подразделения</h2>
+        <ul>
+          <li class="page-card">
+            <h3>Структурные подразделения</h3>
+            <p class="filename">departments-index.html</p>
+            <p class="desc">Индекс подразделений со ссылками на карточки.</p>
+            <a href="departments-index.html">Открыть страницу</a>
+          </li>
+          <li class="page-card">
+            <h3>Женская консультация</h3>
+            <p class="filename">department.html</p>
+            <p class="desc">Страница подразделения.</p>
+            <a href="department.html">Открыть страницу</a>
+          </li>
+          <li class="page-card">
+            <h3>Урицкая АОП</h3>
+            <p class="filename">department-aop.html</p>
+            <p class="desc">
+              Второй вариант страницы подразделения: адрес, режим и телефоны.
+            </p>
+            <a href="department-aop.html">Открыть страницу</a>
+          </li>
+        </ul>
+      </section>
 
-        <li class="page-card">
-          <h2>Страница с таблицами</h2>
-          <p class="filename">table-page.html</p>
-          <p class="desc">
-            Шаблон для табличных внутренних страниц (пример: график прямых
-            телефонных линий).
-          </p>
-          <a href="table-page.html">Открыть страницу</a>
-        </li>
+      <section class="group">
+        <h2 class="group-title">Новости</h2>
+        <ul>
+          <li class="page-card">
+            <h3>Архив новостей</h3>
+            <p class="filename">news-archive.html</p>
+            <p class="desc">Список новостей с пагинацией.</p>
+            <a href="news-archive.html">Открыть страницу</a>
+          </li>
+          <li class="page-card">
+            <h3>Страница новости</h3>
+            <p class="filename">news-single.html</p>
+            <p class="desc">Обычная публикация с изображением.</p>
+            <a href="news-single.html">Открыть страницу</a>
+          </li>
+          <li class="page-card">
+            <h3>Страница новости с видео</h3>
+            <p class="filename">news-single-video.html</p>
+            <p class="desc">Вариант публикации со встроенным видео.</p>
+            <a href="news-single-video.html">Открыть страницу</a>
+          </li>
+          <li class="page-card">
+            <h3>Страница новости без изображения</h3>
+            <p class="filename">news-single-no-media.html</p>
+            <p class="desc">Вариант публикации без главного изображения.</p>
+            <a href="news-single-no-media.html">Открыть страницу</a>
+          </li>
+        </ul>
+      </section>
 
-        <li class="page-card">
-          <h2>Структурные подразделения</h2>
-          <p class="filename">departments-index.html</p>
-          <p class="desc">
-            Индекс структурных подразделений: 18 карточек-ссылок с реальными
-            названиями и адресами страниц источника.
-          </p>
-          <a href="departments-index.html">Открыть страницу</a>
-        </li>
-
-        <li class="page-card">
-          <h2>Страница подразделения</h2>
-          <p class="filename">department.html</p>
-          <p class="desc">
-            Пример страницы структурного подразделения на основе женской
-            консультации.
-          </p>
-          <a href="department.html">Открыть страницу</a>
-        </li>
-
-        <li class="page-card">
-          <h2>Страница подразделения: Урицкая АОП</h2>
-          <p class="filename">department-aop.html</p>
-          <p class="desc">
-            Второй контентный вариант универсального шаблона подразделения.
-          </p>
-          <a href="department-aop.html">Открыть страницу</a>
-        </li>
-
-        <li class="page-card">
-          <h2>Архив новостей</h2>
-          <p class="filename">news-archive.html</p>
-          <p class="desc">Список новостей с пагинацией.</p>
-          <a href="news-archive.html">Открыть страницу</a>
-        </li>
-
-        <li class="page-card">
-          <h2>Страница новости</h2>
-          <p class="filename">news-single.html</p>
-          <p class="desc">
-            Пример отдельной публикации для будущего WordPress-шаблона.
-          </p>
-          <a href="news-single.html">Открыть страницу</a>
-        </li>
-
-        <li class="page-card">
-          <h2>Страница новости с видео</h2>
-          <p class="filename">news-single-video.html</p>
-          <p class="desc">
-            Контентный вариант единого шаблона новости с видео или встроенным
-            медиа.
-          </p>
-          <a href="news-single-video.html">Открыть страницу</a>
-        </li>
-
-        <li class="page-card">
-          <h2>Страница новости без изображения</h2>
-          <p class="filename">news-single-no-media.html</p>
-          <p class="desc">
-            Контентный вариант единого шаблона новости без featured image.
-          </p>
-          <a href="news-single-no-media.html">Открыть страницу</a>
-        </li>
-
-        <li class="page-card">
-          <h2>Результаты поиска</h2>
-          <p class="filename">search-results.html</p>
-          <p class="desc">
-            Статический пример серверных результатов поиска WordPress
-          </p>
-          <a href="search-results.html">Открыть страницу</a>
-        </li>
-      </ul>
+      <section class="group">
+        <h2 class="group-title">Статьи раздела «Информация»</h2>
+        <ul>
+          <li class="page-card">
+            <h3>Диспансерные осмотры взрослого населения</h3>
+            <p class="filename">adult-dispensary-examinations.html</p>
+            <p class="desc">
+              Статья: кабинет, время выдачи обследований и контактный телефон.
+            </p>
+            <a href="adult-dispensary-examinations.html">Открыть страницу</a>
+          </li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>

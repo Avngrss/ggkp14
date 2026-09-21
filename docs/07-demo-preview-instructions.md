@@ -19,6 +19,8 @@
 
 > При открытии файла напрямую (`file://`) стили обычно загружаются, но локальный сервер надёжнее для проверки путей и ссылок между страницами.
 
+Актуальный состав навигатора, включая страницы этапов 6C и 6D, описан в `docs/27-local-static-preview.md`.
+
 **Внутренние страницы:**
 
 - Stage 5A: `src/pages/content-page.html`
@@ -31,6 +33,34 @@
 - Stage 5H: `src/pages/news-single.html`
 - Stage 5H.1: `src/pages/news-single-video.html`, `src/pages/news-single-no-media.html`
 - Stage 5I: `src/pages/search-results.html`
+
+---
+
+## Stage 6A — full static-site regression audit
+
+Перед планированием WordPress проверьте полный статический baseline:
+
+1. Откройте `preview.html` и пройдите все 12 production-шаблонов.
+2. На GitHub Pages: [https://avngrss.github.io/ggkp14/](https://avngrss.github.io/ggkp14/) — «Прямые линии», контакты, подразделения, архив новостей, три локальные новости, отправка поиска.
+3. Убедитесь, что нет переходов на `avngrss.github.io/o-nas/...` без `/ggkp14/`.
+4. Поиск ведёт на `search-results.html` (демо, без серверного запроса).
+5. Таблицы прокручиваются только внутри wrapper; карта контактов с `title` у iframe.
+
+Подробности: `docs/37-stage-6a-static-site-regression-audit.md`, ограничения: `docs/38-static-site-known-limitations.md`.
+
+---
+
+## Stage 6A.1 — Cyrillic encoding repair
+
+После коммита `681e324` на части шаблонов (подразделения и новости) русский текст в **исходниках** был записан в неверной кодировке. В рабочей копии текст восстановлен из Git `382c3aa` с повторным применением локальных ссылок (UTF-8).
+
+Проверка:
+
+1. Локально: `preview-local.cmd` → архив новостей, индекс подразделений, три варианта новости — кириллица в заголовках, хлебных крошках и карточках.
+2. Убедитесь, что в исходниках нет символов `` `r`n `` в атрибутах поиска (исправлено в 6A).
+3. После push на GitHub Pages обновите кэш браузера и повторите те же URL на [https://avngrss.github.io/ggkp14/](https://avngrss.github.io/ggkp14/).
+
+Подробности: `docs/40-stage-6a1-encoding-fix.md`, скриншоты: `docs/audit/stage-6a1/`.
 
 ---
 

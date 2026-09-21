@@ -76,6 +76,44 @@ powershell -ExecutionPolicy Bypass -File .\tools\preview-local.ps1 -Port 8766
 - **не** подключена к production-навигации;
 - не публикуется на GitHub Pages (исключается при сборке деплоя).
 
+Список страниц записан вручную в `preview.html`. Скрипты запуска его не собирают и не фильтруют.
+
+Страницы этапов 6C и 6D не появлялись в навигаторе, потому что в этот список их не добавляли. Сервер отдаёт всю папку `src/`; ограничение было только в самом навигаторе.
+
+Группы навигатора:
+
+1. Основные страницы и служебные
+2. Разделы главного меню
+3. Подразделения
+4. Новости
+5. Статьи раздела «Информация»
+
+17 рабочих страниц, каждая один раз:
+
+- `index.html`
+- `content-page.html`
+- `contacts.html`
+- `table-page.html`
+- `search-results.html`
+- `paid-services.html`
+- `information.html`
+- `about.html`
+- `applicant-2023.html`
+- `departments-index.html`
+- `department.html`
+- `department-aop.html`
+- `news-archive.html`
+- `news-single.html`
+- `news-single-video.html`
+- `news-single-no-media.html`
+- `adult-dispensary-examinations.html`
+
+`preview.html` указан отдельно как страница только для разработки.
+
+Скрипты запуска не менялись. `preview-local.cmd` вызывает `tools/preview-local.ps1`, сервер открывает `http://localhost:8765/pages/preview.html`. Файлов `Start-Preview.ps1` и `preview-local.sh` в репозитории нет.
+
+`preview.html` по-прежнему удаляется в `.github/workflows/pages.yml` и в `tools/simulate-pages-dist.py`. В публичный список страниц он не входит.
+
 ---
 
 ## Пути и совместимость
