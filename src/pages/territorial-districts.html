@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Территориальные участки — ГУЗ «Гомельская городская клиническая поликлиника №14»"
+    />
+    <title>Территориальные участки — ГУЗ «Гомельская городская клиническая поликлиника №14»</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/internal-pages.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Перейти к содержимому</a>
+
+    <!-- 1. Topbar -->
+    <div class="topbar" role="region" aria-label="Служебная панель">
+      <div class="container topbar__inner">
+        <nav class="topbar__nav" aria-label="Служебная навигация">
+          <a href="working-hours.html" data-source-path="/o-nas/rezhim-raboty/" class="topbar__link">Режим работы</a>
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="hot-line.html" data-source-path="/contacts/goryachaya-liniya/" class="topbar__link"
+            >Горячая линия</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="departments-index.html" data-source-path="/o-nas/strukturnye-podrazdeleniya/" class="topbar__link"
+            >Структурные подразделения</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="territorial-districts.html" data-source-path="/o-nas/territorialnye-uchastki/" class="topbar__link" aria-current="page"
+            >Территориальные участки</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="vacancies.html" data-source-path="/o-nas/vakansii/" class="topbar__link">Вакансии</a>
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="contacts.html" data-source-path="/contacts/" class="topbar__link">Контакты</a>
+        </nav>
+        <div class="topbar__actions">
+          <nav class="lang-switcher" aria-label="Выбор языка">
+            <a
+              href="#"
+              class="lang-switcher__link is-active"
+              hreflang="ru"
+              lang="ru"
+              aria-current="true"
+              >RU</a
+            >
+            <a href="#" class="lang-switcher__link" hreflang="be" lang="be"
+              >BY</a
+            >
+            <a href="#" class="lang-switcher__link" hreflang="en" lang="en"
+              >EN</a
+            >
+          </nav>
+          <a href="mailto:ggkp14@ggkp14.by" class="topbar__email">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <path d="M22 6l-10 7L2 6" />
+            </svg>
+            ggkp14@ggkp14.by
+          </a>
+          <button
+            type="button"
+            class="topbar__a11y"
+            data-a11y-toggle
+            aria-pressed="false"
+          >
+            Версия для слабовидящих
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Header -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="index.html" class="site-header__logo">
+          <span class="site-header__logo-icon" aria-hidden="true">14</span>
+          <span class="site-header__logo-text">
+            <span class="site-header__logo-title"
+              >ГУЗ «Гомельская городская клиническая поликлиника №14»</span
+            >
+            <span class="site-header__logo-subtitle"
+              >г. Гомель, ул. Косарева, 11</span
+            >
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Главное меню">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html" class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a
+                href="table-page.html" data-source-path="/o-nas/grafik-pryamyh-telefonnyh-linij/"
+                class="main-nav__link"
+                >Прямые линии</a
+              >
+            </li>
+            <li class="main-nav__item">
+              <a href="paid-services.html" data-source-path="/platnye-uslugi-2/" class="main-nav__link"
+                >Платные услуги</a
+              >
+            </li>
+            <li class="main-nav__item main-nav__item--dropdown">
+              <a
+                href="information.html" data-source-path="/informaciya/"
+                class="main-nav__link main-nav__link--dropdown"
+              >
+                Информация
+                <svg
+                  class="main-nav__chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </a>
+              <ul class="main-nav__dropdown">
+                <li>
+                  <a href="information.html" data-source-path="/informaciya/" class="main-nav__dropdown-link"
+                    >Общая информация</a
+                  >
+                </li>
+                <li>
+                  <a href="about.html" data-source-path="/o-nas/" class="main-nav__dropdown-link">О нас</a>
+                </li>
+                <li>
+                  <a
+                    href="administration.html" data-source-path="/o-nas/administraciya/"
+                    class="main-nav__dropdown-link"
+                    >Администрация</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="working-hours.html" data-source-path="/o-nas/rezhim-raboty/"
+                    class="main-nav__dropdown-link"
+                    >Режим работы</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="main-nav__item main-nav__item--dropdown">
+              <a
+                href="contacts.html" data-source-path="/contacts/"
+                class="main-nav__link main-nav__link--dropdown"
+              >
+                Контакты
+                <svg
+                  class="main-nav__chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </a>
+              <ul class="main-nav__dropdown">
+                <li>
+                  <a href="contacts.html" data-source-path="/contacts/" class="main-nav__dropdown-link"
+                    >Контактная информация</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="hot-line.html" data-source-path="/contacts/goryachaya-liniya/"
+                    class="main-nav__dropdown-link"
+                    >Горячая линия</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="electronic-appeals.html" data-source-path="/contacts/elektronnye-obrashheniya/"
+                    class="main-nav__dropdown-link"
+                    >Электронные обращения</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="email-addresses.html" data-source-path="/adresa-elektronnoj-pochty/"
+                    class="main-nav__dropdown-link"
+                    >Адреса e-mail</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="main-nav__item">
+              <a href="applicant-2023.html" data-source-path="/abiturient-2023/" class="main-nav__link"
+                >Абитуриент 2026</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <div class="header-search">
+            <button
+              type="button"
+              id="header-search-toggle"
+              class="header-search__toggle"
+              aria-label="Открыть поиск по сайту"
+              aria-expanded="false"
+              aria-controls="header-search-panel"
+            >
+              <svg class="header-search__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+          </div>
+          <a href="content-page.html" class="btn btn--primary site-header__cta"
+            >Запись к врачу</a
+          >
+          <button
+            type="button"
+            id="menu-toggle"
+            class="menu-toggle"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+          >
+            <svg
+              class="menu-toggle__icon menu-toggle__open"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+            <svg
+              class="menu-toggle__icon menu-toggle__close"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="header-search-panel"
+        class="header-search-panel"
+        hidden
+        aria-hidden="true"
+      >
+        <!-- WordPress: replace with get_search_form() -->
+        <div class="container header-search-panel__inner">
+          <form
+            class="search-form header-search-panel__form"
+            role="search"
+            action="search-results.html"
+          >
+            <label for="header-search-input" class="header-search-panel__label"
+              >Поиск по сайту</label
+            >
+            <div class="header-search-panel__fields search-form__fields">
+              <input
+                type="search"
+                id="header-search-input"
+                name="s"
+                class="form-input search-form__input"
+                placeholder="Введите запрос"
+                autocomplete="off"
+              />
+              <button
+                type="submit"
+                class="btn btn--primary search-form__btn search-form__submit-text"
+              >
+                Найти
+              </button>
+              <button
+                type="submit"
+                class="search-form__submit-icon"
+                aria-label="Выполнить поиск"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile drawer -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer__overlay" aria-hidden="true"></div>
+      <div
+        class="mobile-drawer__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Мобильное меню"
+      >
+        <button
+          type="button"
+          id="menu-close"
+          class="mobile-drawer__close"
+          aria-label="Закрыть меню"
+        >
+          ×
+        </button>
+        <nav class="mobile-drawer__nav" aria-label="Мобильная навигация">
+          <a href="index.html" class="mobile-drawer__link">Главная</a>
+          <a
+            href="table-page.html" data-source-path="/o-nas/grafik-pryamyh-telefonnyh-linij/"
+            class="mobile-drawer__link"
+            >Прямые линии</a
+          >
+          <a href="paid-services.html" data-source-path="/platnye-uslugi-2/" class="mobile-drawer__link"
+            >Платные услуги</a
+          >
+          <span class="mobile-drawer__group-label">Информация</span>
+          <a
+            href="information.html" data-source-path="/informaciya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Общая информация</a
+          >
+          <a href="about.html" data-source-path="/o-nas/" class="mobile-drawer__link mobile-drawer__link--sub"
+            >О нас</a
+          >
+          <a
+            href="administration.html" data-source-path="/o-nas/administraciya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Администрация</a
+          >
+          <span class="mobile-drawer__group-label">Контакты</span>
+          <a
+            href="contacts.html" data-source-path="/contacts/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Контактная информация</a
+          >
+          <a
+            href="hot-line.html" data-source-path="/contacts/goryachaya-liniya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Горячая линия</a
+          >
+          <a
+            href="electronic-appeals.html" data-source-path="/contacts/elektronnye-obrashheniya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Электронные обращения</a
+          >
+          <a href="applicant-2023.html" data-source-path="/abiturient-2023/" class="mobile-drawer__link"
+            >Абитуриент 2026</a
+          >
+          <span class="mobile-drawer__group-label">Служебное</span>
+          <a
+            href="working-hours.html" data-source-path="/o-nas/rezhim-raboty/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Режим работы</a
+          >
+          <a
+            href="vacancies.html" data-source-path="/o-nas/vakansii/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Вакансии</a
+          >
+          <a
+            href="mailto:ggkp14@ggkp14.by"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >ggkp14@ggkp14.by</a
+          >
+          <button
+            type="button"
+            class="mobile-drawer__link mobile-drawer__link--sub mobile-drawer__a11y"
+            data-a11y-toggle
+            aria-pressed="false"
+          >
+            Версия для слабовидящих
+          </button>
+        </nav>
+        <nav
+          class="lang-switcher lang-switcher--drawer"
+          aria-label="Выбор языка"
+        >
+          <a
+            href="#"
+            class="lang-switcher__link is-active"
+            hreflang="ru"
+            lang="ru"
+            aria-current="true"
+            >RU</a
+          >
+          <a href="#" class="lang-switcher__link" hreflang="be" lang="be"
+            >BY</a
+          >
+          <a href="#" class="lang-switcher__link" hreflang="en" lang="en"
+            >EN</a
+          >
+        </nav>
+        <a href="content-page.html" class="btn btn--primary mobile-drawer__cta"
+          >Запись к врачу</a
+        >
+        <form class="search-form mobile-drawer__search" role="search" action="search-results.html">
+          <label for="mobile-search-input" class="visually-hidden"
+            >Поиск по сайту</label
+          >
+          <div class="search-form__fields">
+            <input
+              type="search"
+              id="mobile-search-input"
+              name="s"
+              class="form-input search-form__input"
+              placeholder="Введите запрос"
+            />
+            <button
+              type="submit"
+              class="btn btn--primary search-form__btn search-form__submit-text"
+            >
+              Найти
+            </button>
+            <button
+              type="submit"
+              class="search-form__submit-icon"
+              aria-label="Выполнить поиск"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <main id="main">
+      <div class="internal-page">
+        <div class="container internal-page__container">
+          <nav class="breadcrumb" aria-label="Хлебные крошки">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item">
+                <a href="index.html">Главная</a>
+                <span class="breadcrumb__sep" aria-hidden="true">&#187;</span>
+              </li>
+              <li class="breadcrumb__item">
+                <a href="about.html" data-source-path="/o-nas/">О нас</a>
+                <span class="breadcrumb__sep" aria-hidden="true">&#187;</span>
+              </li>
+              <li class="breadcrumb__item" aria-current="page">
+                <span>Территориальные участки</span>
+              </li>
+            </ol>
+          </nav>
+
+          <header class="page-header">
+            <h1 id="page-title" class="page-header__title">Территориальные участки</h1>
+          </header>
+
+          <article class="table-content">
+            <h2>Список территориальных участков</h2>
+            <h2>ГУЗ «Гомельская городская клиническая поликлиника № 14»</h2>
+            <section class="table-section" aria-labelledby="district-roster">
+              <h3 id="district-roster" class="visually-hidden">Состав участков</h3>
+              <p class="table-scroll-hint" data-table-scroll-hint hidden>
+                Прокрутите таблицу вправо, чтобы увидеть все данные
+              </p>
+              <div
+                class="table-scroll"
+                data-table-scroll
+                tabindex="0"
+                role="region"
+                aria-label="Список территориальных участков"
+              >
+                <table class="data-table data-table--districts">
+                  <caption class="visually-hidden">
+                    Список территориальных участков ГУЗ «Гомельская городская клиническая поликлиника № 14»
+                  </caption>
+                  <colgroup>
+                    <col class="data-table__col data-table__col--id" />
+                    <col class="data-table__col data-table__col--person" />
+                    <col class="data-table__col data-table__col--area" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">№ участка</th>
+                      <th scope="col">Ф.И.О. (врач, медсестра, помощник врача)</th>
+                      <th scope="col">Обслуживаемая территория</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="4">1</th>
+                    <td>Врач общей практики:<br />Самусенко В.В.</td>
+                    <td rowspan="4">ул. Сосновая д. 8 , 12 , 14<br />пр. Речицкий д. 33,<br />ул. Сосновая д. 2, 2-1, 2-2,<br />ул. Сосновая д. 3 , 4 , 6, 8 , нечётные с 7 по 27</td>
+                  </tr>
+                  <tr>
+                    <td>Врач общей практики:<br />Сычева Т.А.</td>
+                  </tr>
+                  <tr>
+                    <td>Врач общей практики:<br />Ермоленко Ю.В.</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики:<br />Сопот Т.Г.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">2</th>
+                    <td>Врач общей практики:<br />Сычева Т.А.</td>
+                    <td rowspan="2">пр. Речицкий д. 35 , 37 , 39 , 41 , 45</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики:<br />Бисюк К.О.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">3</th>
+                    <td>Врач общей практики:<br />Ермоленко Ю.В.</td>
+                    <td rowspan="2">пр. Речицкий д. 43 , 51 , 53 , 57 , 57а , 59</td>
+                  </tr>
+                  <tr>
+                    <td>Помощник врача по АПП<br />Поддубская В.В.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">4</th>
+                    <td>Врач общей практики:<br />Трибилустова Г.Е.</td>
+                    <td rowspan="2">ул. Междугородняя д. 2, 4, 6, 8, 12, 16, 18,<br />пр. Речицкий д. 99, 101.<br />ул. Лазурная д. 4</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики:<br />Назаренко А.В.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="3">5</th>
+                    <td>Врач общей практики:<br />Голубцова Л.В.</td>
+                    <td rowspan="3">пр. Речицкий д. 63, 63/1, 65, 67, 71<br />ул. Междугородняя д. 10, 10а</td>
+                  </tr>
+                  <tr>
+                    <td>Помощник врача по АПП<br />Черняк М.О.</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики:<br />Чиртик Ю.В.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">6</th>
+                    <td>Врач общей практики:<br />Ковальчук И.А.</td>
+                    <td rowspan="2">ул. Косарева д. 17, 19, 21<br />пр. Речицкий д. 115, 117, 119, 121, 123, 125, 125/1, 149</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики:<br />Гавриченко А.С.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">7</th>
+                    <td>Врач общей практики:<br />Евтушенко Т.Л.</td>
+                    <td rowspan="2">пр. Речицкий д. 73-1, 73-2, 75, 77, 79, 83, 103-1, 103-2</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики:<br />Головко В.А.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">8</th>
+                    <td>Врач общей практики:<br />Шумилова И.Ю.</td>
+                    <td rowspan="2">пр. Речицкий д. 85, 87-1, 87-2, 89, 91, 93, 95<br />ул. Борисенко д. 12, 13, 20</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики:<br />Тиде Г.М.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">9</th>
+                    <td>Врач общей практики:<br />Короткая С.В.</td>
+                    <td rowspan="2">ул. Лазурная д. 12, 14<br />ул. Косарева д. 3, 5, 13</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики:<br />Сапроненко Ю.Я.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">19</th>
+                    <td>Врач общей практики:<br />Самусенко В.В.</td>
+                    <td rowspan="2">ул. проспект Октября: нечет. с № 97 — № 363<br />ул. Майская: четн. с № 2 — № 18; нечет. с №1- № 17<br />ул. Тенистая: нечет. № 1 — № 89; четн. № 2 — № 36<br />ул. Давыдовская д. 1, 3, 5, 30, 32, 34, 36, 38, 40, 42, 46<br />ул. Медицинская д. 1<br />ул. 70 лет БССР: с № 2 — № 20<br />ул. Ромашковая: четн. с № 2 — № 4; нечет. с № 1 — № 35<br />ул. Сельская: нечет. с № 5 — № 57; четн. с № 8 — № 42<br />ул. Камышовая: четн. с № 2 — № 26; нечетн. с № 1 -№ 11<br />ул. Лазовская: нечет с № 1 — № 27, четн. с № 2 — № 18<br />Новая Мильча, ул. Первомайская с № 1 — № 13;<br />Заводская 1-ая, Заводская 2-ая,<br />д. Уза, д. Осовцы</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики:<br />Сопот Т.Г.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">23</th>
+                    <td>Врач общей практики (заведующий):<br />Грицева О.В.</td>
+                    <td rowspan="2">ул. Объездная д. 4-1, 4-2,<br />ул. Лазурная д. 26<br />пр. Речицкий д. 129, 131, 135, 143, 145,151, 153, 155, 157, 159</td>
+                  </tr>
+                  <tr>
+                    <td>Помощник врача по амбулаторно-поликлинической практике:<br />Сеноженская К.А.</td>
+                  </tr>
+                  <tr>
+                    <th scope="colgroup" colspan="3">ООВП №2</th>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="3">10</th>
+                    <td>Врач общей практики<br />Полякова А.Г.</td>
+                    <td rowspan="3">ул. Давыдовская д. 2, 4, 6<br />ул. МЖК Солнечный, корпус 1, 2, 3, 4, 5<br />пр. Речицкий д. 144, 146, 148, 150, 152</td>
+                  </tr>
+                  <tr>
+                    <td>Помощник врача общей практики<br />Линник М.В.</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики<br />Романова А.В.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">11</th>
+                    <td>Врач общей практики:<br />Быстренко В.Э.</td>
+                    <td rowspan="2">ул.Косарева: 6в<br />пр.Речицкий:86,88,90,92,94,96,<br />98,102,104,106,108,110,112,114,118,120,122,124,126,128,130,132,132а,142</td>
+                  </tr>
+                  <tr>
+                    <td>Помощник врача по АПП<br />Шидловская В.И.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="3">12</th>
+                    <td>Врач общей практики<br />Быстренко В.Э.</td>
+                    <td rowspan="3">ул. 70 лет БССР:1,11,13,15,17,23,25 ул.Косарева: 6,6а,6б</td>
+                  </tr>
+                  <tr>
+                    <td>Помощник врача по амбулаторно-поликлинической практике<br />Трашкова А.Л.</td>
+                  </tr>
+                  <tr>
+                    <td>Медицинская сестра общей практики<br />Шевцова Е.С.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">14</th>
+                    <td>Врач общей практики<br />Иванова Е.В.</td>
+                    <td rowspan="2">Косарева 37,39,41,43,45,47<br />пр. Речицкий 72,74,76</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики<br />Грабченкова Е.В.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="4">15</th>
+                    <td>Врач общей практики<br />Адаськов С.О.</td>
+                    <td rowspan="4">пр. Речицкий 70,78<br />пр. Речицкий 56, 62, 62 к.2<br />пр. Речицкий 60,64</td>
+                  </tr>
+                  <tr>
+                    <td>Врач общей практики<br />Иванова Е.В.</td>
+                  </tr>
+                  <tr>
+                    <td>Врач общей практики<br />Быстренко В.Э.</td>
+                  </tr>
+                  <tr>
+                    <td>Медицинский брат общей практики<br />Мартиросян А.А.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">16</th>
+                    <td>Врач общей практики<br />Глумова С.А.</td>
+                    <td rowspan="2">пр. Речицкий 42,44,46,48,52,58<br />Студенческий проезд: 1,3,3а,5,7,9,11</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики<br />Точиленко Е.Л.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">17</th>
+                    <td>Врач общей практики<br />Довгулёва О.А.</td>
+                    <td rowspan="2">Студенческий проезд<br />5а,13,15,15а,19.21,23<br />пр. Октября 52б,60,58,60,62<br />проспект Речицкий 54</td>
+                  </tr>
+                  <tr>
+                    <td>Помощник врача по АПП</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">18</th>
+                    <td>Врач общей практики<br />Адаськов С.О.</td>
+                    <td rowspan="2">ул. Косарева д. 49 , 51<br />ул. проспект Октября д. 64, 68, 74 , 76 , 78 , 80 , 82</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики<br />Бычкова С.И.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">20</th>
+                    <td>Врач общей практики (заведующий)<br />Проказов В.И.</td>
+                    <td rowspan="2">ул. Давыдовская д. 16 , 18 , 20 , 22 , 24 , 26<br />ул. 70 лет БССР д. 40 , 42 , 44 , 46<br />ул. МЖК Солнечный, корпус 5<br />ул. Медицинская д. 5</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики<br />Чернякова А.А.<br />Помощник врача по АПП<br />Савичев И.В.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="data-table__id" rowspan="2">21</th>
+                    <td>Врач общей практики (заведующий)<br />Проказов В.И.<br />Врач общей практики<br />Иванова Е.В.<br />Врач общей практики<br />Адаськов С.О.<br />Врач общей практики<br />Быстренко В.Э.</td>
+                    <td rowspan="2">м/н Энергетиков<br />9,10,11,12,13,14,15,16,17,18,18a,27,28,29,30,31,32,33,35<br />м/н Восточный<br />1,2,3,4,5,6,8,9,10,11,12,13,14,15,16,17,18,19,20,21,23,25,26,27,28,29,30,31,32,33,34,35,35a,36,36a,37,<br />38,39,40,41,95,96,97,98,99,100,101,102,103/1.</td>
+                  </tr>
+                  <tr>
+                    <td>Медсестра общей практики<br />Пашкевич А.С.</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </article>
+        </div>
+      </div>
+    </main>
+
+
+
+    <!-- 10. Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div>
+            <h3 class="site-footer__title">ГУЗ «ГГКП №14»</h3>
+            <p>г. Гомель, ул. Косарева, 11<br />246012</p>
+            <p><a href="tel:+375232329065">+375 (232) 32-90-65</a></p>
+            <p><a href="mailto:ggkp14@ggkp14.by">ggkp14@ggkp14.by</a></p>
+          </div>
+          <div>
+            <h3 class="site-footer__title">Навигация</h3>
+            <ul class="site-footer__list">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="about.html" data-source-path="/o-nas/">О нас</a></li>
+              <li><a href="contacts.html" data-source-path="/contacts/">Контакты</a></li>
+              <li><a href="paid-services.html" data-source-path="/platnye-uslugi-2/">Платные услуги</a></li>
+              <li><a href="news-archive.html" data-source-path="/category/novosti/">Новости</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="site-footer__title">Пациентам</h3>
+            <ul class="site-footer__list">
+              <li><a href="content-page.html">Запись к врачу</a></li>
+              <li>
+                <a href="electronic-appeals.html" data-source-path="/contacts/elektronnye-obrashheniya/"
+                  >Электронные обращения</a
+                >
+              </li>
+              <li><a href="working-hours.html" data-source-path="/o-nas/rezhim-raboty/">Режим работы</a></li>
+              <li><a href="vacancies.html" data-source-path="/o-nas/vakansii/">Вакансии</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p>© ГУЗ «Гомельская городская клиническая поликлиника № 14»</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/accessibility.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

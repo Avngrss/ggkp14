@@ -1,4 +1,4 @@
-# GGKP14 - local static preview server (development only)
+﻿# GGKP14 - local static preview server (development only)
 # Does not modify any source files.
 
 param(

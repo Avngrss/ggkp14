@@ -88,7 +88,7 @@ powershell -ExecutionPolicy Bypass -File .\tools\preview-local.ps1 -Port 8766
 4. Новости
 5. Статьи раздела «Информация»
 
-17 рабочих страниц, каждая один раз:
+30 рабочих страниц, каждая один раз:
 
 - `index.html`
 - `content-page.html`
@@ -98,6 +98,19 @@ powershell -ExecutionPolicy Bypass -File .\tools\preview-local.ps1 -Port 8766
 - `paid-services.html`
 - `information.html`
 - `about.html`
+- `administration.html`
+- `vacancies.html`
+- `working-hours.html`
+- `hot-line.html`
+- `electronic-appeals.html`
+- `email-addresses.html`
+- `territorial-districts.html`
+- `medical-tourism.html`
+- `five-steps.html`
+- `medical-extract-order.html`
+- `dispensarization.html`
+- `personal-appeals.html`
+- `sexological-help.html`
 - `applicant-2023.html`
 - `departments-index.html`
 - `department.html`
@@ -109,6 +122,13 @@ powershell -ExecutionPolicy Bypass -File .\tools\preview-local.ps1 -Port 8766
 - `adult-dispensary-examinations.html`
 
 `preview.html` указан отдельно как страница только для разработки.
+
+Для `search-results.html` в навигаторе есть две ссылки-состояния одного и того же файла:
+
+- `search-results.html` — демонстрация с результатами;
+- `search-results.html?state=empty&s=пример%20запроса` — демонстрация без результатов.
+
+Это не отдельная production-страница и не меняет счётчик из 30 HTML-файлов. Stage 6H rechecked the navigator: every production file appears once, both search states return HTTP 200, and `preview.html` stays development-only.
 
 Скрипты запуска не менялись. `preview-local.cmd` вызывает `tools/preview-local.ps1`, сервер открывает `http://localhost:8765/pages/preview.html`. Файлов `Start-Preview.ps1` и `preview-local.sh` в репозитории нет.
 

@@ -129,6 +129,43 @@
     });
   }
 
+  function initSearchResultsDemo() {
+    const header = document.querySelector("[data-search-header]");
+    if (!header) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const state = (params.get("state") || "").toLowerCase();
+    const isEmptyState = state === "empty";
+    const rawQuery = params.get("s");
+    const query = typeof rawQuery === "string" ? rawQuery.trim() : "";
+    const displayQuery = query || "диспансеризация";
+
+    const quotedQuery = `«${displayQuery}»`;
+    document
+      .querySelectorAll("[data-search-query], [data-search-query-empty]")
+      .forEach((node) => {
+        node.textContent = quotedQuery;
+      });
+
+    const resultsSection = document.querySelector("[data-search-results]");
+    const emptySection = document.querySelector("[data-search-empty]");
+    const resultsCount = document.querySelector("[data-search-results-count]");
+    const resultsNote = document.querySelector("[data-search-results-note]");
+    const emptyQuery = document.querySelector("[data-search-empty-query]");
+
+    if (resultsSection) resultsSection.hidden = isEmptyState;
+    if (emptySection) emptySection.hidden = !isEmptyState;
+    if (resultsCount) resultsCount.hidden = isEmptyState;
+    if (resultsNote) resultsNote.hidden = isEmptyState;
+    if (emptyQuery) emptyQuery.hidden = !query;
+
+    document
+      .querySelectorAll('.search-form input[name="s"]')
+      .forEach((input) => {
+        input.value = query;
+      });
+  }
+
   function initTableScroll() {
     const wrappers = document.querySelectorAll("[data-table-scroll]");
     if (!wrappers.length) return;
@@ -161,6 +198,7 @@
     initStickyHeader();
     initHeaderSearch();
     initSearchForm();
+    initSearchResultsDemo();
     initTableScroll();
   });
 })();

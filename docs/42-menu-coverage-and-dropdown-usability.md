@@ -20,13 +20,13 @@ Shown from 1440px. The same 14 `href`s are on every production page.
 | Информация | `/informaciya/` | `information.html` | Local landing |
 | Общая информация | `/informaciya/` | `information.html` | Same landing, static label |
 | О нас | `/o-nas/` | `about.html` | Local landing |
-| Администрация | `/o-nas/administraciya/` | source URL | External until a local page exists |
-| Режим работы | `/o-nas/rezhim-raboty/` | source URL | External |
+| Администрация | `/o-nas/administraciya/` | `administration.html` | Local (Stage 6F.1) |
+| Режим работы | `/o-nas/rezhim-raboty/` | `working-hours.html` | Local (Stage 6E.1) |
 | Контакты | `/contacts/` | `contacts.html` | Local landing |
 | Контактная информация | `/contacts/` | `contacts.html` | Same landing |
-| Горячая линия | `/contacts/goryachaya-liniya/` | source URL | External |
-| Электронные обращения | `/contacts/elektronnye-obrashheniya/` | source URL | External |
-| Адреса e-mail | `/adresa-elektronnoj-pochty/` | source URL | External. Source label is «Адреса электронной почты» |
+| Горячая линия | `/contacts/goryachaya-liniya/` | `hot-line.html` | Local (Stage 6E.2) |
+| Электронные обращения | `/contacts/elektronnye-obrashheniya/` | `electronic-appeals.html` | Local (Stage 6F.1). Source h1 is «ОБ ОБРАЩЕНИЯХ ГРАЖДАН И ЮРИДИЧЕСКИХ ЛИЦ» |
+| Адреса e-mail | `/adresa-elektronnoj-pochty/` | `email-addresses.html` | Local (Stage 6F.2). Source h1 is «Адреса электронной почты». Not in the drawer |
 | Абитуриент 2026 | `/abiturient-2023/` | `applicant-2023.html` | Local |
 
 Header actions, not inside the dropdowns: search submits to `search-results.html`; «Запись к врачу» goes to `content-page.html` (`/zapis-k-vrachu/`).
@@ -43,26 +43,26 @@ Topbar, visible only at 1440px and identical on every production page:
 
 | Label | Target |
 | --- | --- |
-| Режим работы | source `/o-nas/rezhim-raboty/` |
-| Горячая линия | source `/contacts/goryachaya-liniya/` |
+| Режим работы | `working-hours.html` |
+| Горячая линия | `hot-line.html` |
 | Структурные подразделения | `departments-index.html` |
-| Территориальные участки | source `/o-nas/territorialnye-uchastki/` |
-| Вакансии | source `/o-nas/vakansii/` |
+| Территориальные участки | `territorial-districts.html` |
+| Вакансии | `vacancies.html` |
 | Контакты | `contacts.html` |
 
 RU is the current language. BY and EN are `href="#"`.
 
-Footer navigation: Главная, О нас, Контакты, Платные услуги, Новости (`news-archive.html`). Footer «Пациентам»: Запись к врачу (local), Электронные обращения, Режим работы, Вакансии (those three still on the source site).
+Footer navigation: Главная, О нас, Контакты, Платные услуги, Новости (`news-archive.html`). Footer «Пациентам»: Запись к врачу (local), Электронные обращения (`electronic-appeals.html`), Режим работы (`working-hours.html`), Вакансии (`vacancies.html`).
 
 ## 6. Localized Destinations
 
-Local header, drawer, topbar, or footer targets: `index.html`, `table-page.html`, `paid-services.html`, `information.html`, `about.html`, `contacts.html`, `applicant-2023.html`, `content-page.html`, `departments-index.html`, `news-archive.html`, `search-results.html`.
+Local header, drawer, topbar, or footer targets: `index.html`, `table-page.html`, `paid-services.html`, `information.html`, `about.html`, `administration.html`, `contacts.html`, `electronic-appeals.html`, `email-addresses.html`, `applicant-2023.html`, `content-page.html`, `departments-index.html`, `news-archive.html`, `search-results.html`, `working-hours.html`, `hot-line.html`, `vacancies.html`, `territorial-districts.html`.
 
 `adult-dispensary-examinations.html` is linked from the Information landing, not from the header.
 
 ## 7. Remaining Source-Site Destinations
 
-Still used from the static shell: администрация, режим работы, горячая линия, электронные обращения, адреса e-mail, вакансии, территориальные участки.
+Approved shell page destinations are local, including адреса электронной почты and территориальные участки as of Stage 6F.2. No `ggkp14.by` page link remains in the topbar, desktop dropdowns, mobile drawer, or footer. The separate contacts path `/contacts/rezhim-raboty-i-kontaktnye-telefony-strukturnyh-podrazdelenij/` is still external and is not part of the approved shell.
 
 Present in the source menus and absent from the static header:
 
@@ -168,13 +168,13 @@ Screenshots: `docs/audit/stage-6d4/dropdown-open-1440.png`, `dropdown-keyboard-1
 
 ## 18. Revised Static Page Implementation Order
 
-1. Pages already linked from the static header or topbar and still on the source site: режим работы, горячая линия, администрация, электронные обращения, вакансии, адреса e-mail, территориальные участки.
+1. Pages already linked from the static header or topbar and still on the source site: администрация, электронные обращения, вакансии, адреса e-mail, территориальные участки. Режим работы and горячая линия are local.
 2. `/dlya-pacientov/`, the source top-level item that the static header does not list yet.
 3. Contact children from the source menu: телефоны администрации, телефоны сотрудников, режим и телефоны подразделений.
 4. Information children named in the source menu: диспансеризация (not the adult examinations page already built), профилактические осмотры, признание недееспособными, then the other Information children in §7.
 5. Remaining About children: коррупция, профсоюз, партнеры, общественные организации, график приема граждан.
 6. The other 16 department pages, then optional extra news cards.
-7. Search no-results on the existing search template.
+7. Search no-results on the existing search template. Done in Stage 6G.2.
 8. Leave for WordPress: BY/EN, live search, archive pagination, and the chief-doctor form embed.
 
 Do not build these pages as part of 6D.4.
@@ -182,6 +182,7 @@ Do not build these pages as part of 6D.4.
 ## 19. Known Limitations
 
 - The static dropdown is a short subset of the source menu. Matching that longer tree was not part of this fix.
-- «Адреса e-mail» is still absent from the drawer. «Территориальные участки» disappears with the topbar below 1440px.
+- «Адреса e-mail» and «Территориальные участки» are local pages. Their links stay out of the drawer, matching the shell that existed before Stage 6F.2. The districts link is in the topbar, which is hidden below 1440px.
+- The six Stage 6G.1 homepage pages are local. They were not added to the desktop menu or the drawer, because those destinations were not in the approved shell.
 - The 4px bridge covers the width of the panel. A very fast diagonal that leaves that width can still miss it; the tested diagonals did not.
 - Source inspection was an HTML fetch, not a click-through of the live site.

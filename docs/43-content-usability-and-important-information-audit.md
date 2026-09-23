@@ -82,9 +82,9 @@ Hiding the icons leaves the labels, sentences, telephone links, and file names i
 
 | Pattern | Pages |
 | --- | --- |
-| Phone | `adult-dispensary-examinations.html`, `department.html`, `department-aop.html` |
-| Location | `adult-dispensary-examinations.html` (cabinet 121), `department-aop.html` |
-| Clock | `adult-dispensary-examinations.html`, `department.html`, `department-aop.html` |
+| Phone | `adult-dispensary-examinations.html`, `department.html`, `department-aop.html`, `working-hours.html`, `hot-line.html`, `administration.html`, `vacancies.html` |
+| Location | `adult-dispensary-examinations.html` (cabinet 121), `department-aop.html`, `administration.html`, `electronic-appeals.html` |
+| Clock | `adult-dispensary-examinations.html`, `department.html`, `department-aop.html`, `working-hours.html`, `hot-line.html`, `administration.html` |
 | Notice | `paid-services.html` (E-POS), `content-page.html` (registry notice) |
 | Document | `paid-services.html` (four price-list files) |
 
@@ -119,3 +119,33 @@ The static classes map to a later block without a PHP implementation in this sta
 - a file link: the existing document link class
 
 The icon is not required. A row with only the label and the value is still understandable. Long Cyrillic text wraps in the text column, including on a narrow screen. The same class names can be printed by a dynamic block later; the SVG files stay in the theme and are referenced from CSS, not from a remote icon kit.
+
+## 10. Working Hours Page
+
+`working-hours.html` reuses the clock and phone rows. One clock marks each schedule group, and one phone marks each callable group. Days and individual times do not get their own icons. There is no address, room, or document on this page, so location and document icons are not used. Sunday «выходной» stays in the schedule text. The source painted that word red; the word itself is the distinction, so the red color was not copied.
+
+`hot-line.html` uses one phone icon and one clock icon for each of the three lines. The lunch break stays in the same clock row as the weekday hours. The source painted the repeated heading red; that color was not copied.
+
+## 11. Administration, Vacancies, And Appeals
+
+`administration.html` uses one phone, one location, and one clock for each of the four people. Email addresses are links in the same group and have no icon, because the icon family has no mail glyph and the source phone glyph on those addresses was not reused. Portraits are local copies of the published photographs, with the published empty alt; the name is the heading. The Terenya file is the smaller source size because the larger file did not finish downloading.
+
+`vacancies.html` uses one phone row for the personnel office. The five job titles are a list. There is no clock, room, or document on that source page.
+
+`electronic-appeals.html` uses a location row for the postal address and another for the registration office. The legal paragraphs stay prose. Related schedules stay ordinary links. `https://обращения.бел` stays an external link. No notice icon was added to the statute text.
+
+## 12. Email Directory And Territorial Roster
+
+`email-addresses.html` and `territorial-districts.html` do not put icons in table cells. The address and the role, or the district number, name, and territory, are already column values. There is no separate schedule, phone, or legend outside those tables.
+
+## 13. Homepage Quick Actions
+
+`medical-tourism.html` uses one phone row for the cash-desk number. The service lists stay lists. The featured photograph uses the source alt text.
+
+`five-steps.html` has no icon. The source body is one external link.
+
+`medical-extract-order.html` and `personal-appeals.html` use a notice row for the published conditions. They do not use a form, and they do not put an icon on every field.
+
+`dispensarization.html` keeps the two article images and uses headings for the questions. It does not add a phone or clock row, because the cabinet hours are inside the poster rather than in the HTML text.
+
+`sexological-help.html` uses one phone icon on each regional helpline row. The warning signs and the five «нельзя» rules stay lists, without an icon on each item.

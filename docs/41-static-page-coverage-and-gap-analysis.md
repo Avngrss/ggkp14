@@ -89,29 +89,29 @@ Classification key: **C** covered by existing static page · **I** covered by te
 | Урицкая АОП | `/.../urickaya-aop/` | **C** | `department-aop.html` | AOP variant validated 5F.1 |
 | Рубрика: Новости (archive) | `/category/novosti/` | **C** | `news-archive.html` | 10 cards; pagination UI non-functional (38) |
 | News single (image / video / text) | various posts | **C** | `news-single*.html` (3 files) | Three structural variants, not three URLs |
-| Search results (sample query) | `/?s=dispanserizaciya` | **P** | `search-results.html` | Static shows 3 results; live showed 1 at fetch time — demo query set in 5I |
-| Search no-results | `/?s=…` (zero hits) | **I** | — (pattern in docs only) | Live shows “0 search results…”; no visible static page (35, 38) |
+| Search results (sample query) | `/?s=dispanserizaciya` | **C** | `search-results.html` | State with results. Query text comes from `?s=` for display only |
+| Search no-results | `/?s=…` (zero hits) | **C** (Stage 6G.2) | `search-results.html?state=empty&s=...` | Explicit static demo state; no client-side search |
 
 ### 4.2 Main & secondary navigation destinations (not yet local)
 
 | Source title | Source URL | Nav origin | Purpose | Class | Local equivalent | Recommended action |
 |--------------|------------|------------|---------|-------|------------------|-------------------|
 | Платные услуги | `/platnye-uslugi-2/` | Main nav | E-POS notice + four price-list PDF downloads | **C** (Stage 6C.1) | `paid-services.html` | Landing implemented from `content-page.html` + `.prose-document-link`. PDFs remain on `ggkp14.by/wp-content/uploads/…` (not local child pages). |
-| Информация (hub) | `/informaciya/` | Main nav dropdown | Index of four destinations | **C** (Stage 6C.2) | `information.html` using `dept-index` cards | Landing implemented. Three article children stay on the source site. «Новости / Объявления» points at existing `news-archive.html`. |
-| О нас (hub) | `/o-nas/` | Main nav dropdown | Eight section cards | **C** (Stage 6C.3) | `about.html` using `dept-index` cards | Landing implemented. Local children: departments index, phone-line schedule. Six children stay on the source site. |
-| Администрация | `/o-nas/administraciya/` | Main nav dropdown | Leadership contacts | **I** | `content-page.html` (+ optional card blocks) | **Content instance**; staff blocks resemble homepage `contact-card` but CSS is homepage-scoped — reuse prose or extend internal CSS in implementation stage |
-| Режим работы | `/o-nas/rezhim-raboty/` | Topbar, nav, footer | Hours + emergency text | **I** | `content-page.html` | **Content instance** (long structured sections) |
-| Территориальные участки | `/o-nas/territorialnye-uchastki/` | Topbar | District–doctor–address roster | **P** | — | **Product/layout decision:** distinct long roster; may need dedicated territorial layout **or** long-form `content-page` + scroll QA — not the same as `table-page.html` (schedule tables) |
-| Вакансии | `/o-nas/vakansii/` | Topbar, footer | HR contact | **I** | `content-page.html` | **Content instance** |
+| Информация (hub) | `/informaciya/` | Main nav dropdown | Index of four destinations | **C** (Stage 6C.2) | `information.html` using `dept-index` cards | Landing implemented. Two article children stay on the source site. Диспансеризация is local. «Новости / Объявления» points at existing `news-archive.html`. |
+| О нас (hub) | `/o-nas/` | Main nav dropdown | Eight section cards | **C** (Stage 6C.3) | `about.html` using `dept-index` cards | Landing implemented. Local children: administration, departments index, working hours, vacancies, and the phone-line schedule. Citizen-reception schedule, anti-corruption, and the union stay on the source site. |
+| Администрация | `/o-nas/administraciya/` | Main nav dropdown | Leadership contacts | **C** (Stage 6F.1) | `administration.html` | Four staff groups with phone, email, room, and hours. Portraits are local copies of the published photographs, with the source empty alt. |
+| Режим работы | `/o-nas/rezhim-raboty/` | Topbar, nav, footer | Hours + emergency text | **C** (Stage 6E.1) | `working-hours.html` | Schedule groups with compact clock and phone rows. |
+| Территориальные участки | `/o-nas/territorialnye-uchastki/` | Topbar | District–doctor–address roster | **C** (Stage 6F.2) | `territorial-districts.html` | One source table with rowspan groups. Reuses the scrolling table wrapper. |
+| Вакансии | `/o-nas/vakansii/` | Topbar, footer | HR contact | **C** (Stage 6F.1) | `vacancies.html` | Five vacancy names and one personnel-office phone. No requirements or documents on the source page. |
 | Абитуриент | `/abiturient-2023/` | Main nav | Long-form applicant guidance for 2026, plus three external college/university sites | **C** (Stage 6C.4) | `applicant-2023.html` using the content-page prose pattern | Landing implemented. Slug remains `abiturient-2023`. No child pages or files on the landing. |
-| Горячая линия | `/contacts/goryachaya-liniya/` | Topbar, contacts dropdown | Hotline info | **I** | `content-page.html` or partial in `contacts.html` | **Instance** or expand contacts hub |
-| Электронные обращения | `/contacts/elektronnye-obrashheniya/` | Nav, footer, hero CTAs | Legal + link to national portal | **I** | `content-page.html` | **Instance**; keep `https://обращения.бел` **external** |
-| Адреса электронной почты | `/adresa-elektronnoj-pochty/` | Contacts dropdown | Email directory | **I** | `content-page.html` or `table-page.html` | **Instance** (table if source is tabular) |
+| Горячая линия | `/contacts/goryachaya-liniya/` | Topbar, contacts dropdown | Hotline info | **C** (Stage 6E.2) | `hot-line.html` | Three labelled hot-line groups. |
+| Электронные обращения | `/contacts/elektronnye-obrashheniya/` | Nav, footer, hero CTAs | Legal + link to national portal | **C** (Stage 6F.1) | `electronic-appeals.html` | Source h1 is «ОБ ОБРАЩЕНИЯХ ГРАЖДАН И ЮРИДИЧЕСКИХ ЛИЦ». `https://обращения.бел` stays external. No local form. |
+| Адреса электронной почты | `/adresa-elektronnoj-pochty/` | Contacts dropdown | Email directory | **C** (Stage 6F.2) | `email-addresses.html` | One two-column directory. Each address is a `mailto:` link. Source breadcrumb has no «Контакты» step. |
 | Контактные телефоны администрации | `/contacts/kontaktnye-telefony-administracii/` | Contacts page body | Admin phone table | **I** | `table-page.html` | **Table template instance** (small table) |
 | Контактные телефоны сотрудников | `/contacts/kontaktnye-telefony-sotrudnikov/` | Contacts page | Staff phone list | **I** | `table-page.html` | **Table instance** (confirm structure on implementation) |
 | Режим работы и телефоны подразделений | `/contacts/rezhim-raboty-i-kontaktnye-telefony-strukturnyh-podrazdelenij/` | Contacts page | Combined reference | **I** | `table-page.html` / `content-page.html` | **Instance** after source layout check |
-| Dispanserization article | `/poryadok-provedeniya-dispanserizacii-…/` | Homepage quick action, footer | Public info | **I** | `content-page.html` | **Instance** |
-| Other homepage quick actions | `/zakaz-vypiski-…/`, `/medicinskij-turizm-2/`, `/lichnye-obrashheniya-grazhdan/`, `/seksologicheskaya-pomoshh/`, etc. | Homepage grid | Service information | **I** or **E** | `content-page.html` | **Instances** for in-site policy pages; **E** for third-party-only flows |
+| Dispanserization article | `/poryadok-provedeniya-dispanserizacii-…/` | Homepage quick action, Information hub | Public info | **C** (Stage 6G.1) | `dispensarization.html` | Same article as the Information-section path after redirect confirmation. |
+| Homepage quick actions from Stage 6G.1 | `/medicinskij-turizm-2/`, `/sdelai-5-shagov-chtoby-spasti-zhizn/`, `/zakaz-vypiski-iz-medicinskih-dokumentov/`, `/poryadok-provedeniya-dispanserizacii-vzroslogo-i-detskogo-naseleniya/`, `/lichnye-obrashheniya-grazhdan/`, `/seksologicheskaya-pomoshh/` | Homepage grid | Service information | **C** (Stage 6G.1) | The six local files | The dispensarization homepage path redirects to the Information article. Personal appeals is not the electronic-appeals page. |
 | Information subpages | `/informaciya/...` | Information hub | Medical policy prose | **I** | `content-page.html` | **Instances** per article |
 
 ### 4.3 Structural departments (16 without local detail)
@@ -163,14 +163,14 @@ Do **not** add a new template per department or per news story.
 Prioritized groups (public nav first). The Stage 6D.4 menu audit in `docs/42-menu-coverage-and-dropdown-usability.md` replaces the order in §10.
 
 1. **Main nav landings from Stage 6B are now local** (`platnye-uslugi-2/`, `/informaciya/`, `/o-nas/`, `/abiturient-2023/`). Remaining work is child instances, not these four landings.
-2. **Still external in the static header or topbar:** режим работы, горячая линия, администрация, электронные обращения, адреса e-mail, вакансии, территориальные участки.
+2. **Still external in the static header or topbar:** администрация, электронные обращения, адреса e-mail, вакансии, территориальные участки. Режим работы and горячая линия are local.
 3. **Source primary item absent from the static header:** `/dlya-pacientov/`.
 4. **Contacts cluster:** admin phones, staff phones, department hours and phones, plus the appeals and email pages above.
 5. **Information children named in the source menu** but not yet local, including dispensarization, preventive examinations, and incapacity. The adult dispensary examinations article is already local and is a different URL.
 6. **About children** still external, including corruption, union, partners, and the chief-doctor form from the source top bar.
 7. **Departments:** 16 detail pages (group: polyclinic vs AOP template)
 8. **News:** the archive is local but is not in the header menu; remaining archive cards are optional.
-9. **Search:** no-results variant on existing `search-results.html`
+9. **Search:** covered by two states on existing `search-results.html` (with results + empty)
 
 ---
 
@@ -187,7 +187,7 @@ Prioritized groups (public nav first). The Stage 6D.4 menu audit in `docs/42-men
 | Empty optional sections | Partial | Low | Stress-test during instance work |
 | Long titles / nav labels | Partial | Medium | Regression pass when adding RU copy |
 | Search with results | **C** | — | Fixed demo query |
-| Search no results | **Missing** | Medium | **Controlled variant** on `search-results.html` (documented 5I, not visible) |
+| Search no results | **C** (Stage 6G.2) | — | Controlled variant on `search-results.html` via `?state=empty&s=...` |
 | Archive pagination active / page 2 | **Missing behavior** | Low | Visual only; **D** functional pagination to WP |
 | Missing images / placeholders | **C** | — | Placeholder SVGs |
 | Form validation UI (booking) | **Not on static** | **D** | Live booking is tutmed external |
@@ -244,7 +244,7 @@ Stage 6D.4: the static top-level items Главная, Прямые линии, 
 
 Superseded for remaining pages by `docs/42` §18. Short form:
 
-1. Header and topbar pages that are still external: режим работы, горячая линия, администрация, электронные обращения, вакансии, адреса e-mail, территориальные участки.
+1. Header and topbar pages that are still external: администрация, электронные обращения, вакансии, адреса e-mail, территориальные участки. Режим работы and горячая линия are local.
 2. Source top-level page missing from the static header: `/dlya-pacientov/`.
 3. Contact phone and hours subpages.
 4. Information children named in the source menu, then the other About children.
@@ -280,7 +280,7 @@ The static baseline is **complete enough for WordPress planning** when:
 7. **Stage 6A regression** passes on GitHub Pages artifact after link updates.
 8. **docs/38** and this document updated to reflect remaining intentional limitations.
 
-Current status: **templates approved; coverage incomplete**. Primary landings through Stage 6D.1 are local. Many source menu children still point at the live site. The checked menu inventory and dropdown fix are in `docs/42`.
+Current status: **templates approved; coverage incomplete**. Primary landings through Stage 6D.1 are local. Режим работы and горячая линия are local. Many source menu children still point at the live site. The checked menu inventory and dropdown fix are in `docs/42`.
 
 ---
 
@@ -342,10 +342,10 @@ No introductory prose and no file downloads in the main column. Sidebar widgets 
 
 | Card | Destination | Local |
 |------|-------------|--------|
-| Администрация | `/o-nas/administraciya/` | External |
+| Администрация | `/o-nas/administraciya/` | `administration.html` (Stage 6F.1) |
 | Структурные подразделения | `/o-nas/strukturnye-podrazdeleniya/` | `departments-index.html` |
-| Режим работы | `/o-nas/rezhim-raboty/` | External |
-| Вакансии | `/o-nas/vakansii/` | External |
+| Режим работы | `/o-nas/rezhim-raboty/` | `working-hours.html` |
+| Вакансии | `/o-nas/vakansii/` | `vacancies.html` (Stage 6F.1) |
 | График приема граждан администрацией | `/o-nas/grafik-priema-grazhdan-administraciej/` | External (not the phone-line table page) |
 | График прямых телефонных линий | `/o-nas/grafik-pryamyh-telefonnyh-linij/` | `table-page.html` |
 | Работа по противодействию коррупции | `/o-nas/rabota-po-protivodejstviju-korrupcii/` | External |
@@ -387,7 +387,7 @@ No introductory prose and no file downloads in the main column. Sidebar widgets 
 
 **Source article** (`/informaciya/poryadok-provedeniya-dispansernyh-osmotrov-vzroslogo-naseleniya/`): title and breadcrumb «Порядок проведения диспансерных осмотров взрослого населения», then four paragraphs (D1/D2 groups, cabinet 121, chronic conditions, heads of general-practice departments phone). Wording kept, including «согласно установленных диагнозов».
 
-**Not the same page:** `/informaciya/poryadok-provedeniya-dispanserizacii-vzroslogo-i-detskogo-naseleniya/` is a separate article titled «Диспансеризация» (2025 decree and age-group FAQ). `/poryadok-provedeniya-dispanserizacii-vzroslogo-i-detskogo-naseleniya/` redirects to that canonical URL. Homepage and search-result links to those paths were not changed.
+**Not the same page:** `/informaciya/poryadok-provedeniya-dispanserizacii-vzroslogo-i-detskogo-naseleniya/` is a separate article titled «Диспансеризация». `/poryadok-provedeniya-dispanserizacii-vzroslogo-i-detskogo-naseleniya/` redirects to that canonical URL. Stage 6G.1 confirmed the redirect and identical responses, and both exact paths now open `dispensarization.html`. That file is not `adult-dispensary-examinations.html`.
 
 **Not copied:** a sidebar image widget (`widget_media_image`) that links to Telegram. It is not part of the article.
 
@@ -412,11 +412,113 @@ No introductory prose and no file downloads in the main column. Sidebar widgets 
 | 9 | `news-single.html` | Yes |
 | 10 | `news-single-video.html` | Yes |
 | 11 | `news-single-no-media.html` | Yes |
-| 12 | `search-results.html` | Yes (partial) |
+| 12 | `search-results.html` | Yes (results + empty state) |
 | 13 | `paid-services.html` | Yes (§4.2, Stage 6C.1) |
 | 14 | `information.html` | Yes (§4.2, Stage 6C.2) |
 | 15 | `about.html` | Yes (§4.2, Stage 6C.3) |
 | 16 | `applicant-2023.html` | Yes (§4.2, Stage 6C.4) |
 | 17 | `adult-dispensary-examinations.html` | Yes (Stage 6D.1) |
+| 18 | `working-hours.html` | Yes (Stage 6E.1) |
+| 19 | `hot-line.html` | Yes (Stage 6E.2) |
+| 20 | `administration.html` | Yes (Stage 6F.1) |
+| 21 | `vacancies.html` | Yes (Stage 6F.1) |
+| 22 | `electronic-appeals.html` | Yes (Stage 6F.1) |
+| 23 | `email-addresses.html` | Yes (Stage 6F.2) |
+| 24 | `territorial-districts.html` | Yes (Stage 6F.2) |
+| 25 | `medical-tourism.html` | Yes (Stage 6G.1) |
+| 26 | `five-steps.html` | Yes (Stage 6G.1) |
+| 27 | `medical-extract-order.html` | Yes (Stage 6G.1) |
+| 28 | `dispensarization.html` | Yes (Stage 6G.1) |
+| 29 | `personal-appeals.html` | Yes (Stage 6G.1) |
+| 30 | `sexological-help.html` | Yes (Stage 6G.1) |
 
-All seventeen production templates appear in the matrix; none omitted.
+All thirty production pages appear in the matrix; none omitted.
+
+---
+
+## Stage 6E.2 — Hot line
+
+**Implemented:** `src/pages/hot-line.html` for the exact path `/contacts/goryachaya-liniya/`.
+
+Source breadcrumb: Главная, Контакты, Горячая линия. The article is three separate hot telephone lines: this clinic, the central city clinic, and the regional health department. Each line has one number, weekday hours, and a lunch break. Sidebar widgets were not copied. Compact phone and clock rows are used instead of a table, because each line is a short labeled group rather than a wide comparison.
+
+Exact `https://ggkp14.by/contacts/goryachaya-liniya/` links in the topbar, Contacts dropdown, mobile drawer, the Contacts subpage list, and the homepage «Телефон «горячей» линии» item now point at `hot-line.html`. Other contact children stay external.
+
+Playwright could not open the live page (`ERR_CERT_COMMON_NAME_INVALID`). The article text is from a UTF-8 fetch that returned 200. Local checks: `docs/audit/stage-6e2/`.
+
+---
+
+## Stage 6E.1 — Working hours
+
+**Implemented:** `src/pages/working-hours.html` for the exact path `/o-nas/rezhim-raboty/`.
+
+The source article is the clinic schedule plus seven named service groups. Shared sidebar widgets (a shorter hours widget, search, useful links, images) were not copied. Source tables were single-row layout tables, so the page uses compact clock and phone groups instead of a comparison table. The emergency-brigade conditions stay a list. No new template and no schedule JavaScript.
+
+Exact `https://ggkp14.by/o-nas/rezhim-raboty/` links in the topbar, Information dropdown, mobile drawer, footer, and the About card now point at `working-hours.html`. `/contacts/rezhim-raboty-i-kontaktnye-telefony-strukturnyh-podrazdelenij/` is unchanged.
+
+Playwright could not open the live page (`ERR_CERT_COMMON_NAME_INVALID`). The article text is from a UTF-8 fetch that returned 200. Local checks: `docs/audit/stage-6e1/`.
+
+---
+
+## Stage 6F.1 — Administration, vacancies, electronic appeals
+
+**Implemented:** `administration.html`, `vacancies.html`, and `electronic-appeals.html` for `/o-nas/administraciya/`, `/o-nas/vakansii/`, and `/contacts/elektronnye-obrashheniya/`.
+
+Administration is four people with source portraits, phones, emails, rooms, and hours. Vacancies are five job titles and one personnel-office phone; the source has no requirements, salaries, or files. Appeals keep the legal wording, the external system `https://обращения.бел`, the postal address, and the related source links. There is no local appeal form. Sidebar widgets were not copied.
+
+Exact matches of those three paths now point at the local files. Citizen-reception schedules, administration phone directories, and other appeal URLs stay on the source site.
+
+Playwright could not open the live pages (`ERR_CERT_COMMON_NAME_INVALID`). A compressed UTF-8 fetch returned 200. Local checks: `docs/audit/stage-6f1/`.
+
+---
+
+## Stage 6F.2 — Email addresses and territorial districts
+
+**Implemented:** `email-addresses.html` and `territorial-districts.html`.
+
+Email addresses are one 17-row directory. The source has no column headings and no «Контакты» breadcrumb step, so the static breadcrumb is Главная / Адреса электронной почты. The menu parent is still Contacts. `zamglav@ggkp14.by` keeps both published roles in one cell.
+
+Territorial districts are one table. Staff who share a district stay in rowspan groups. The group label «ООВП №2» stays inside the table. Source order is unchanged, including the jump from 9 to 19 and the missing names on one assistant row. An empty spacer row and empty heading tags were not copied.
+
+Both tables use the existing scroll wrapper. The districts table scrolls inside that wrapper at 390. At 768 and 1440 it fits, and the scroll hint stays hidden. The email table fits without scrolling at the checked widths. No column is hidden. Sidebar widgets were not copied.
+
+Exact path matches now point at the local files. Email stays out of the drawer. Districts stay in the topbar and are not added to the drawer.
+
+Playwright could not open the live pages (`ERR_CERT_COMMON_NAME_INVALID`). A compressed UTF-8 fetch returned 200. Local checks: `docs/audit/stage-6f2/`.
+
+---
+
+## Stage 6G.1 — Homepage quick actions
+
+**Implemented:** `medical-tourism.html`, `five-steps.html`, `medical-extract-order.html`, `dispensarization.html`, `personal-appeals.html`, and `sexological-help.html`.
+
+The homepage dispensarization URL redirects to the Information article. Those two responses were identical, so one local file serves both exact paths. Adult dispensary examinations stays a different page. Personal appeals stays different from electronic appeals: the source says messages in that section are not electronic appeals. The five-steps source page contains only a link to `mentalhealth.by`; the steps themselves were not copied. The extract and personal-appeal sources are contact forms; the local pages list the published fields and conditions and do not submit anything.
+
+Playwright could not open the live pages (`ERR_CERT_COMMON_NAME_INVALID`). A compressed UTF-8 fetch returned 200. Local checks: `docs/audit/stage-6g1/`.
+
+---
+
+## Stage 6G.2 — Search no-results state
+
+**Implemented:** no-results on the existing `search-results.html` (no second HTML file).
+
+Static demo states are explicit:
+
+- default results state: `search-results.html` (or `?s=...`);
+- empty state: `search-results.html?state=empty&s=...`.
+
+`?s=` is rendered as text only; no filtering, no index, no AJAX, and no routing were added. With `state=empty`, the result count and cards are hidden and the empty-state block is shown. The page keeps a labelled search field, a homepage link, and concise recovery links.
+
+All production search forms still submit to `search-results.html` with `name="s"` and do not include a state parameter. This preserves normal demo behavior and keeps empty mode explicit.
+
+Playwright could not open the live search page (`ERR_CERT_COMMON_NAME_INVALID`). Local checks: `docs/audit/stage-6g2/`.
+
+---
+
+## Stage 6H — Final static baseline audit
+
+Verified the working tree as one product: 30 production HTML files, one development-only `preview.html`, and two visual states of `search-results.html`.
+
+Local browser checks at 390, 768, and 1440 found no page-level horizontal overflow and no missing local page or asset. Approved shell destinations and the six homepage quick actions stay local. Remaining source-site links are departments, extra news posts, two Information children, three About children, three Contacts children, and published PDFs.
+
+No new production page was added. Evidence: `docs/audit/stage-6h/`.

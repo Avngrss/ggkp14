@@ -24,6 +24,19 @@ PAGES = [
     "about.html",
     "applicant-2023.html",
     "adult-dispensary-examinations.html",
+    "working-hours.html",
+    "hot-line.html",
+    "administration.html",
+    "vacancies.html",
+    "electronic-appeals.html",
+    "email-addresses.html",
+    "territorial-districts.html",
+    "medical-tourism.html",
+    "five-steps.html",
+    "medical-extract-order.html",
+    "dispensarization.html",
+    "personal-appeals.html",
+    "sexological-help.html",
 ]
 
 
