@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Памятка о противодействии экстремизму, терроризму и реабилитации нацизма."
+    />
+    <title>
+      Противодействие экстремизму — ГУЗ «Гомельская городская клиническая поликлиника №14»
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/internal-pages.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Перейти к содержимому</a>
+
+    <!-- 1. Topbar -->
+    <div class="topbar" role="region" aria-label="Служебная панель">
+      <div class="container topbar__inner">
+        <nav class="topbar__nav" aria-label="Служебная навигация">
+          <a href="working-hours.html" data-source-path="/o-nas/rezhim-raboty/" class="topbar__link">Режим работы</a>
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="hot-line.html" data-source-path="/contacts/goryachaya-liniya/" class="topbar__link"
+            >Горячая линия</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="departments-index.html" data-source-path="/o-nas/strukturnye-podrazdeleniya/" class="topbar__link"
+            >Структурные подразделения</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="territorial-districts.html" data-source-path="/o-nas/territorialnye-uchastki/" class="topbar__link"
+            >Территориальные участки</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="vacancies.html" data-source-path="/o-nas/vakansii/" class="topbar__link">Вакансии</a>
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="contacts.html" data-source-path="/contacts/" class="topbar__link">Контакты</a>
+        </nav>
+        <div class="topbar__actions">
+          <nav class="lang-switcher" aria-label="Выбор языка">
+            <a
+              href="#"
+              class="lang-switcher__link is-active"
+              hreflang="ru"
+              lang="ru"
+              aria-current="true"
+              >RU</a
+            >
+            <a href="#" class="lang-switcher__link" hreflang="be" lang="be"
+              >BY</a
+            >
+            <a href="#" class="lang-switcher__link" hreflang="en" lang="en"
+              >EN</a
+            >
+          </nav>
+          <a href="mailto:ggkp14@ggkp14.by" class="topbar__email">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <path d="M22 6l-10 7L2 6" />
+            </svg>
+            ggkp14@ggkp14.by
+          </a>
+          <button
+            type="button"
+            class="topbar__a11y"
+            data-a11y-toggle
+            aria-pressed="false"
+          >
+            Версия для слабовидящих
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Header -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="index.html" class="site-header__logo">
+          <span class="site-header__logo-icon" aria-hidden="true">14</span>
+          <span class="site-header__logo-text">
+            <span class="site-header__logo-title"
+              >ГУЗ «Гомельская городская клиническая поликлиника №14»</span
+            >
+            <span class="site-header__logo-subtitle"
+              >г. Гомель, ул. Косарева, 11</span
+            >
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Главное меню">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html" class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a
+                href="table-page.html" data-source-path="/o-nas/grafik-pryamyh-telefonnyh-linij/"
+                class="main-nav__link"
+                >Прямые линии</a
+              >
+            </li>
+            <li class="main-nav__item">
+              <a href="paid-services.html" data-source-path="/platnye-uslugi-2/" class="main-nav__link"
+                >Платные услуги</a
+              >
+            </li>
+            <li class="main-nav__item main-nav__item--dropdown">
+              <a
+                href="information.html" data-source-path="/informaciya/"
+                class="main-nav__link main-nav__link--dropdown is-active"
+              >
+                Информация
+                <svg
+                  class="main-nav__chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </a>
+              <ul class="main-nav__dropdown">
+                <li>
+                  <a href="information.html" data-source-path="/informaciya/" class="main-nav__dropdown-link">Общая информация</a>
+                </li>
+                <li class="main-nav__subitem main-nav__subitem--dropdown">
+                  <a href="about.html" data-source-path="/o-nas/" class="main-nav__dropdown-link main-nav__dropdown-link--parent">О нас</a>
+                  <ul class="main-nav__flyout">
+                    <li>
+                      <a href="territorial-districts.html" class="main-nav__dropdown-link" data-source-path="/o-nas/territorialnye-uchastki/">Территориальные участки</a>
+                    </li>
+                    <li>
+                      <a href="administration.html" class="main-nav__dropdown-link" data-source-path="/o-nas/administraciya/">Администрация</a>
+                    </li>
+                    <li>
+                      <a href="departments-index.html" class="main-nav__dropdown-link" data-source-path="/o-nas/strukturnye-podrazdeleniya/">Структурные подразделения</a>
+                    </li>
+                    <li>
+                      <a href="working-hours.html" class="main-nav__dropdown-link" data-source-path="/o-nas/rezhim-raboty/">Режим работы</a>
+                    </li>
+                    <li>
+                      <a href="vacancies.html" class="main-nav__dropdown-link" data-source-path="/o-nas/vakansii/">Вакансии</a>
+                    </li>
+                    <li>
+                      <a href="administration-reception.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap" data-source-path="/o-nas/grafik-priema-grazhdan-administraciej/">График приема граждан администрацией</a>
+                    </li>
+                    <li>
+                      <a href="table-page.html" class="main-nav__dropdown-link" data-source-path="/o-nas/grafik-pryamyh-telefonnyh-linij/">Прямые линии</a>
+                    </li>
+                    <li>
+                      <a href="anti-corruption.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap" data-source-path="/o-nas/rabota-po-protivodejstviju-korrupcii/">Работа по противодействию коррупции</a>
+                    </li>
+                    <li>
+                      <a href="trade-union.html" class="main-nav__dropdown-link" data-source-path="/o-nas/profsojuz/">Профсоюз</a>
+                    </li>
+                    <li>
+                      <a href="partners.html" class="main-nav__dropdown-link" data-source-path="/nashi-partnery/">Наши партнеры</a>
+                    </li>
+                    <li>
+                      <a href="https://sansk.by/" class="main-nav__dropdown-link" rel="noopener noreferrer">Санаторий «Серябряные ключи»</a>
+                    </li>
+                    <li>
+                      <a href="public-organizations.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap" data-source-path="/o-nas/obshhestvennye-organizacii/">Общественные организации</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="main-nav__subitem main-nav__subitem--dropdown">
+                  <a href="administrative-procedures.html" class="main-nav__dropdown-link main-nav__dropdown-link--parent" data-source-path="/administrativnye-procedury/">Административные процедуры</a>
+                  <ul class="main-nav__flyout">
+                    <li>
+                      <a href="medical-extract-procedure.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap" data-source-path="/informaciya/poryadok-polucheniya-vypiski-iz-medicin/">Порядок получения выписки из медицинских документов</a>
+                    </li>
+                    <li>
+                      <a href="palliative-care.html" class="main-nav__dropdown-link" data-source-path="/palliativnaya-medicinskaya-pomoshhi/">Паллиативная медицинская помощь</a>
+                    </li>
+                    <li>
+                      <a href="ideology.html" class="main-nav__dropdown-link" data-source-path="/informaciya/ideologiya/">Идеология</a>
+                    </li>
+                  </ul>
+                </li>
+<li>
+                  <a href="preventive-examinations.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap" data-source-path="/informaciya/poryadok-provedeniya-profilakticheskih/">Порядок проведения профилактических осмотров</a>
+                </li>
+                <li>
+                  <a href="addiction-help.html" class="main-nav__dropdown-link" data-source-path="/pomoshh-pri-alkogolizme/">Помощь в лечении зависимости</a>
+                </li>
+                <li>
+                  <a href="incapacity.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap" data-source-path="/informaciya/poryadok-priznaniya-grazhdan-nedeesposobnymi/">Порядок признания граждан недееспособными</a>
+                </li>
+                <li>
+                  <a href="cybercrime.html" class="main-nav__dropdown-link" data-source-path="/kiberprestupnost/">Профилактика киберпреступлений</a>
+                </li>
+                <li>
+                  <a href="extremism.html" class="main-nav__dropdown-link is-active" data-source-path="/protivodejstvie-ekstremizmu/" aria-current="page">Противодействие экстремизму</a>
+                </li>
+                <li>
+                  <a href="decree-631.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap" data-source-path="/informaciya/mery-po-realizacii-ukaza-631/">Меры поддержки по реализации Указа 631</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-nav__item main-nav__item--dropdown">
+              <a
+                href="contacts.html" data-source-path="/contacts/"
+                class="main-nav__link main-nav__link--dropdown"
+              >
+                Контакты
+                <svg
+                  class="main-nav__chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </a>
+              <ul class="main-nav__dropdown">
+                <li>
+                  <a href="contacts.html" data-source-path="/contacts/" class="main-nav__dropdown-link"
+                    >Контактная информация</a
+                  >
+                </li>
+                <li>
+                  <a href="administration-phones.html" data-source-path="/contacts/kontaktnye-telefony-administracii/" class="main-nav__dropdown-link"
+                    >Контактные телефоны администрации</a
+                  >
+                </li>
+                <li>
+                  <a href="staff-phones.html" data-source-path="/contacts/kontaktnye-telefony-sotrudnikov/" class="main-nav__dropdown-link"
+                    >Контактные телефоны сотрудников</a
+                  >
+                </li>
+                <li>
+                  <a href="department-hours-phones.html" data-source-path="/contacts/rezhim-raboty-i-kontaktnye-telefony-strukturnyh-podrazdelenij/" class="main-nav__dropdown-link main-nav__dropdown-link--wrap"
+                    >Режим работы и контактные телефоны структурных подразделений</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="hot-line.html" data-source-path="/contacts/goryachaya-liniya/"
+                    class="main-nav__dropdown-link"
+                    >Горячая линия</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="electronic-appeals.html" data-source-path="/contacts/elektronnye-obrashheniya/"
+                    class="main-nav__dropdown-link"
+                    >Электронные обращения</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="email-addresses.html" data-source-path="/adresa-elektronnoj-pochty/"
+                    class="main-nav__dropdown-link"
+                    >Адреса e-mail</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="main-nav__item">
+              <a href="applicant-2023.html" data-source-path="/abiturient-2023/" class="main-nav__link"
+                >Абитуриент 2026</a
+              >
+            </li>
+          
+            <li class="main-nav__item">
+              <a href="for-patients.html" data-source-path="/dlya-pacientov/" class="main-nav__link"
+                >Для пациентов</a
+              >
+            </li>
+            </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <div class="header-search">
+            <button
+              type="button"
+              id="header-search-toggle"
+              class="header-search__toggle"
+              aria-label="Открыть поиск по сайту"
+              aria-expanded="false"
+              aria-controls="header-search-panel"
+            >
+              <svg class="header-search__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+          </div>
+          <a href="content-page.html" class="btn btn--primary site-header__cta"
+            >Запись к врачу</a
+          >
+          <button
+            type="button"
+            id="menu-toggle"
+            class="menu-toggle"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+          >
+            <svg
+              class="menu-toggle__icon menu-toggle__open"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+            <svg
+              class="menu-toggle__icon menu-toggle__close"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="header-search-panel"
+        class="header-search-panel"
+        hidden
+        aria-hidden="true"
+      >
+        <!-- WordPress: replace with get_search_form() -->
+        <div class="container header-search-panel__inner">
+          <form
+            class="search-form header-search-panel__form"
+            role="search"
+            action="search-results.html"
+          >
+            <label for="header-search-input" class="header-search-panel__label"
+              >Поиск по сайту</label
+            >
+            <div class="header-search-panel__fields search-form__fields">
+              <input
+                type="search"
+                id="header-search-input"
+                name="s"
+                class="form-input search-form__input"
+                placeholder="Введите запрос"
+                autocomplete="off"
+              />
+              <button
+                type="submit"
+                class="btn btn--primary search-form__btn search-form__submit-text"
+              >
+                Найти
+              </button>
+              <button
+                type="submit"
+                class="search-form__submit-icon"
+                aria-label="Выполнить поиск"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile drawer -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer__overlay" aria-hidden="true"></div>
+      <div
+        class="mobile-drawer__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Мобильное меню"
+      >
+        <button
+          type="button"
+          id="menu-close"
+          class="mobile-drawer__close"
+          aria-label="Закрыть меню"
+        >
+          ×
+        </button>
+        <nav class="mobile-drawer__nav" aria-label="Мобильная навигация">
+          <a href="index.html" class="mobile-drawer__link">Главная</a>
+          <a
+            href="table-page.html" data-source-path="/o-nas/grafik-pryamyh-telefonnyh-linij/"
+            class="mobile-drawer__link"
+            >Прямые линии</a
+          >
+          <a href="paid-services.html" data-source-path="/platnye-uslugi-2/" class="mobile-drawer__link"
+            >Платные услуги</a
+          >
+                                                  <span class="mobile-drawer__group-label">Информация</span>
+                                                            <a href="administrative-procedures.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/administrativnye-procedury/">Административные процедуры</a>
+          <a href="medical-extract-procedure.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/informaciya/poryadok-polucheniya-vypiski-iz-medicin/">Порядок получения выписки из медицинских документов</a>
+          <a href="palliative-care.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/palliativnaya-medicinskaya-pomoshhi/">Паллиативная медицинская помощь</a>
+          <a href="ideology.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/informaciya/ideologiya/">Идеология</a>
+<a href="preventive-examinations.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/informaciya/poryadok-provedeniya-profilakticheskih/">Порядок проведения профилактических осмотров</a>
+          <a href="addiction-help.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/pomoshh-pri-alkogolizme/">Помощь в лечении зависимости</a>
+          <a href="incapacity.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/informaciya/poryadok-priznaniya-grazhdan-nedeesposobnymi/">Порядок признания граждан недееспособными</a>
+          <a href="cybercrime.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/kiberprestupnost/">Профилактика киберпреступлений</a>
+          <a href="extremism.html" class="mobile-drawer__link mobile-drawer__link--sub is-active" data-source-path="/protivodejstvie-ekstremizmu/" aria-current="page">Противодействие экстремизму</a>
+          <a href="decree-631.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/informaciya/mery-po-realizacii-ukaza-631/">Меры поддержки по реализации Указа 631</a>
+          <span class="mobile-drawer__group-label">О нас</span>
+          <a href="about.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/">О нас</a>
+          <a href="territorial-districts.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/territorialnye-uchastki/">Территориальные участки</a>
+          <a href="administration.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/administraciya/">Администрация</a>
+          <a href="departments-index.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/strukturnye-podrazdeleniya/">Структурные подразделения</a>
+          <a href="working-hours.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/rezhim-raboty/">Режим работы</a>
+          <a href="vacancies.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/vakansii/">Вакансии</a>
+          <a href="administration-reception.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/grafik-priema-grazhdan-administraciej/">График приема граждан администрацией</a>
+          <a href="anti-corruption.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/rabota-po-protivodejstviju-korrupcii/">Работа по противодействию коррупции</a>
+          <a href="trade-union.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/profsojuz/">Профсоюз</a>
+          <a href="partners.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/nashi-partnery/">Наши партнеры</a>
+          <a href="https://sansk.by/" class="mobile-drawer__link mobile-drawer__link--sub" rel="noopener noreferrer">Санаторий «Серябряные ключи»</a>
+          <a href="public-organizations.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/obshhestvennye-organizacii/">Общественные организации</a>
+<span class="mobile-drawer__group-label">Контакты</span>
+          <a
+            href="contacts.html" data-source-path="/contacts/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Контактная информация</a
+          >
+          <a href="administration-phones.html" data-source-path="/contacts/kontaktnye-telefony-administracii/" class="mobile-drawer__link mobile-drawer__link--sub"
+            >Контактные телефоны администрации</a
+          >
+          <a href="staff-phones.html" data-source-path="/contacts/kontaktnye-telefony-sotrudnikov/" class="mobile-drawer__link mobile-drawer__link--sub"
+            >Контактные телефоны сотрудников</a
+          >
+          <a href="department-hours-phones.html" data-source-path="/contacts/rezhim-raboty-i-kontaktnye-telefony-strukturnyh-podrazdelenij/" class="mobile-drawer__link mobile-drawer__link--sub"
+            >Режим работы и контактные телефоны структурных подразделений</a
+          >
+          <a
+            href="hot-line.html" data-source-path="/contacts/goryachaya-liniya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Горячая линия</a
+          >
+          <a
+            href="electronic-appeals.html" data-source-path="/contacts/elektronnye-obrashheniya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Электронные обращения</a
+          >
+          <a href="applicant-2023.html" data-source-path="/abiturient-2023/" class="mobile-drawer__link"
+            >Абитуриент 2026</a
+          >
+          
+          <a href="for-patients.html" data-source-path="/dlya-pacientov/" class="mobile-drawer__link"
+            >Для пациентов</a
+          >
+          <span class="mobile-drawer__group-label">Служебное</span>
+          <a
+            href="mailto:ggkp14@ggkp14.by"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >ggkp14@ggkp14.by</a
+          >
+          <button
+            type="button"
+            class="mobile-drawer__link mobile-drawer__link--sub mobile-drawer__a11y"
+            data-a11y-toggle
+            aria-pressed="false"
+          >
+            Версия для слабовидящих
+          </button>
+        </nav>
+        <nav
+          class="lang-switcher lang-switcher--drawer"
+          aria-label="Выбор языка"
+        >
+          <a
+            href="#"
+            class="lang-switcher__link is-active"
+            hreflang="ru"
+            lang="ru"
+            aria-current="true"
+            >RU</a
+          >
+          <a href="#" class="lang-switcher__link" hreflang="be" lang="be"
+            >BY</a
+          >
+          <a href="#" class="lang-switcher__link" hreflang="en" lang="en"
+            >EN</a
+          >
+        </nav>
+        <a href="content-page.html" class="btn btn--primary mobile-drawer__cta"
+          >Запись к врачу</a
+        >
+        <form class="search-form mobile-drawer__search" role="search" action="search-results.html">
+          <label for="mobile-search-input" class="visually-hidden"
+            >Поиск по сайту</label
+          >
+          <div class="search-form__fields">
+            <input
+              type="search"
+              id="mobile-search-input"
+              name="s"
+              class="form-input search-form__input"
+              placeholder="Введите запрос"
+            />
+            <button
+              type="submit"
+              class="btn btn--primary search-form__btn search-form__submit-text"
+            >
+              Найти
+            </button>
+            <button
+              type="submit"
+              class="search-form__submit-icon"
+              aria-label="Выполнить поиск"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+        <main id="main">
+      <div class="internal-page">
+        <div class="container internal-page__container">
+          <nav class="breadcrumb" aria-label="Хлебные крошки">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item">
+                <a href="index.html">Главная</a>
+                <span class="breadcrumb__sep" aria-hidden="true">&#187;</span>
+              </li>
+              <li class="breadcrumb__item" aria-current="page">
+                <span>Противодействие экстремизму</span>
+              </li>
+            </ol>
+          </nav>
+          <header class="page-header">
+            <h1 class="page-header__title">Противодействие экстремизму</h1>
+          </header>
+          <article class="prose">
+            <h2>Меры противодействия экстремизму</h2>
+            <h2>ПАМЯТКА</h2>
+            <p>О мерах противодействия экстремизму, терроризму и</p>
+            <p>реабилитации нацизма. Ответственность за регистрацию</p>
+            <p>на интернет ресурсах, признанных экстремистскими и</p>
+            <p>распространение экстремистских материалов</p>
+            <p>в глобальной сети интернет</p>
+            <h2>ОБЩЕЕ ПОНЯТИЕ ЭКСТРЕМИЗМА</h2>
+            <p>В основу государственной политики и идеологии Республики Беларусь заложен ряд постулатов и направлений, определяющих функционирование государства в целом, в том числе направленных на противодействие экстремизму и терроризму, недопустимость реабилитации нацизма.</p>
+            <p>Экстремизм — это приверженность к радикальным взглядам и действиям, направленным на насильственное изменение конституционного строя, нарушение целостности государства, разжигание розни, публичное оправдание терроризма и хранение запрещенных материалов.</p>
+            <p>Вместе с тем, экстремизм – это одно из наиболее опасных явлений безопасности мирового сообщества, представляющих угрозу для всего общества, как совершаемыми преступлениями, так и разрушением общепризнанных норм морали, права и человеческих ценностей, представляющих собой некий своеобразный способ разрешения социальных противоречий, сложившихся в тех и или иных областях общественной жизни.</p>
+            <p>Регулирование последствий экстремистской деятельности затрагивают все основные сферы общественной жизни — политическую, экономическую, социальную и регламентируется:</p>
+            <p>Законом Республики Беларусь от 04.01.2007 № 203-З «О противодействии экстремизму» (в редакции от 17.07.2023);</p>
+            <p>Законом Республики Беларусь от 04.01.2010 № 108-З) «О местном управлении и самоуправлении в Республике Беларусь» (ред. от 09.12.2025);</p>
+            <p>Законом Республики Беларусь от 03.01.2002 № 77-З «О борьбе с терроризмом» (ред. от 01.01.2024);</p>
+            <p>Законом Республики Беларусь от 14.05.2021 №103-З «О недопущении реабилитации нацизма»;</p>
+            <p>Постановлением Совета Министров Республики Беларусь от 12.10.2021 № 575 «О мерах противодействия экстремизму и реабилитации нацизма» (ред. от 01.01.2026).</p>
+            <h2>ПРОЯВЛЕНИЕ ЭКСТРЕМИЗМА</h2>
+            <p>Экстремистские действия могут осуществляться путем:</p>
+            <p>насильственное изменение основ конституционного строя и нарушение целостности государства Республики Беларусь;</p>
+            <p>захвата или удержания государственной власти неконституционным путем;</p>
+            <p>создания экстремистского формирования либо участия в экстремистском формировании;</p>
+            <p>содействия осуществлению экстремистской деятельности, прохождения обучения или иной подготовки для участия в такой деятельности;</p>
+            <p>распространения в этих целях заведомо ложных сведений о политическом, экономическом, социальном, военном или международном положении Республики Беларусь, правовом положении граждан в Республике Беларусь, дискредитирующих Республику Беларусь;</p>
+            <p>оскорбления в этих целях представителя власти в связи с исполнением им служебных обязанностей, дискредитации органов государственной власти и управления;</p>
+            <p>создания в этих целях незаконного вооруженного формирования;</p>
+            <p>осуществления террористической деятельности;</p>
+            <p>разжигания расовой, национальной, религиозной либо иной социальной вражды или розни, политической или идеологической вражды, вражды или розни в отношении какой-либо социальной группы, в том числе совершения в указанных целях противоправных деяний против общественного порядка и общественной нравственности, порядка управления, жизни и здоровья, личной свободы, чести и достоинства личности, имущества;</p>
+            <p>организации и осуществления массовых беспорядков, актов вандализма, сопряженных с повреждением или уничтожением имущества, захвата зданий и сооружений, иных действий, грубо нарушающих общественный порядок, либо активного участия в них по мотивам расовой, национальной, религиозной либо иной социальной вражды или розни, политической или идеологической вражды, вражды или розни в отношении какой-либо социальной группы;</p>
+            <p>совершения в этих целях незаконных действий в отношении оружия, боеприпасов, взрывчатых веществ;</p>
+            <p>пропаганды исключительности, превосходства либо неполноценности граждан по признаку их социальной, расовой, национальной, религиозной или языковой принадлежности;</p>
+            <p>распространения экстремистских материалов, а равно изготовления, издания, хранения или перевозки таких материалов в целях распространения;</p>
+            <p>реабилитации нацизма, пропаганды или публичного демонстрирования, изготовления, распространения нацистской символики и атрибутики, а равно хранения или приобретения такой символики или атрибутики в целях распространения;</p>
+            <p>воспрепятствования законной деятельности государственных органов, в том числе Центральной комиссии Республики Беларусь по выборам и проведению республиканских референдумов, избирательных комиссий, комиссий по референдуму, комиссий по проведению голосования об отзыве депутата, а также законной деятельности должностных лиц этих органов, комиссий, совершенного с применением насилия, угрозы его применения, обмана, подкупа, а равно применения насилия либо угрозы насилием в отношении близких указанных должностных лиц в целях воспрепятствования их законной деятельности или принуждения к изменению характера такой деятельности либо из мести за исполнение ими служебных обязанностей;</p>
+            <p>финансирования экстремистской деятельности;</p>
+            <p>публичных призывов к организации или проведению в этих целях незаконных собрания, митинга, уличного шествия, демонстрации или пикетирования с нарушением установленного порядка их организации или проведения, либо вовлечения лиц в участие в таких массовых мероприятиях путем насилия, угрозы применения насилия, обмана или выплаты вознаграждения, либо иной организации или проведения таких массовых мероприятий, если их проведение повлекло по неосторожности гибель людей, причинение тяжкого телесного повреждения одному или нескольким лицам или причинение ущерба в крупном размере.</p>
+            <h2>ЭКСТРЕМИСТСКИЕ МАТЕРИАЛЫ. ОТВЕТСТВЕННОСТЬ</h2>
+            <p>К экстремистским материалам относятся символика и атрибутика, информационная продукция (печатные, аудио-, аудиовизуальные и другие информационные сообщения и (или) материалы, плакаты, портреты, транспаранты и иная наглядная агитация, рекламная продукция), предназначенные для публичных демонстрации, использования и распространения, либо распространенные любым способом в целях вовлечения в экстремистскую деятельность и ее пропаганды и признанные экстремистскими материалами по решению суда.</p>
+            <p>Список материалов, признанных экстремистскими, постоянно актуализируется и с ним каждый гражданин может ознакомиться на сайте Министерства информации Республики Беларусь:</p>
+            <p><a href="http://mininform.gov.by/documents/respublikanskiy-spisok-ekstremistskikh-materialov/">http://mininform.gov.by/documents/respublikanskiy-spisok-ekstremistskikh-materialov/</a></p>
+            <p>Систематически на официальной странице мессенджера: <a href="http://t.me/gomelcgp">http://t.me/gomelcgp</a> ГУЗ «ГЦГКП» публикуется актуальная информация о фактах экстремистской деятельности, а также о мерах воздействия и предупреждения правонарушений.</p>
+            <p>Экстремистские телеграм — каналы, телеграм — чаты, после того, как их признают экстремистским формированием, вместе с аудиторией могут попасть под уголовную ответственность.</p>
+            <p>Только с момента признания экстремистским формированием начинается уголовное преследование.</p>
+            <p>Различная пропаганда – «слив» данных, репосты, комментарии, оказание поддержки в популяризации канала, финансирование – это влечет в настоящее время административную ответственность.</p>
+            <p>Подписка — это элемент популяризации, распространения экстремистской информации.</p>
+            <p>«Слив» данных – нарушение безопасности, при котором важное, защищённые или конфиденциальные данные копируются, передаются, просматриваются, изменяются или используются лицом, не имеющим на это права.</p>
+            <p>Репост – повторная публикация содержимого поста другого пользователя.</p>
+            <p>Деанонимизировать правоохранители на сегодня могут практически любого, современные компьютерные программы позволяют это сделать, контролируются и проверяются, в том числе, и различные домовые чаты.</p>
+            <p>За распространение, изготовление, хранение, перевозку информационной продукции, содержащей призывы к экстремистской деятельности или пропагандирующей такую деятельность, предусмотрена административная ответственность согласно ст.19.11 КоАП Республики Беларусь.</p>
+            <p>Распространение информационной продукции, содержащей призывы к экстремистской деятельности или пропагандирующей такую деятельность, а равно изготовление, хранение либо перевозка с целью распространения такой информационной продукции влекут наложение штрафа в размере до двадцати базовых величин с конфискацией предмета административного правонарушения, на индивидуального предпринимателя — от двадцати до пятидесяти базовых величин с конфискацией предмета административного правонарушения, а на юридическое лицо — от пятидесяти до двухсот базовых величин с конфискацией предмета административного правонарушения.</p>
+            <p>Распространение информационной продукции, включенной в республиканский список экстремистских материалов, а равно изготовление, издание, хранение либо перевозка с целью распространения такой информационной продукции влекут наложение штрафа в размере от десяти до тридцати базовых величин с конфискацией предмета административного правонарушения, а также орудий и средств совершения указанного нарушения или без конфискации таких орудий и средств, или общественные работы с конфискацией предмета административного правонарушения, а также орудий и средств совершения указанного нарушения или без конфискации таких орудий и средств, или административный арест с конфискацией предмета административного правонарушения, а также орудий и средств совершения указанного нарушения или без конфискации таких орудий и средств, на индивидуального предпринимателя — наложение штрафа в размере от пятидесяти до ста базовых величин с конфискацией предмета административного правонарушения, а также орудий и средств совершения указанного нарушения или без конфискации таких орудий и средств, а на юридическое лицо — от ста до пятисот базовых величин с конфискацией предмета административного правонарушения, а также орудий и средств совершения указанного нарушения или без конфискации таких орудий и средств.</p>
+            <p>По указанной статье привлекаются лица, распространяющие в глобальной компьютерной сети «интернет» (мессенджерах «вайбер», «телеграмм» и др.) информацию с телеграмм-каналов и иных источников, признанных экстремистскими (NEXTA, «Беларусь головного мозга», «Мая краiна Беларусь» «Беларусь за МКАДом» и др., полный перечень которых определен Министерством информации Республики Беларусь), либо хранящие указанную информацию с целью ее распространения.</p>
+            <p>Состав указанного административного правонарушения будет и в том случае, когда гражданин, передает какую-либо информацию для размещения ее на экстремистском канале, поскольку в этой ситуации он фактически участвует в изготовлении экстремистской продукции, так как вся информация, размещенная на канале, признанном экстремистским, также является экстремистской.</p>
+            <p>Статьей 19.10 КоАП Республики Беларусь установлена административная ответственность за пропаганду или публичное демонстрирование, изготовление, распространение нацисткой символики и атрибутики.</p>
+            <p>Административной ответственности по указанной статье КоАП Республики Беларусь подлежат как вменяемые физические лица, достигшие 16-летнего возраста, так и индивидуальные предприниматели, и юридические лица.</p>
+            <p>Пропаганда – распространение и углублённое разъяснение каких – либо идей, учений и знаний. Важнейший инструмент формирования общественного мнения.</p>
+            <p>Публичное демонстрирование – публичное выставление, показ, ношение, вывешивание, изображение, воспроизведение на страницах печатных изданий или фото-кино-видео материалов, тиражирование и другие действия, делающие восприятие информации доступным неограниченному кругу лиц.</p>
+            <p>В качестве взыскания для физического лица статья 19.10 КоАП Республики Беларусь предусматривает альтернативную санкцию в виде штрафа до 10 базовых величин (далее — БВ), или общественных работ, или административного ареста. При этом в качестве дополнительного взыскания за предусмотренные данной статьей противоправные деяния предусмотрена конфискация предмета административного правонарушения, а также орудий и средств совершения указанного правонарушения.</p>
+            <p>За аналогичные деяния, но совершенные повторно в течение одного года после наложения административного взыскания, санкцией части 2 статьи 19.10 КоАП Республики Беларусь предусмотрена повышенная ответственность:</p>
+            <p>штраф для физического лица от 10 до 20 БВ</p>
+            <p>для индивидуального предпринимателя – от 20 до 50 БВ</p>
+            <p>для юридического лица – от 50 до 200 БВ.</p>
+            <p>Кроме того, в Республике Беларусь введена уголовная ответственность за пропаганду или публичное демонстрирование, изготовление, распространение нацистской символики или атрибутики (статья 341-1 Уголовного кодекса Республики Беларусь). Данной нормой уголовного закона установлено, что пропаганда или публичное демонстрирование, в том числе с использованием глобальной компьютерной сети Интернет либо иной информационной сети, изготовление, распространение нацистской символики или атрибутики, а равно хранение или приобретение такой символики в целях распространения, совершенные неоднократно, — наказываются штрафом, или арестом, или ограничением свободы на срок до трех лет, или лишением свободы на срок до четырех лет.</p>
+            <p>Приверженцы неонацизма, которые смело демонстрируют свои татуировки в виде нацистских символов (свастики и т.п. символов), в том числе приветственные жесты, в реальности становятся фигурантами дел об административных правонарушениях и уголовных дел.</p>
+            <p>Таким образом, лицам, которые по каким-то причинам увлекаются нацисткой символикой и атрибутикой, следует всегда помнить, что их действиям правоохранителями республики будет даваться принципиальная правовая оценка с целью пресечения распространения нацистской идеологии на территории нашей Республики Беларусь.</p>
+            <h2>ВАЖНО!</h2>
+            <p>Если вышеуказанные действия совершены за вознаграждение, то в соответствии с действующим законодательством Республики Беларусь предусмотрена ответственность в виде штрафа в размере от тридцати до двухсот базовых величин, или общественных работ, или административного ареста.</p>
+            <p>Уголовным Кодексом предусмотрен ряд ограничений, связанных с преступными действиями и намерениями при проведении массовых мероприятий.</p>
+            <p>Статья 370 Уголовного Кодекса Республики Беларусь предусматривает ответственность за надругательство над государственными символами (Государственным гербом Республики Беларусь, Государственным флагом Республики Беларусь, Государственным гимном Республики Беларусь).</p>
+            <p>Одним из наиболее часто совершаемых видов данного преступления является надругательство над Государственным флагом, которое выражается в его срыве с места установки с последующими оскорбительными действиями (срыв флага и последующее кидание его на землю уже образует состав преступления), либо размещении в сети Интернет изображения Государственного флага с оскорбительными комментариями и публикациями.</p>
+            <p>За надругательство над государственными символами Законом предусмотрена ответственность в виде штрафа в размере от тридцати до одной тысячи базовых величин, исправительных работ на срок до двух лет, ареста на срок от одного до трех месяцев, ограничения свободы на срок до трех лет, или лишения свободы на тот же срок.</p>
+            <p>Статья 342 Уголовного Кодекса Республики Беларусь предусматривает ответственность за организацию и подготовку действий, грубо нарушающих общественный порядок, либо активное участие в них.</p>
+            <p>Состав данного преступления образуют любые активные действия, как правило, в ходе несанкционированных массовых мероприятий, грубо нарушающие общественный порядок и сопряженные с явным неповиновением законным требованиям представителей власти, могут выражаться в создании «сцепки» для оказания сопротивления работникам милиции, в действиях по прорыву милицейского оцепления, в перекрытии дорог, повлекшем нарушение работы транспорта и т.д.</p>
+            <p>В частности, к экстремистской деятельности отнесены:</p>
+            <p>распространение заведомо ложных сведений о политическом, экономическом, социальном, военном или международном положении Республики Беларусь, правовом положении ее граждан, сведений, дискредитирующих Республику Беларусь. Предоставление заведомо ложных сведений является уголовным преступление и влечет наказание арестом, или ограничением свободы на срок до четырех лет, или лишением свободы на тот же срок со штрафом или без штрафа (ст.369-1 УК Республики Беларусь);</p>
+            <p>оскорбление представителя власти в связи с выполнением им служебных обязанностей, дискредитация органов государственной власти. Публичное оскорбление представителя власти в связи с выполнением им служебных обязанностей влечет уголовную ответственность и наказание штрафом, или арестом, или ограничением свободы на срок до трех лет со штрафом, или лишением свободы на тот же срок со штрафом (ст.369 УК Республики Беларусь);</p>
+            <p>финансирование деятельности экстремистского формирования — предоставление или сбор денежных средств, ценных бумаг либо иного имущества — последует арест, или ограничение свободы на срок до пяти лет, или лишением свободы на срок от трех до пяти лег и лишением свободы на срок от пяти до восьми лет со штрафом (ст.361-2 УК Республики Беларусь);</p>
+            <p>публичные призывы к организации или проведению незаконного собрания, митинга, уличного шествия, демонстрации или пикетирования либо вовлечение лиц в участие в таких массовых мероприятиях, влечет наказание арестом, или ограничением свободы на срок до пяти лет, или лишением свободы на тот же срок (ст.369-3 УК Республики Беларусь);</p>
+            <p>финансирование деятельности экстремистского формирования — предоставление или сбор денежных средств, ценных бумаг либо иного имущества — влечет арест, или ограничение свободы на срок до пяти лет, или лишение свободы на срок от трех до пяти лет и лишение свободы на срок от пяти до восьми лет со штрафом (ст.361-2 УК Республики Беларусь);</p>
+            <p>за создание экстремистского формирования либо руководство таким формированием предусмотрено наказание в виде ограничения свободы на срок до пяти лет или лишения свободы на срок от трех до семи лет, те же деяния, совершенные повторно либо должностным лицом с использованием служебных полномочий, будут наказываться ограничением свободы на срок от трех до пяти лет или лишением свободы на срок от шести до десяти лет (ст.361-1 УК Республики Беларусь);</p>
+            <p>Статьи 361-4 и 361-5 УК Республики Беларусь предусматривают наказания за содействие экстремистской деятельности и подготовку других людей к ней в виде наказания сроком до 7 лет лишения свободы.</p>
+            <p>В случае своевременного сообщения лицом, совершившим вышеуказанные преступления, государственным органам, а равно иным образом способствовавшее выявлению, предотвращению или пресечению деяний, отнесенных законодательством к экстремистской деятельности, ее финансированию, оно освобождается от уголовной ответственности.</p>
+            <p>Также, предусмотрена уголовная ответственность за незаконный сбор либо распространение информации о частной жизни или персональных данных граждан, а также повышенная ответственность за такие действия в отношении лица или его близких в связи с осуществлением служебной деятельности или выполнением общественного долга.</p>
+            <p>Самостоятельным преступлением является вербовка и вовлечение лица в экстремистскую деятельность, обучение, а равно иное содействие экстремистской деятельности. Согласно статье 3614 Уголовного кодекса Республики Беларусь наказание за подобные действия может достигать до 6 лет лишения свободы, а в случае их совершения повторно, группой лиц по предварительному сговору либо должностным лицом с использованием своих служебных полномочий – до 7 лет лишения свободы.</p>
+            <p>Следует отметить, что совершение злоумышленниками преступлений экстремисткой направленности посредством сети Интернет из-за рубежа, не освобождает от уголовной ответственности.</p>
+            <h2>О ПРОТИВОДЕЙСТВИИ ТЕРРОРИЗМУ</h2>
+            <p>Терроризм – социально-политическое криминальное явление, представляющее собой идеологию и практику применения насилия или угрозы насилием в целях оказания воздействия на принятие решений органами власти, воспрепятствования политической или иной общественной деятельности, провокации международных осложнений или войны, устрашения населения, дестабилизации общественного порядка.</p>
+            <p>Правовую основу борьбы с терроризмом составляют Конституция Республики Беларусь, Уголовный кодекс Республики Беларусь, настоящий Закон, другие акты законодательства, международные договоры Республики Беларусь.</p>
+            <p>При этом борьба с терроризмом представляет собой деятельность по предупреждению, выявлению, пресечению и минимизации последствий террористической деятельности.</p>
+            <p>Противодействие идеологии терроризма включает комплекс организационных, социально-политических, информационно-пропагандистских мер по предупреждению распространения в обществе убеждений, идей, настроений, мотивов, установок, направленных на коренное изменение существующих социальных и политических институтов государства.</p>
+            <p>В качестве потенциальных объектов террористических устремлений могут рассматриваться любые физические и юридические лица, места массового пребывания людей, объекты недвижимости, критической инфраструктуры, транспорта, жизнеобеспечения, коммуникационные и информационные сети.</p>
+            <p>Под защищенностью потенциальных объектов террористических устремлений следует понимать комплексное использование сил физической защиты, инженерно-технических средств и режимных мер, направленных на обеспечение их безопасного функционирования.</p>
+            <p>Субъектами, непосредственно осуществляющими борьбу с терроризмом в пределах своей компетенции, являются органы государственной безопасности, органы внутренних дел, Служба безопасности Президента Республики Беларусь, Вооруженные Силы Республики Беларусь, органы пограничной службы, внутренние войска Министерства внутренних дел.</p>
+            <p>Субъектами, участвующими в предупреждении, выявлении и пресечении террористической деятельности в пределах своей компетенции, являются государственные органы и иные государственные организации.</p>
+            <p>При этом государственные органы и иные государственные организации, не являющиеся субъектами борьбы с терроризмом, участвуют в государственном реагировании в соответствии с законодательством.</p>
+            <p>Также на государственные органы, иные организации и граждан возлагается обязанность оказывать содействие субъектам борьбы с терроризмом, выполнять их требования и соблюдать правовой режим в зоне проведения контртеррористической операции.</p>
+            <p>Сообщение гражданами государственным органам о ставших известными им сведениях о террористической деятельности является долгом каждого и поощряется государством.</p>
+            <p>В силу ст.22 Закона «О борьбе с терроризмом» лица, принимавшие участие в террористической деятельности, несут ответственность, предусмотренную законодательными актами.</p>
+            <h2>О НЕДОПУЩЕНИИ РЕАБИЛИТАЦИИ НАЦИЗМА</h2>
+            <p>Нацизм – тоталитарная идеология (доктрина) и практика ее применения гитлеровской Германией, ее союзниками и сателлитами с 1933 по 1945 год, связанные с тоталитарными террористическими методами власти, официальной градацией всех наций по степени полноценности, пропагандой превосходства одних наций над другими, сопровождавшиеся преступлениями против мира и безопасности человечества, военными и другими преступлениями, установленными приговором Международного военного трибунала для суда и наказания главных военных преступников европейских стран оси.</p>
+            <p>Реабилитация нацизма – действия, совершенные публично либо с использованием публично демонстрируемого произведения, или средств массовой информации, или глобальной компьютерной сети Интернет, или иной информационной сети, выражающиеся в:</p>
+            <p>оправдании идеологии (доктрины) и практики нацизма, признании их правильными, нуждающимися в поддержке и достойными подражания, а также в распространении идеологии нацизма;</p>
+            <p>одобрении или отрицании преступлений против мира и безопасности человечества, военных и других преступлений, установленных приговором Международного военного трибунала либо приговорами национальных, военных или оккупационных трибуналов, основанными на приговоре Международного военного трибунала;</p>
+            <p>оправдании лиц и (или) структур либо организаций, признанных преступными либо виновными в совершении преступлений приговором Международного военного трибунала либо приговорами национальных, военных или оккупационных трибуналов, основанными на приговоре Международного военного трибунала, а равно сотрудничавших с такими лицами и (или) структурами либо организациями на оккупированной территории СССР в годы Второй мировой войны политических и военных организаций, а также лиц, участвовавших в деятельности таких политических и военных организаций и исполнявших либо умышленно содействовавших исполнению преступных приказов лиц и (или) структур либо организаций, указанных в настоящем абзаце, в любой форме;</p>
+            <p>героизации нацистских преступников и их пособников — преднамеренном прославлении их, а также совершенных ими преступлений.</p>
+            <p>Недопущение реабилитации нацизма основывается на принципах:</p>
+            <p>сохранения исторической памяти и недопущения фальсификации истории, в том числе искажения исторических фактов;</p>
+            <p>законности;</p>
+            <p>признания, соблюдения и защиты прав, свобод и законных интересов граждан, а также прав и законных интересов организаций;</p>
+            <p>сочетания гласных и негласных методов недопущения реабилитации нацизма;</p>
+            <p>приоритета обеспечения национальной безопасности Республики Беларусь;</p>
+            <p>сотрудничества государства с организациями и гражданами;</p>
+            <p>приоритета предусмотренных законодательством в сфере профилактики правонарушений мер профилактики правонарушений, направленных на выявление и устранение причин и условий, способствующих реабилитации нацизма (далее — профилактические меры);</p>
+            <p>неотвратимости наказания за реабилитацию нацизма.</p>
+            <p>К числу субъектов недопущения реабилитации нацизма относятся органы внутренних дел, государственной безопасности, финансовых расследований Комитета государственного контроля, пограничной службы, таможенные органы, органы прокуратуры, Следственного комитета, республиканские органы государственного управления в сферах культуры, массовой информации и образования, а также Национальная академия наук Беларуси, Министерство юстиции, соответствующие управления юстиции, республиканский орган государственного управления по делам религий и национальностей, местные исполнительные и распорядительные.</p>
+            <p>Иные государственные органы и организации осуществляют профилактические меры, участвуют в выявлении и пресечении реабилитации нацизма, а также оказывают содействие субъектам противодействия реабилитации нацизма в пределах своей компетенции.</p>
+            <p>К мерам противодействия реабилитации нацизма относятся:</p>
+            <p>официальное предупреждение;</p>
+            <p>предписание;</p>
+            <p>приостановление деятельности организации, представительства иностранной или международной организации, индивидуального предпринимателя, деятельность которых направлена на реабилитацию нацизма;</p>
+            <p>признание организации, зарегистрированной на территории Республики Беларусь, деятельность которой направлена на реабилитацию нацизма, экстремистской, запрещение ее деятельности и ликвидация такой организации;</p>
+            <p>признание деятельности индивидуального предпринимателя, деятельность которого направлена на реабилитацию нацизма, экстремистской и ее прекращение;</p>
+            <p>противодействие деятельности экстремистских формирований, деятельность которых направлена на реабилитацию нацизма;</p>
+            <p>запрещение деятельности экстремистских иностранных и международных организаций, деятельность которых направлена на реабилитацию нацизма;</p>
+            <p>противодействие финансированию реабилитации нацизма;</p>
+            <p>иные меры противодействия реабилитации нацизма, предусмотренные законодательством о противодействии экстремизму.</p>
+            <h2>ОБ ОТВЕТСТВЕННОСТИ ЗА ПЕРЕДАЧУ РЕКВИЗИТОВ БАНКОВСКИХ КАРТ ПОСТОРОННИМ ЛИЦАМ</h2>
+            <p>Злоумышленники в целях конспирации своих преступных действий нередко используют для получения и перевода денежных средств реквизиты банковских платежных карточек (номер, срок действия карточки и иная информация в соответствии с правилами платежной системы (банка-эмитента)) либо аутентификационные данные счетов третьих лиц.</p>
+            <p>Под аутентификационными данными понимаются уникальные данные (персонализированные признаки), которые поставщик платежных услуг сообщает идентифицированному пользователю платежных услуг, а также которые идентифицированный пользователь формирует или получает в процессе его идентификации.</p>
+            <p>К таким данным могут относиться логин и пароль, обеспечивающие доступ к системам дистанционного банковского обслуживания типа «Интернет-банкинг», ОТР-код (One Time Password (одноразовый пароль)) протокола 3D—Secure, который отправляется, как правило, через SMS-сообщение держателю карточки и действует только один сеанс для подтверждения пользователя при его входе в личный кабинет, иные TAN-коды (Transaction Authentication Number), push-уведомления, секретный вопрос и секретный ответ, ключевое слово, криптографический токен аутентификации, биометрические данные (отпечатки пальцев рук, ладоней, радужная оболочка глаза, изображение лица человека при его обработке в рамках уникальной идентификации и пр.) и иные уникальные данные (персонализированные признаки), с помощью которых возможно получение доступа к счетам.</p>
+            <p>Именно потому корыстное, т.е. с целью извлечения прибыли, распространение реквизитов платежных средств – это не «безобидная подработка». Каждый проданный или переданный другому лицу набор цифр представляет собой потенциальные финансовые потери для конкретного человека.</p>
+            <p>Подобные деяния подрывают основу доверия к финансовой системе. Способствуют совершению других тяжких преступлений: от торговли наркотиками и хищений до экстремизма и терроризма.</p>
+            <p>Таким образом, лицо, распространившее данные платежных инструментов, становится элементом больших криминальных схем.</p>
+            <p>Распространение из корыстных побуждений, находящихся в незаконном владении лица реквизитов банковских платежных карточек либо аутентификационных данных, с помощью которых возможно получить доступ к счетам, электронным или виртуальным кошелькам, влечет ответственность по статье 222 Уголовного кодекса Республики Беларусь, предусматривающей наказание вплоть до лишения свободы.</p>
+            <p>В свою очередь, за незаконное предоставление из корыстных побуждений, находящихся в законном владении лица реквизитов банковских платежных карточек либо аутентификационных данных в статье 12.35 Кодекса Республики Беларусь об административных правонарушениях установлена административная ответственность.</p>
+            <h2>ВАЖНО!</h2>
+            <p>Причины совершения подобных преступлений во многом обусловлены сочетанием экономических, социальных и технологических факторов.</p>
+            <p>На первый план здесь выходит корысть: именно легкая возможность незаконного заработка становится мотивом для вовлечения в такую деятельность лиц, не имеющих стабильного дохода или работы.</p>
+            <p>Одна из серьезных проблем – вовлечение в эту преступную деятельность молодежи.</p>
+            <p>Злоумышленники активно рекламируют в интернет-мессенджерах так называемый «легкий заработок» («удаленный доход», «работа мечты», «ищем менеджеров по обработке данных»), играя на человеческой слабости и обещая за реквизиты платежных средств вознаграждение.</p>
+            <p>Нередко вовлечение происходит под видом легальной удаленной работы, где соискателю предлагают задания, связанные с обработкой данных. При этом не раскрывают их незаконный характер, объясняя это, например, «покупкой крипто валюты», «нуждами бизнеса» или «оптимизацией финансовых потоков».</p>
+            <p>Значительную роль играет и низкий уровень правосознания, когда правонарушители не понимают масштаб последствий от «простой» передачи или пересылки чужих данных. Многие участники таких схем искренне не осознают, что их действия образуют состав преступления.</p>
+            <p>Важно помнить, что легальная работа не требует передачи чужих платежных данных. Распространение из корыстных побуждений, находящихся в незаконном владении реквизитов банковских платежных карточек либо аутентификационных данных, с помощью которых возможно получение доступа к счетам, – это преступление с реальными потерпевшими и уголовным наказанием. Выбирая между «легкими деньгами» и спокойной совестью, следует учитывать, что в цифровом мире каждое действие оставляет следы, которые правоохранительные органы умеют читать!</p>
+            <p><a href="https://gomel-region.gov.by/ru/stopekstremizm-ru">https://gomel-region.gov.by/ru/stopekstremizm-ru</a></p>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <!-- 10. Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div>
+            <h3 class="site-footer__title">ГУЗ «ГГКП №14»</h3>
+            <p>г. Гомель, ул. Косарева, 11<br />246012</p>
+            <p><a href="tel:+375232329065">+375 (232) 32-90-65</a></p>
+            <p><a href="mailto:ggkp14@ggkp14.by">ggkp14@ggkp14.by</a></p>
+          </div>
+          <div>
+            <h3 class="site-footer__title">Навигация</h3>
+            <ul class="site-footer__list">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="about.html" data-source-path="/o-nas/">О нас</a></li>
+              <li><a href="contacts.html" data-source-path="/contacts/">Контакты</a></li>
+              <li><a href="paid-services.html" data-source-path="/platnye-uslugi-2/">Платные услуги</a></li>
+              <li><a href="news-archive.html" data-source-path="/category/novosti/">Новости</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="site-footer__title">Пациентам</h3>
+            <ul class="site-footer__list">
+              <li><a href="content-page.html">Запись к врачу</a></li>
+              <li>
+                <a href="electronic-appeals.html" data-source-path="/contacts/elektronnye-obrashheniya/"
+                  >Электронные обращения</a
+                >
+              </li>
+              <li><a href="working-hours.html" data-source-path="/o-nas/rezhim-raboty/">Режим работы</a></li>
+              <li><a href="vacancies.html" data-source-path="/o-nas/vakansii/">Вакансии</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p>© ГУЗ «Гомельская городская клиническая поликлиника № 14»</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/accessibility.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

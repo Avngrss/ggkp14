@@ -623,6 +623,67 @@
   min-width: 36rem;
 }
 
+.data-table--directory {
+  min-width: 42rem;
+}
+
+.data-table--schedule {
+  min-width: 44rem;
+}
+
+.data-table--schedule-wide {
+  min-width: 58rem;
+}
+
+.data-table--schedule :is(th, td),
+.data-table--schedule-wide :is(th, td) {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.data-table--schedule a[href^="tel:"],
+.data-table--schedule-wide a[href^="tel:"] {
+  white-space: nowrap;
+}
+
+.prose-logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+  margin: var(--space-6) 0;
+}
+
+.prose-logo-row img {
+  width: auto;
+  max-width: 10rem;
+  height: auto;
+}
+
+.data-table--directory .data-table__col--name {
+  width: 30%;
+}
+
+.data-table--directory .data-table__col--role {
+  width: 40%;
+}
+
+.data-table--directory .data-table__col--phone {
+  width: 30%;
+  min-width: 11rem;
+}
+
+.data-table--directory :is(th, td) {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.data-table--directory a[href^="tel:"] {
+  white-space: nowrap;
+  word-break: normal;
+}
+
 .data-table--emails .data-table__col--email {
   width: 44%;
   min-width: 11rem;

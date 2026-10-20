@@ -88,7 +88,7 @@ powershell -ExecutionPolicy Bypass -File .\tools\preview-local.ps1 -Port 8766
 4. Новости
 5. Статьи раздела «Информация»
 
-30 рабочих страниц, каждая один раз:
+49 рабочих страниц, каждая один раз:
 
 - `index.html`
 - `content-page.html`
@@ -108,6 +108,7 @@ powershell -ExecutionPolicy Bypass -File .\tools\preview-local.ps1 -Port 8766
 - `medical-tourism.html`
 - `five-steps.html`
 - `medical-extract-order.html`
+- `administrative-procedures.html`
 - `dispensarization.html`
 - `personal-appeals.html`
 - `sexological-help.html`
@@ -120,6 +121,24 @@ powershell -ExecutionPolicy Bypass -File .\tools\preview-local.ps1 -Port 8766
 - `news-single-video.html`
 - `news-single-no-media.html`
 - `adult-dispensary-examinations.html`
+- `for-patients.html`
+- `administration-phones.html`
+- `staff-phones.html`
+- `department-hours-phones.html`
+- `anti-corruption.html`
+- `trade-union.html`
+- `partners.html`
+- `public-organizations.html`
+- `administration-reception.html`
+- `medical-extract-procedure.html`
+- `palliative-care.html`
+- `ideology.html`
+- `preventive-examinations.html`
+- `addiction-help.html`
+- `incapacity.html`
+- `cybercrime.html`
+- `extremism.html`
+- `decree-631.html`
 
 `preview.html` указан отдельно как страница только для разработки.
 
@@ -128,7 +147,7 @@ powershell -ExecutionPolicy Bypass -File .\tools\preview-local.ps1 -Port 8766
 - `search-results.html` — демонстрация с результатами;
 - `search-results.html?state=empty&s=пример%20запроса` — демонстрация без результатов.
 
-Это не отдельная production-страница и не меняет счётчик из 30 HTML-файлов. Stage 6H rechecked the navigator: every production file appears once, both search states return HTTP 200, and `preview.html` stays development-only.
+Это не отдельная production-страница и не меняет счётчик HTML-файлов. Stage 6K.6 rechecked the navigator after adding `administrative-procedures.html`: every production file appears once, both search states stay listed, and `preview.html` stays development-only.
 
 Скрипты запуска не менялись. `preview-local.cmd` вызывает `tools/preview-local.ps1`, сервер открывает `http://localhost:8765/pages/preview.html`. Файлов `Start-Preview.ps1` и `preview-local.sh` в репозитории нет.
 

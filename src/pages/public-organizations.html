@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Первичные организации «Белая Русь», БРСМ, Красного Креста, Белорусского союза женщин и профсоюзный комитет."
+    />
+    <title>
+      Общественные организации — ГУЗ «Гомельская городская клиническая поликлиника №14»
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/internal-pages.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Перейти к содержимому</a>
+
+    <!-- 1. Topbar -->
+    <div class="topbar" role="region" aria-label="Служебная панель">
+      <div class="container topbar__inner">
+        <nav class="topbar__nav" aria-label="Служебная навигация">
+          <a href="working-hours.html" data-source-path="/o-nas/rezhim-raboty/" class="topbar__link">Режим работы</a>
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="hot-line.html" data-source-path="/contacts/goryachaya-liniya/" class="topbar__link"
+            >Горячая линия</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="departments-index.html" data-source-path="/o-nas/strukturnye-podrazdeleniya/" class="topbar__link"
+            >Структурные подразделения</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="territorial-districts.html" data-source-path="/o-nas/territorialnye-uchastki/" class="topbar__link"
+            >Территориальные участки</a
+          >
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="vacancies.html" data-source-path="/o-nas/vakansii/" class="topbar__link">Вакансии</a>
+          <span class="topbar__sep" aria-hidden="true"></span>
+          <a href="contacts.html" data-source-path="/contacts/" class="topbar__link">Контакты</a>
+        </nav>
+        <div class="topbar__actions">
+          <nav class="lang-switcher" aria-label="Выбор языка">
+            <a
+              href="#"
+              class="lang-switcher__link is-active"
+              hreflang="ru"
+              lang="ru"
+              aria-current="true"
+              >RU</a
+            >
+            <a href="#" class="lang-switcher__link" hreflang="be" lang="be"
+              >BY</a
+            >
+            <a href="#" class="lang-switcher__link" hreflang="en" lang="en"
+              >EN</a
+            >
+          </nav>
+          <a href="mailto:ggkp14@ggkp14.by" class="topbar__email">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <path d="M22 6l-10 7L2 6" />
+            </svg>
+            ggkp14@ggkp14.by
+          </a>
+          <button
+            type="button"
+            class="topbar__a11y"
+            data-a11y-toggle
+            aria-pressed="false"
+          >
+            Версия для слабовидящих
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Header -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="index.html" class="site-header__logo">
+          <span class="site-header__logo-icon" aria-hidden="true">14</span>
+          <span class="site-header__logo-text">
+            <span class="site-header__logo-title"
+              >ГУЗ «Гомельская городская клиническая поликлиника №14»</span
+            >
+            <span class="site-header__logo-subtitle"
+              >г. Гомель, ул. Косарева, 11</span
+            >
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Главное меню">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html" class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a
+                href="table-page.html" data-source-path="/o-nas/grafik-pryamyh-telefonnyh-linij/"
+                class="main-nav__link"
+                >Прямые линии</a
+              >
+            </li>
+            <li class="main-nav__item">
+              <a href="paid-services.html" data-source-path="/platnye-uslugi-2/" class="main-nav__link"
+                >Платные услуги</a
+              >
+            </li>
+            <li class="main-nav__item main-nav__item--dropdown">
+              <a
+                href="information.html" data-source-path="/informaciya/"
+                class="main-nav__link main-nav__link--dropdown is-active"
+              >
+                Информация
+                <svg
+                  class="main-nav__chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </a>
+              <ul class="main-nav__dropdown">
+                <li>
+                  <a href="information.html" data-source-path="/informaciya/" class="main-nav__dropdown-link">Общая информация</a>
+                </li>
+                <li class="main-nav__subitem main-nav__subitem--dropdown">
+                  <a href="about.html" data-source-path="/o-nas/" class="main-nav__dropdown-link main-nav__dropdown-link--parent is-active">О нас</a>
+                  <ul class="main-nav__flyout">
+                    <li>
+                      <a href="territorial-districts.html" class="main-nav__dropdown-link" data-source-path="/o-nas/territorialnye-uchastki/">Территориальные участки</a>
+                    </li>
+                    <li>
+                      <a href="administration.html" class="main-nav__dropdown-link" data-source-path="/o-nas/administraciya/">Администрация</a>
+                    </li>
+                    <li>
+                      <a href="departments-index.html" class="main-nav__dropdown-link" data-source-path="/o-nas/strukturnye-podrazdeleniya/">Структурные подразделения</a>
+                    </li>
+                    <li>
+                      <a href="working-hours.html" class="main-nav__dropdown-link" data-source-path="/o-nas/rezhim-raboty/">Режим работы</a>
+                    </li>
+                    <li>
+                      <a href="vacancies.html" class="main-nav__dropdown-link" data-source-path="/o-nas/vakansii/">Вакансии</a>
+                    </li>
+                    <li>
+                      <a href="administration-reception.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap" data-source-path="/o-nas/grafik-priema-grazhdan-administraciej/">График приема граждан администрацией</a>
+                    </li>
+                    <li>
+                      <a href="table-page.html" class="main-nav__dropdown-link" data-source-path="/o-nas/grafik-pryamyh-telefonnyh-linij/">Прямые линии</a>
+                    </li>
+                    <li>
+                      <a href="anti-corruption.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap" data-source-path="/o-nas/rabota-po-protivodejstviju-korrupcii/">Работа по противодействию коррупции</a>
+                    </li>
+                    <li>
+                      <a href="trade-union.html" class="main-nav__dropdown-link" data-source-path="/o-nas/profsojuz/">Профсоюз</a>
+                    </li>
+                    <li>
+                      <a href="partners.html" class="main-nav__dropdown-link" data-source-path="/nashi-partnery/">Наши партнеры</a>
+                    </li>
+                    <li>
+                      <a href="https://sansk.by/" class="main-nav__dropdown-link" rel="noopener noreferrer">Санаторий «Серябряные ключи»</a>
+                    </li>
+                    <li>
+                      <a href="public-organizations.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap is-active" data-source-path="/o-nas/obshhestvennye-organizacii/" aria-current="page">Общественные организации</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="main-nav__subitem main-nav__subitem--dropdown">
+                  <a href="administrative-procedures.html" class="main-nav__dropdown-link main-nav__dropdown-link--parent" data-source-path="/administrativnye-procedury/">Административные процедуры</a>
+                  <ul class="main-nav__flyout">
+                    <li>
+                      <a href="medical-extract-procedure.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap" data-source-path="/informaciya/poryadok-polucheniya-vypiski-iz-medicin/">Порядок получения выписки из медицинских документов</a>
+                    </li>
+                    <li>
+                      <a href="palliative-care.html" class="main-nav__dropdown-link" data-source-path="/palliativnaya-medicinskaya-pomoshhi/">Паллиативная медицинская помощь</a>
+                    </li>
+                    <li>
+                      <a href="ideology.html" class="main-nav__dropdown-link" data-source-path="/informaciya/ideologiya/">Идеология</a>
+                    </li>
+                  </ul>
+                </li>
+<li>
+                  <a href="preventive-examinations.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap" data-source-path="/informaciya/poryadok-provedeniya-profilakticheskih/">Порядок проведения профилактических осмотров</a>
+                </li>
+                <li>
+                  <a href="addiction-help.html" class="main-nav__dropdown-link" data-source-path="/pomoshh-pri-alkogolizme/">Помощь в лечении зависимости</a>
+                </li>
+                <li>
+                  <a href="incapacity.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap" data-source-path="/informaciya/poryadok-priznaniya-grazhdan-nedeesposobnymi/">Порядок признания граждан недееспособными</a>
+                </li>
+                <li>
+                  <a href="cybercrime.html" class="main-nav__dropdown-link" data-source-path="/kiberprestupnost/">Профилактика киберпреступлений</a>
+                </li>
+                <li>
+                  <a href="extremism.html" class="main-nav__dropdown-link" data-source-path="/protivodejstvie-ekstremizmu/">Противодействие экстремизму</a>
+                </li>
+                <li>
+                  <a href="decree-631.html" class="main-nav__dropdown-link main-nav__dropdown-link--wrap" data-source-path="/informaciya/mery-po-realizacii-ukaza-631/">Меры поддержки по реализации Указа 631</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-nav__item main-nav__item--dropdown">
+              <a
+                href="contacts.html" data-source-path="/contacts/"
+                class="main-nav__link main-nav__link--dropdown"
+              >
+                Контакты
+                <svg
+                  class="main-nav__chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </a>
+              <ul class="main-nav__dropdown">
+                <li>
+                  <a href="contacts.html" data-source-path="/contacts/" class="main-nav__dropdown-link"
+                    >Контактная информация</a
+                  >
+                </li>
+                <li>
+                  <a href="administration-phones.html" data-source-path="/contacts/kontaktnye-telefony-administracii/" class="main-nav__dropdown-link"
+                    >Контактные телефоны администрации</a
+                  >
+                </li>
+                <li>
+                  <a href="staff-phones.html" data-source-path="/contacts/kontaktnye-telefony-sotrudnikov/" class="main-nav__dropdown-link"
+                    >Контактные телефоны сотрудников</a
+                  >
+                </li>
+                <li>
+                  <a href="department-hours-phones.html" data-source-path="/contacts/rezhim-raboty-i-kontaktnye-telefony-strukturnyh-podrazdelenij/" class="main-nav__dropdown-link main-nav__dropdown-link--wrap"
+                    >Режим работы и контактные телефоны структурных подразделений</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="hot-line.html" data-source-path="/contacts/goryachaya-liniya/"
+                    class="main-nav__dropdown-link"
+                    >Горячая линия</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="electronic-appeals.html" data-source-path="/contacts/elektronnye-obrashheniya/"
+                    class="main-nav__dropdown-link"
+                    >Электронные обращения</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="email-addresses.html" data-source-path="/adresa-elektronnoj-pochty/"
+                    class="main-nav__dropdown-link"
+                    >Адреса e-mail</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="main-nav__item">
+              <a href="applicant-2023.html" data-source-path="/abiturient-2023/" class="main-nav__link"
+                >Абитуриент 2026</a
+              >
+            </li>
+          
+            <li class="main-nav__item">
+              <a href="for-patients.html" data-source-path="/dlya-pacientov/" class="main-nav__link"
+                >Для пациентов</a
+              >
+            </li>
+            </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <div class="header-search">
+            <button
+              type="button"
+              id="header-search-toggle"
+              class="header-search__toggle"
+              aria-label="Открыть поиск по сайту"
+              aria-expanded="false"
+              aria-controls="header-search-panel"
+            >
+              <svg class="header-search__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+          </div>
+          <a href="content-page.html" class="btn btn--primary site-header__cta"
+            >Запись к врачу</a
+          >
+          <button
+            type="button"
+            id="menu-toggle"
+            class="menu-toggle"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+          >
+            <svg
+              class="menu-toggle__icon menu-toggle__open"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+            <svg
+              class="menu-toggle__icon menu-toggle__close"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="header-search-panel"
+        class="header-search-panel"
+        hidden
+        aria-hidden="true"
+      >
+        <!-- WordPress: replace with get_search_form() -->
+        <div class="container header-search-panel__inner">
+          <form
+            class="search-form header-search-panel__form"
+            role="search"
+            action="search-results.html"
+          >
+            <label for="header-search-input" class="header-search-panel__label"
+              >Поиск по сайту</label
+            >
+            <div class="header-search-panel__fields search-form__fields">
+              <input
+                type="search"
+                id="header-search-input"
+                name="s"
+                class="form-input search-form__input"
+                placeholder="Введите запрос"
+                autocomplete="off"
+              />
+              <button
+                type="submit"
+                class="btn btn--primary search-form__btn search-form__submit-text"
+              >
+                Найти
+              </button>
+              <button
+                type="submit"
+                class="search-form__submit-icon"
+                aria-label="Выполнить поиск"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile drawer -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer__overlay" aria-hidden="true"></div>
+      <div
+        class="mobile-drawer__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Мобильное меню"
+      >
+        <button
+          type="button"
+          id="menu-close"
+          class="mobile-drawer__close"
+          aria-label="Закрыть меню"
+        >
+          ×
+        </button>
+        <nav class="mobile-drawer__nav" aria-label="Мобильная навигация">
+          <a href="index.html" class="mobile-drawer__link">Главная</a>
+          <a
+            href="table-page.html" data-source-path="/o-nas/grafik-pryamyh-telefonnyh-linij/"
+            class="mobile-drawer__link"
+            >Прямые линии</a
+          >
+          <a href="paid-services.html" data-source-path="/platnye-uslugi-2/" class="mobile-drawer__link"
+            >Платные услуги</a
+          >
+                                                  <span class="mobile-drawer__group-label">Информация</span>
+                                                            <a href="administrative-procedures.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/administrativnye-procedury/">Административные процедуры</a>
+          <a href="medical-extract-procedure.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/informaciya/poryadok-polucheniya-vypiski-iz-medicin/">Порядок получения выписки из медицинских документов</a>
+          <a href="palliative-care.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/palliativnaya-medicinskaya-pomoshhi/">Паллиативная медицинская помощь</a>
+          <a href="ideology.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/informaciya/ideologiya/">Идеология</a>
+<a href="preventive-examinations.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/informaciya/poryadok-provedeniya-profilakticheskih/">Порядок проведения профилактических осмотров</a>
+          <a href="addiction-help.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/pomoshh-pri-alkogolizme/">Помощь в лечении зависимости</a>
+          <a href="incapacity.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/informaciya/poryadok-priznaniya-grazhdan-nedeesposobnymi/">Порядок признания граждан недееспособными</a>
+          <a href="cybercrime.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/kiberprestupnost/">Профилактика киберпреступлений</a>
+          <a href="extremism.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/protivodejstvie-ekstremizmu/">Противодействие экстремизму</a>
+          <a href="decree-631.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/informaciya/mery-po-realizacii-ukaza-631/">Меры поддержки по реализации Указа 631</a>
+          <span class="mobile-drawer__group-label">О нас</span>
+          <a href="about.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/">О нас</a>
+          <a href="territorial-districts.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/territorialnye-uchastki/">Территориальные участки</a>
+          <a href="administration.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/administraciya/">Администрация</a>
+          <a href="departments-index.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/strukturnye-podrazdeleniya/">Структурные подразделения</a>
+          <a href="working-hours.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/rezhim-raboty/">Режим работы</a>
+          <a href="vacancies.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/vakansii/">Вакансии</a>
+          <a href="administration-reception.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/grafik-priema-grazhdan-administraciej/">График приема граждан администрацией</a>
+          <a href="anti-corruption.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/rabota-po-protivodejstviju-korrupcii/">Работа по противодействию коррупции</a>
+          <a href="trade-union.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/o-nas/profsojuz/">Профсоюз</a>
+          <a href="partners.html" class="mobile-drawer__link mobile-drawer__link--sub" data-source-path="/nashi-partnery/">Наши партнеры</a>
+          <a href="https://sansk.by/" class="mobile-drawer__link mobile-drawer__link--sub" rel="noopener noreferrer">Санаторий «Серябряные ключи»</a>
+          <a href="public-organizations.html" class="mobile-drawer__link mobile-drawer__link--sub is-active" data-source-path="/o-nas/obshhestvennye-organizacii/" aria-current="page">Общественные организации</a>
+<span class="mobile-drawer__group-label">Контакты</span>
+          <a
+            href="contacts.html" data-source-path="/contacts/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Контактная информация</a
+          >
+          <a href="administration-phones.html" data-source-path="/contacts/kontaktnye-telefony-administracii/" class="mobile-drawer__link mobile-drawer__link--sub"
+            >Контактные телефоны администрации</a
+          >
+          <a href="staff-phones.html" data-source-path="/contacts/kontaktnye-telefony-sotrudnikov/" class="mobile-drawer__link mobile-drawer__link--sub"
+            >Контактные телефоны сотрудников</a
+          >
+          <a href="department-hours-phones.html" data-source-path="/contacts/rezhim-raboty-i-kontaktnye-telefony-strukturnyh-podrazdelenij/" class="mobile-drawer__link mobile-drawer__link--sub"
+            >Режим работы и контактные телефоны структурных подразделений</a
+          >
+          <a
+            href="hot-line.html" data-source-path="/contacts/goryachaya-liniya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Горячая линия</a
+          >
+          <a
+            href="electronic-appeals.html" data-source-path="/contacts/elektronnye-obrashheniya/"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >Электронные обращения</a
+          >
+          <a href="applicant-2023.html" data-source-path="/abiturient-2023/" class="mobile-drawer__link"
+            >Абитуриент 2026</a
+          >
+          
+          <a href="for-patients.html" data-source-path="/dlya-pacientov/" class="mobile-drawer__link"
+            >Для пациентов</a
+          >
+          <span class="mobile-drawer__group-label">Служебное</span>
+          <a
+            href="mailto:ggkp14@ggkp14.by"
+            class="mobile-drawer__link mobile-drawer__link--sub"
+            >ggkp14@ggkp14.by</a
+          >
+          <button
+            type="button"
+            class="mobile-drawer__link mobile-drawer__link--sub mobile-drawer__a11y"
+            data-a11y-toggle
+            aria-pressed="false"
+          >
+            Версия для слабовидящих
+          </button>
+        </nav>
+        <nav
+          class="lang-switcher lang-switcher--drawer"
+          aria-label="Выбор языка"
+        >
+          <a
+            href="#"
+            class="lang-switcher__link is-active"
+            hreflang="ru"
+            lang="ru"
+            aria-current="true"
+            >RU</a
+          >
+          <a href="#" class="lang-switcher__link" hreflang="be" lang="be"
+            >BY</a
+          >
+          <a href="#" class="lang-switcher__link" hreflang="en" lang="en"
+            >EN</a
+          >
+        </nav>
+        <a href="content-page.html" class="btn btn--primary mobile-drawer__cta"
+          >Запись к врачу</a
+        >
+        <form class="search-form mobile-drawer__search" role="search" action="search-results.html">
+          <label for="mobile-search-input" class="visually-hidden"
+            >Поиск по сайту</label
+          >
+          <div class="search-form__fields">
+            <input
+              type="search"
+              id="mobile-search-input"
+              name="s"
+              class="form-input search-form__input"
+              placeholder="Введите запрос"
+            />
+            <button
+              type="submit"
+              class="btn btn--primary search-form__btn search-form__submit-text"
+            >
+              Найти
+            </button>
+            <button
+              type="submit"
+              class="search-form__submit-icon"
+              aria-label="Выполнить поиск"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <main id="main">
+      <div class="internal-page">
+        <div class="container internal-page__container">
+          <nav class="breadcrumb" aria-label="Хлебные крошки">
+<ol class="breadcrumb__list">
+<li class="breadcrumb__item">
+<a href="index.html">Главная</a>
+<span class="breadcrumb__sep" aria-hidden="true">&#187;</span>
+</li>
+<li class="breadcrumb__item">
+<a href="about.html" data-source-path="/o-nas/">О нас</a>
+<span class="breadcrumb__sep" aria-hidden="true">&#187;</span>
+</li>
+<li class="breadcrumb__item" aria-current="page">
+<span>Общественные организации</span>
+</li>
+</ol></nav>
+          <header class="page-header">
+            <h1 class="page-header__title">Общественные организации</h1>
+          </header>
+          <article class="prose">
+            <p>Общественные организации нашего коллектива играют важную роль в жизни учреждения. Они объединяют сотрудников, способствуют развитию корпоративного духа, укрепляют традиции, реализуют социальные инициативы и вносят вклад в формирование здоровой, творческой и социально ответственной среды.</p>
+            <h2>ПЕРВИЧНАЯ ОРГАНИЗАЦИЯ РОО «БЕЛАЯ РУСЬ»</h2>
+            <p>Цели: Содействие построению сильной, процветающей и социально справедливой Беларуси, создание условий для реализации потенциала каждого гражданина.</p>
+            <p>Председатель: Пиковская Жанна Тимофеевна, медицинская сестра отделения профилактики.</p>
+            <h2>ПЕРВИЧНАЯ ОРГАНИЗАЦИЯ ОО «БРСМ»</h2>
+            <p>Цели: Создание условий для всестороннего развития молодежи, раскрытие творческого потенциала, поддержка гражданского общества на основе патриотических и духовно-нравственных ценностей.</p>
+            <p>Секретарь: Романова Анастасия Вячеславовна, медицинская сестра общей практики ООВП №2.</p>
+            <h2>ПЕРВИЧНАЯ ОРГАНИЗАЦИЯ БЕЛОРУССКОГО КРАСНОГО КРЕСТА</h2>
+            <p>Цели: Облегчение человеческих страданий, помощь пострадавшим, пропаганда здорового образа жизни и международного гуманитарного права.</p>
+            <p>Председатель: Прокаева Татьяна Викторовна, старшая медицинская сестра отделения общей врачебной практики №1.</p>
+            <h2>ПЕРВИЧНАЯ ОРГАНИЗАЦИЯ «БЕЛОРУССКИЙ СОЮЗ ЖЕНЩИН»</h2>
+            <p>Приоритетные направления:</p>
+            <ul>
+              <li>Вовлечение женщин в общественную жизнь.</li>
+              <li>Пропаганда здорового образа жизни и семейных ценностей.</li>
+              <li>Укрепление статуса семьи, повышение значимости материнства.</li>
+              <li>Развитие творческих способностей и организация досуга.</li>
+            </ul>
+            <p>Председатель: Грицева Ольга Васильевна, врач общей практики (заведующий) ООВП №1.</p>
+            <h2>ПРОФСОЮЗНЫЙ КОМИТЕТ ГУЗ «ГГКП №14»</h2>
+            <p>Цели: Защита трудовых и социально-экономических прав членов профсоюза. Содействие здоровому образу жизни, организация культурного досуга, материальная поддержка и поощрение сотрудников.</p>
+            <p>Председатель профкома: Гусак Юлия Владимировна, врач-кардиолог.</p>
+
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <!-- 10. Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div>
+            <h3 class="site-footer__title">ГУЗ «ГГКП №14»</h3>
+            <p>г. Гомель, ул. Косарева, 11<br />246012</p>
+            <p><a href="tel:+375232329065">+375 (232) 32-90-65</a></p>
+            <p><a href="mailto:ggkp14@ggkp14.by">ggkp14@ggkp14.by</a></p>
+          </div>
+          <div>
+            <h3 class="site-footer__title">Навигация</h3>
+            <ul class="site-footer__list">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="about.html" data-source-path="/o-nas/">О нас</a></li>
+              <li><a href="contacts.html" data-source-path="/contacts/">Контакты</a></li>
+              <li><a href="paid-services.html" data-source-path="/platnye-uslugi-2/">Платные услуги</a></li>
+              <li><a href="news-archive.html" data-source-path="/category/novosti/">Новости</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="site-footer__title">Пациентам</h3>
+            <ul class="site-footer__list">
+              <li><a href="content-page.html">Запись к врачу</a></li>
+              <li>
+                <a href="electronic-appeals.html" data-source-path="/contacts/elektronnye-obrashheniya/"
+                  >Электронные обращения</a
+                >
+              </li>
+              <li><a href="working-hours.html" data-source-path="/o-nas/rezhim-raboty/">Режим работы</a></li>
+              <li><a href="vacancies.html" data-source-path="/o-nas/vakansii/">Вакансии</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p>© ГУЗ «Гомельская городская клиническая поликлиника № 14»</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/accessibility.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

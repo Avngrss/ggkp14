@@ -372,6 +372,64 @@
   color: var(--color-primary);
 }
 
+/* The department-hours label is longer than the other Contacts items. */
+.main-nav__dropdown:has(.main-nav__dropdown-link--wrap) {
+  max-width: 20rem;
+}
+
+.main-nav__dropdown-link--wrap {
+  white-space: normal;
+}
+
+/* About flyout inside the Information dropdown. */
+.main-nav__subitem {
+  position: relative;
+}
+
+.main-nav__dropdown-link--parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.main-nav__flyout {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 4px);
+  z-index: 60;
+  min-width: 16rem;
+  max-width: 20rem;
+  max-height: calc(100vh - 7rem);
+  margin: 0;
+  padding: var(--space-2);
+  overflow-y: auto;
+  list-style: none;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.main-nav__flyout::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 8px;
+}
+
+.main-nav__subitem--dropdown:hover > .main-nav__flyout,
+.main-nav__subitem--dropdown:focus-within > .main-nav__flyout {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 .site-header__actions {
   grid-area: actions;
   display: flex;
@@ -1277,12 +1335,12 @@
   }
 
   .main-nav__list {
-    gap: 12px;
+    gap: 4px;
   }
 
   .main-nav__link {
-    padding-inline: 6px;
-    font-size: 15px;
+    padding-inline: 2px;
+    font-size: 14px;
   }
 
   .site-header__actions {

@@ -522,3 +522,27 @@ Verified the working tree as one product: 30 production HTML files, one developm
 Local browser checks at 390, 768, and 1440 found no page-level horizontal overflow and no missing local page or asset. Approved shell destinations and the six homepage quick actions stay local. Remaining source-site links are departments, extra news posts, two Information children, three About children, three Contacts children, and published PDFs.
 
 No new production page was added. Evidence: `docs/audit/stage-6h/`.
+
+---
+
+## Stage 6K.1 — Patients page and three contact directories
+
+Four source-header pages now have local files: `for-patients.html`, `administration-phones.html`, `staff-phones.html`, and `department-hours-phones.html`. Production HTML is 34 pages plus development-only `preview.html`. Fifteen other live header paths remain unimplemented. Evidence: `docs/50-header-dropdown-page-coverage-reaudit.md` and `docs/audit/stage-6k1/`.
+
+## Stage 6K.3 — About dropdown pages
+
+Five more source pages now have local files: `anti-corruption.html`, `trade-union.html`, `partners.html`, `public-organizations.html`, and `administration-reception.html`. Production HTML is 39 pages plus development-only `preview.html`. Ten live header paths remain unimplemented. The procedures hub is still unread because of HTTP 403. Evidence: `docs/51-full-header-parity-and-remaining-pages.md` and `docs/audit/stage-6k3/`.
+
+## Stage 6K.4 — First Information article batch
+
+Five Information pages now have local files: `medical-extract-procedure.html`, `palliative-care.html`, `ideology.html`, `preventive-examinations.html`, and `addiction-help.html`. Production HTML is 44 pages plus development-only `preview.html`. Five live header paths remain unimplemented: the blocked procedures hub and four Information articles from the next batch (`incapacity`, `cybercrime`, `extremism`, `decree-631`). Evidence: `docs/51-full-header-parity-and-remaining-pages.md` and `docs/audit/stage-6k4/`.
+
+## Stage 6K.5 — Final readable Information pages
+
+Four final readable Information pages now have local files: `incapacity.html`, `cybercrime.html`, `extremism.html`, and `decree-631.html`. Production HTML is 48 pages plus development-only `preview.html`. The only unresolved source-header page is `/administrativnye-procedury/`: Playwright still fails on the certificate and strict UTF-8 fetch still returns HTTP 403, so no body was available for implementation. Evidence: `docs/51-full-header-parity-and-remaining-pages.md` and `docs/audit/stage-6k5/`.
+
+## Stage 6K.6 — Administrative Procedures hub
+
+`administrative-procedures.html` is now implemented from verified source evidence: live menu DOM, sitemap entry, and published WordPress REST content for `/administrativnye-procedury/` after repeated front-end access failures (Playwright certificate error and strict UTF-8 HTTP 403). Production HTML is 49 pages plus development-only `preview.html`.
+
+The Information dropdown and drawer now include the Administrative Procedures parent and its three existing child pages in source order. Header-source coverage is complete for internal readable destinations in this static baseline.
